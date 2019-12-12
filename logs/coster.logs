@@ -2725,3 +2725,41 @@
 2019-12-11 20:16:44 INFO  IntrinsticInfer:87 - Recall: 0.19664944008547883
 2019-12-11 20:16:44 INFO  IntrinsticInfer:88 - FScore: 1.9999898296693404E-6
 2019-12-11 20:16:44 INFO  IntrinsticInfer:90 - Extrinsic Evaluation is done!!!
+2019-12-11 20:35:40 INFO  COSTER:32 - COSTER: Context Sensitive Type Solver
+2019-12-11 20:35:40 INFO  COSTER:33 - Version: 1.0
+
+2019-12-11 20:38:01 INFO  COSTER:32 - COSTER: Context Sensitive Type Solver
+2019-12-11 20:38:01 INFO  COSTER:33 - Version: 1.0
+
+2019-12-11 20:38:09 INFO  IntrinsticInfer:29 - Collecting Jar Files and Test Projects
+2019-12-11 20:38:09 INFO  ParseUtil:83 - Colelcting Jar Files
+2019-12-11 20:38:09 INFO  ParseUtil:96 - Total Number of JAR Files: 48
+2019-12-11 20:38:09 INFO  IntrinsticInfer:32 - Collecting SO code snippets
+2019-12-11 20:38:09 INFO  ParseUtil:143 - Colelcting Stack Overflow Code Snippets
+2019-12-11 20:38:09 INFO  ParseUtil:143 - Colelcting Stack Overflow Code Snippets
+2019-12-11 20:38:09 INFO  ParseUtil:143 - Colelcting Stack Overflow Code Snippets
+2019-12-11 20:38:09 INFO  ParseUtil:143 - Colelcting Stack Overflow Code Snippets
+2019-12-11 20:38:09 INFO  ParseUtil:143 - Colelcting Stack Overflow Code Snippets
+2019-12-11 20:38:09 INFO  ParseUtil:143 - Colelcting Stack Overflow Code Snippets
+2019-12-11 20:38:09 INFO  ParseUtil:143 - Colelcting Stack Overflow Code Snippets
+2019-12-11 20:38:09 INFO  ParseUtil:143 - Colelcting Stack Overflow Code Snippets
+2019-12-11 20:38:09 INFO  ParseUtil:143 - Colelcting Stack Overflow Code Snippets
+2019-12-11 20:38:09 INFO  ParseUtil:143 - Colelcting Stack Overflow Code Snippets
+2019-12-11 20:38:09 INFO  ParseUtil:143 - Colelcting Stack Overflow Code Snippets
+2019-12-11 20:38:09 INFO  ParseUtil:143 - Colelcting Stack Overflow Code Snippets
+2019-12-11 20:38:09 INFO  ParseUtil:143 - Colelcting Stack Overflow Code Snippets
+2019-12-11 20:38:09 INFO  IntrinsticInfer:36 - Total Number of SO Code Snippet: 4
+2019-12-11 20:38:09 INFO  IntrinsticInfer:39 - Collecting dataset from the SO datasets
+2019-12-11 20:38:09 INFO  CompilableCodeExtraction:73 - Configure Eclipse JDT
+2019-12-11 20:38:09 INFO  CompilableCodeExtraction:92 - Creating Compilation Unit for each java file
+2019-12-11 20:38:09 INFO  CompilableCodeExtraction:103 - Total Number of Compilation Units: 4
+2019-12-11 20:38:09 INFO  SOCodeExtraction:32 - Extracting types/methods/fields from each Compilation Unit
+2019-12-11 20:38:10 INFO  SOCodeExtraction:45 - 4 compilation units out of 4 are parsed. Percentage of completion: 100%
+2019-12-11 20:38:10 INFO  IntrinsticInfer:46 - Inferring test cases
+2019-12-11 20:38:11 INFO  IntrinsticInfer:77 - 25 test cases out of 25 are inferred. Percentage of completion: 100%
+2019-12-11 20:38:11 INFO  IntrinsticInfer:79 - Average time for inference: 39.0milliseconds
+2019-12-11 20:38:11 INFO  IntrinsticInfer:81 - Calculating performance mesures
+2019-12-11 20:38:11 INFO  IntrinsticInfer:86 - Precision: 1.0E-6
+2019-12-11 20:38:11 INFO  IntrinsticInfer:87 - Recall: 0.11800065184301828
+2019-12-11 20:38:11 INFO  IntrinsticInfer:88 - FScore: 1.9999830510847198E-6
+2019-12-11 20:38:11 INFO  IntrinsticInfer:90 - Extrinsic Evaluation is done!!!
