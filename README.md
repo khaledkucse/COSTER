@@ -132,7 +132,7 @@ For other issue please create an issue. We will look forward to solve it.
 
 * **C M Khaled Saifullah** - *Initial work* - [khaledkucse](https://github.com/khaledkucse)
 
-See also the list of [contributors](https://github.com/khaledkucse/COSTER/graphs/contributorss) who participated in this project.
+See also the list of [contributors](https://github.com/khaledkucse/COSTER/graphs/contributors) who participated in this project.
 
 ## License
 
