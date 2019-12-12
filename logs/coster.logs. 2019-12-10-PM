@@ -1,0 +1,330 @@
+2019-12-10 13:14:24 INFO  COSTER:29 - COSTER: Context Sensitive Type Solver
+2019-12-10 13:14:24 INFO  COSTER:30 - Version: 1.0
+
+2019-12-10 13:14:27 INFO  IntrinsticInfer:28 - Collecting Jar Files and Test Projects
+2019-12-10 13:14:27 INFO  ParseUtil:83 - Colelcting Jar Files
+2019-12-10 13:14:27 INFO  ParseUtil:96 - Total Number of JAR Files: 328
+2019-12-10 13:14:27 INFO  ParseUtil:101 - Colelcting GitHub Subject Systems/Projects
+2019-12-10 13:14:27 INFO  ParseUtil:112 - Total Number of Subject Systems: 1
+2019-12-10 13:14:27 INFO  IntrinsticInfer:33 - Collecting dataset from the Test Dataset
+2019-12-10 13:14:27 INFO  InferUtil:43 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2019-12-10 13:14:27 INFO  CompilableCodeExtraction:56 - Colelcting Java Files
+2019-12-10 13:14:27 INFO  CompilableCodeExtraction:68 - Total Number of Java Files: 13
+2019-12-10 13:14:27 INFO  CompilableCodeExtraction:73 - Configure Eclipse JDT
+2019-12-10 13:14:28 INFO  CompilableCodeExtraction:92 - Creating Compilation Unit for each java file
+2019-12-10 13:14:29 INFO  CompilableCodeExtraction:103 - Total Number of Compilation Units: 13
+2019-12-10 13:14:29 INFO  CompilableCodeExtraction:36 - Extracting types/methods/fields from each Compilation Unit
+2019-12-10 13:14:36 INFO  CompilableCodeExtraction:49 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2019-12-10 13:14:36 INFO  InferUtil:66 - 1 compilation units out of 1 are parsed. Percentage of completion: 100%
+2019-12-10 13:14:36 INFO  IntrinsticInfer:39 - Inferring test cases
+2019-12-10 13:14:39 INFO  IntrinsticInfer:65 - 100 test cases out of 232 are inferred. Percentage of completion: 43%
+2019-12-10 13:14:41 INFO  IntrinsticInfer:65 - 200 test cases out of 232 are inferred. Percentage of completion: 86%
+2019-12-10 13:14:42 INFO  IntrinsticInfer:70 - 232 test cases out of 232 are inferred. Percentage of completion: 100%
+2019-12-10 13:14:42 INFO  IntrinsticInfer:72 - Average time for inference: 28.0milliseconds
+2019-12-10 13:14:42 INFO  IntrinsticInfer:74 - Calculating performance mesures
+2019-12-10 13:14:42 INFO  IntrinsticInfer:79 - Precision: 0.4224137931034483
+2019-12-10 13:14:42 INFO  IntrinsticInfer:80 - Recall: 0.4224137931034483
+2019-12-10 13:14:42 INFO  IntrinsticInfer:81 - FScore: 0.42241379310344834
+2019-12-10 13:14:42 INFO  IntrinsticInfer:83 - Intrinsic Evaluation is done!!!
+2019-12-10 13:18:41 INFO  COSTER:29 - COSTER: Context Sensitive Type Solver
+2019-12-10 13:18:41 INFO  COSTER:30 - Version: 1.0
+
+2019-12-10 14:57:58 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 14:57:58 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 18:13:36 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 18:13:36 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 18:16:14 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 18:16:14 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 18:16:55 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 18:16:55 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 18:17:27 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 18:17:27 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 18:18:00 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 18:18:00 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 18:18:27 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 18:18:27 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 18:18:39 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 18:18:39 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 18:42:53 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 18:42:53 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 18:43:02 INFO  IntrinsticInfer:28 - Collecting Jar Files and Test Projects
+2019-12-10 18:43:02 INFO  ParseUtil:83 - Colelcting Jar Files
+2019-12-10 18:43:02 INFO  ParseUtil:96 - Total Number of JAR Files: 328
+2019-12-10 18:43:02 INFO  ParseUtil:101 - Colelcting GitHub Subject Systems/Projects
+2019-12-10 18:43:02 INFO  ParseUtil:112 - Total Number of Subject Systems: 1
+2019-12-10 18:43:02 INFO  IntrinsticInfer:33 - Collecting dataset from the Test Dataset
+2019-12-10 18:43:02 INFO  InferUtil:43 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2019-12-10 18:43:03 INFO  CompilableCodeExtraction:56 - Colelcting Java Files
+2019-12-10 18:43:03 INFO  CompilableCodeExtraction:68 - Total Number of Java Files: 13
+2019-12-10 18:43:03 INFO  CompilableCodeExtraction:73 - Configure Eclipse JDT
+2019-12-10 18:43:03 INFO  CompilableCodeExtraction:92 - Creating Compilation Unit for each java file
+2019-12-10 18:43:04 INFO  CompilableCodeExtraction:103 - Total Number of Compilation Units: 13
+2019-12-10 18:43:04 INFO  CompilableCodeExtraction:36 - Extracting types/methods/fields from each Compilation Unit
+2019-12-10 18:43:13 INFO  CompilableCodeExtraction:49 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2019-12-10 18:43:13 INFO  InferUtil:66 - 1 compilation units out of 1 are parsed. Percentage of completion: 100%
+2019-12-10 18:43:13 INFO  IntrinsticInfer:39 - Inferring test cases
+2019-12-10 18:46:05 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 18:46:05 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 18:46:14 INFO  CreateOLD:117 - Populating the data from the CSV file to the OLD
+2019-12-10 18:46:14 INFO  CreateOLD:119 - Total number of projects: 19
+2019-12-10 18:46:14 INFO  CreateOLD:141 - 19 subject systems out of 19 are populated in the OLD. Percentage of completion: 100%
+2019-12-10 18:46:14 INFO  TrainUtil:134 - Calculating the occurance likelihood score and indexing the data
+2019-12-10 18:46:14 INFO  TrainUtil:135 - Total number of FQNs in the train data: 226
+2019-12-10 18:46:15 INFO  TrainUtil:180 - 15 FQNS out of 226 are index. Percentage of completion: 6%
+2019-12-10 18:46:15 INFO  TrainUtil:182 - Commiting the context with id, fqn and occurance likelihood score in the OLD
+2019-12-10 18:46:15 INFO  TrainUtil:189 - Occurance likelihood calculation and commiting to the index is done.
+2019-12-10 18:46:15 INFO  CreateOLD:62 - Writting the OLD at /home/khaledkucse/Project/backup/coster/model/OLD.json
+2019-12-10 18:46:16 INFO  CreateOLD:72 - Creating OLD is done!!!
+2019-12-10 18:46:45 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 18:46:45 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 18:46:50 INFO  IntrinsticInfer:28 - Collecting Jar Files and Test Projects
+2019-12-10 18:46:50 INFO  ParseUtil:83 - Colelcting Jar Files
+2019-12-10 18:46:50 INFO  ParseUtil:96 - Total Number of JAR Files: 328
+2019-12-10 18:46:50 INFO  ParseUtil:101 - Colelcting GitHub Subject Systems/Projects
+2019-12-10 18:46:50 INFO  ParseUtil:112 - Total Number of Subject Systems: 1
+2019-12-10 18:46:50 INFO  IntrinsticInfer:33 - Collecting dataset from the Test Dataset
+2019-12-10 18:46:50 INFO  InferUtil:43 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2019-12-10 18:46:50 INFO  CompilableCodeExtraction:56 - Colelcting Java Files
+2019-12-10 18:46:50 INFO  CompilableCodeExtraction:68 - Total Number of Java Files: 13
+2019-12-10 18:46:50 INFO  CompilableCodeExtraction:73 - Configure Eclipse JDT
+2019-12-10 18:46:50 INFO  CompilableCodeExtraction:92 - Creating Compilation Unit for each java file
+2019-12-10 18:46:52 INFO  CompilableCodeExtraction:103 - Total Number of Compilation Units: 13
+2019-12-10 18:46:52 INFO  CompilableCodeExtraction:36 - Extracting types/methods/fields from each Compilation Unit
+2019-12-10 18:47:00 INFO  CompilableCodeExtraction:49 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2019-12-10 18:47:00 INFO  InferUtil:66 - 1 compilation units out of 1 are parsed. Percentage of completion: 100%
+2019-12-10 18:47:00 INFO  IntrinsticInfer:39 - Inferring test cases
+2019-12-10 19:04:05 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 19:04:05 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 19:04:09 INFO  CreateOLD:117 - Populating the data from the CSV file to the OLD
+2019-12-10 19:04:09 INFO  CreateOLD:119 - Total number of projects: 19
+2019-12-10 19:04:09 INFO  CreateOLD:141 - 19 subject systems out of 19 are populated in the OLD. Percentage of completion: 100%
+2019-12-10 19:04:09 INFO  TrainUtil:139 - Calculating the occurance likelihood score and indexing the data
+2019-12-10 19:04:09 INFO  TrainUtil:140 - Total number of FQNs in the train data: 226
+2019-12-10 19:04:09 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2548)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2179)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1746)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1720)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.calculateOccuranceLikelihood(TrainUtil.java:106)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.indexData(TrainUtil.java:158)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - org.usask.srlab.coster.train.CreateOLD.createOld(CreateOLD.java:60)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.run(COSTER.java:55)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.main(COSTER.java:34)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2548)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2179)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1746)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1720)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.calculateOccuranceLikelihood(TrainUtil.java:106)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.indexData(TrainUtil.java:158)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - org.usask.srlab.coster.train.CreateOLD.createOld(CreateOLD.java:60)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.run(COSTER.java:55)
+2019-12-10 19:04:09 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.main(COSTER.java:34)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2548)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2179)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1746)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1720)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.calculateOccuranceLikelihood(TrainUtil.java:106)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.indexData(TrainUtil.java:158)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.train.CreateOLD.createOld(CreateOLD.java:60)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.run(COSTER.java:55)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.main(COSTER.java:34)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2548)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2179)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1746)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1720)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.calculateOccuranceLikelihood(TrainUtil.java:106)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.indexData(TrainUtil.java:158)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.train.CreateOLD.createOld(CreateOLD.java:60)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.run(COSTER.java:55)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.main(COSTER.java:34)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2548)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2179)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1746)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1720)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.calculateOccuranceLikelihood(TrainUtil.java:106)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.indexData(TrainUtil.java:158)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.train.CreateOLD.createOld(CreateOLD.java:60)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.run(COSTER.java:55)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.main(COSTER.java:34)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2548)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2179)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1746)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1720)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.calculateOccuranceLikelihood(TrainUtil.java:106)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.indexData(TrainUtil.java:158)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.train.CreateOLD.createOld(CreateOLD.java:60)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.run(COSTER.java:55)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.main(COSTER.java:34)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2548)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2179)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1746)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1720)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.calculateOccuranceLikelihood(TrainUtil.java:106)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.indexData(TrainUtil.java:158)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.train.CreateOLD.createOld(CreateOLD.java:60)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.run(COSTER.java:55)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.main(COSTER.java:34)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2548)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2179)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1746)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1720)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.calculateOccuranceLikelihood(TrainUtil.java:106)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.indexData(TrainUtil.java:158)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.train.CreateOLD.createOld(CreateOLD.java:60)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.run(COSTER.java:55)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.main(COSTER.java:34)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2548)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2179)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1746)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1720)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.calculateOccuranceLikelihood(TrainUtil.java:106)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.indexData(TrainUtil.java:158)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.train.CreateOLD.createOld(CreateOLD.java:60)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.run(COSTER.java:55)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.main(COSTER.java:34)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2548)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2179)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1746)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1720)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.calculateOccuranceLikelihood(TrainUtil.java:106)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.indexData(TrainUtil.java:158)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.train.CreateOLD.createOld(CreateOLD.java:60)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.run(COSTER.java:55)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.main(COSTER.java:34)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2548)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2179)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1746)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1720)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.calculateOccuranceLikelihood(TrainUtil.java:106)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.indexData(TrainUtil.java:158)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.train.CreateOLD.createOld(CreateOLD.java:60)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.run(COSTER.java:55)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.main(COSTER.java:34)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2548)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2179)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1746)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1720)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.calculateOccuranceLikelihood(TrainUtil.java:106)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.indexData(TrainUtil.java:158)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.train.CreateOLD.createOld(CreateOLD.java:60)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.run(COSTER.java:55)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.main(COSTER.java:34)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2548)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2179)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1746)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1720)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.calculateOccuranceLikelihood(TrainUtil.java:106)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.indexData(TrainUtil.java:158)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.train.CreateOLD.createOld(CreateOLD.java:60)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.run(COSTER.java:55)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.main(COSTER.java:34)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2548)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2179)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1746)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1720)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.calculateOccuranceLikelihood(TrainUtil.java:106)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.indexData(TrainUtil.java:158)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.train.CreateOLD.createOld(CreateOLD.java:60)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.run(COSTER.java:55)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.main(COSTER.java:34)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2548)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2179)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1746)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1720)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.calculateOccuranceLikelihood(TrainUtil.java:106)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.utils.TrainUtil.indexData(TrainUtil.java:158)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.train.CreateOLD.createOld(CreateOLD.java:60)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.run(COSTER.java:55)
+2019-12-10 19:04:10 ERROR TrainUtil:133 - org.usask.srlab.coster.COSTER.main(COSTER.java:34)
+2019-12-10 19:04:10 INFO  TrainUtil:185 - 15 FQNS out of 226 are index. Percentage of completion: 6%
+2019-12-10 19:04:10 INFO  TrainUtil:187 - Commiting the context with id, fqn and occurance likelihood score in the OLD
+2019-12-10 19:04:10 INFO  TrainUtil:194 - Occurance likelihood calculation and commiting to the index is done.
+2019-12-10 19:04:10 INFO  CreateOLD:62 - Writting the OLD at /home/khaledkucse/Project/backup/coster/model/OLD.json
+2019-12-10 19:04:10 INFO  CreateOLD:72 - Creating OLD is done!!!
+2019-12-10 19:04:48 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 19:04:48 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 19:04:52 INFO  CreateOLD:117 - Populating the data from the CSV file to the OLD
+2019-12-10 19:04:52 INFO  CreateOLD:119 - Total number of projects: 19
+2019-12-10 19:04:52 INFO  CreateOLD:141 - 19 subject systems out of 19 are populated in the OLD. Percentage of completion: 100%
+2019-12-10 19:04:52 INFO  TrainUtil:139 - Calculating the occurance likelihood score and indexing the data
+2019-12-10 19:04:52 INFO  TrainUtil:140 - Total number of FQNs in the train data: 226
+2019-12-10 19:04:53 INFO  TrainUtil:185 - 15 FQNS out of 226 are index. Percentage of completion: 6%
+2019-12-10 19:04:53 INFO  TrainUtil:187 - Commiting the context with id, fqn and occurance likelihood score in the OLD
+2019-12-10 19:04:53 INFO  TrainUtil:194 - Occurance likelihood calculation and commiting to the index is done.
+2019-12-10 19:04:53 INFO  CreateOLD:62 - Writting the OLD at /home/khaledkucse/Project/backup/coster/model/OLD.json
+2019-12-10 19:04:53 INFO  CreateOLD:72 - Creating OLD is done!!!
+2019-12-10 19:07:05 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 19:07:05 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 19:07:16 INFO  CreateOLD:117 - Populating the data from the CSV file to the OLD
+2019-12-10 19:07:16 INFO  CreateOLD:119 - Total number of projects: 19
+2019-12-10 19:07:16 INFO  CreateOLD:141 - 19 subject systems out of 19 are populated in the OLD. Percentage of completion: 100%
+2019-12-10 19:07:16 INFO  TrainUtil:139 - Calculating the occurance likelihood score and indexing the data
+2019-12-10 19:07:16 INFO  TrainUtil:140 - Total number of FQNs in the train data: 226
+2019-12-10 19:07:17 INFO  TrainUtil:186 - 15 FQNS out of 226 are index. Percentage of completion: 6%
+2019-12-10 19:07:17 INFO  TrainUtil:188 - Commiting the context with id, fqn and occurance likelihood score in the OLD
+2019-12-10 19:07:17 INFO  TrainUtil:195 - Occurance likelihood calculation and commiting to the index is done.
+2019-12-10 19:07:17 INFO  CreateOLD:62 - Writting the OLD at /home/khaledkucse/Project/backup/coster/model/OLD.json
+2019-12-10 19:07:18 INFO  CreateOLD:72 - Creating OLD is done!!!
+2019-12-10 19:13:51 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 19:13:51 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 19:43:00 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 19:43:00 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 19:43:04 INFO  CreateOLD:117 - Populating the data from the CSV file to the OLD
+2019-12-10 19:43:04 INFO  CreateOLD:119 - Total number of projects: 19
+2019-12-10 19:43:04 INFO  CreateOLD:141 - 19 subject systems out of 19 are populated in the OLD. Percentage of completion: 100%
+2019-12-10 19:43:04 INFO  TrainUtil:139 - Calculating the occurance likelihood score and indexing the data
+2019-12-10 19:43:04 INFO  TrainUtil:140 - Total number of FQNs in the train data: 226
+2019-12-10 19:43:05 INFO  TrainUtil:185 - 15 FQNS out of 226 are index. Percentage of completion: 6%
+2019-12-10 19:43:05 INFO  TrainUtil:187 - Commiting the context with id, fqn and occurance likelihood score in the OLD
+2019-12-10 19:43:05 INFO  TrainUtil:194 - Occurance likelihood calculation and commiting to the index is done.
+2019-12-10 19:43:05 INFO  CreateOLD:62 - Writting the OLD at /home/khaledkucse/Project/backup/coster/model/OLD.json
+2019-12-10 19:43:05 INFO  CreateOLD:72 - Creating OLD is done!!!
+2019-12-10 19:43:22 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 19:43:22 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 19:43:33 INFO  IntrinsticInfer:28 - Collecting Jar Files and Test Projects
+2019-12-10 19:43:33 INFO  ParseUtil:83 - Colelcting Jar Files
+2019-12-10 19:43:33 INFO  ParseUtil:96 - Total Number of JAR Files: 328
+2019-12-10 19:43:33 INFO  ParseUtil:101 - Colelcting GitHub Subject Systems/Projects
+2019-12-10 19:43:33 INFO  ParseUtil:112 - Total Number of Subject Systems: 1
+2019-12-10 19:43:33 INFO  IntrinsticInfer:33 - Collecting dataset from the Test Dataset
+2019-12-10 19:43:33 INFO  InferUtil:42 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2019-12-10 19:43:33 INFO  CompilableCodeExtraction:56 - Colelcting Java Files
+2019-12-10 19:43:33 INFO  CompilableCodeExtraction:68 - Total Number of Java Files: 13
+2019-12-10 19:43:33 INFO  CompilableCodeExtraction:73 - Configure Eclipse JDT
+2019-12-10 19:43:33 INFO  CompilableCodeExtraction:92 - Creating Compilation Unit for each java file
+2019-12-10 19:43:34 INFO  CompilableCodeExtraction:103 - Total Number of Compilation Units: 13
+2019-12-10 19:43:34 INFO  CompilableCodeExtraction:36 - Extracting types/methods/fields from each Compilation Unit
+2019-12-10 19:43:43 INFO  CompilableCodeExtraction:49 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2019-12-10 19:43:43 INFO  InferUtil:65 - 1 compilation units out of 1 are parsed. Percentage of completion: 100%
+2019-12-10 19:43:43 INFO  IntrinsticInfer:39 - Inferring test cases
+2019-12-10 19:43:47 INFO  IntrinsticInfer:65 - 100 test cases out of 232 are inferred. Percentage of completion: 43%
+2019-12-10 19:43:51 INFO  IntrinsticInfer:65 - 200 test cases out of 232 are inferred. Percentage of completion: 86%
+2019-12-10 19:43:52 INFO  IntrinsticInfer:70 - 232 test cases out of 232 are inferred. Percentage of completion: 100%
+2019-12-10 19:43:52 INFO  IntrinsticInfer:72 - Average time for inference: 39.0milliseconds
+2019-12-10 19:43:52 INFO  IntrinsticInfer:74 - Calculating performance mesures
+2019-12-10 19:43:52 INFO  IntrinsticInfer:79 - Precision: 0.4224137931034483
+2019-12-10 19:43:52 INFO  IntrinsticInfer:80 - Recall: 2.7236140131116593
+2019-12-10 19:43:52 INFO  IntrinsticInfer:81 - FScore: 0.42241379310344834
+2019-12-10 19:43:52 INFO  IntrinsticInfer:83 - Intrinsic Evaluation is done!!!
+2019-12-10 19:48:02 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 19:48:02 INFO  COSTER:32 - Version: 1.0
+
+2019-12-10 19:48:50 INFO  COSTER:31 - COSTER: Context Sensitive Type Solver
+2019-12-10 19:48:50 INFO  COSTER:32 - Version: 1.0
+
