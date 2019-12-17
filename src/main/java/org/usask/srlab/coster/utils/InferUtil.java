@@ -7,12 +7,10 @@ import java.text.DecimalFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import org.apache.commons.text.similarity.CosineSimilarity;
-import org.apache.commons.text.similarity.LevenshteinDistance;
+import org.apache.commons.text.similarity.*;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
@@ -22,6 +20,7 @@ import org.apache.lucene.search.*;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.codehaus.plexus.util.FileUtils;
+
 
 import org.usask.srlab.coster.config.Config;
 import org.usask.srlab.coster.extraction.CompilableCodeExtraction;
@@ -35,7 +34,7 @@ public class InferUtil {
 
     private static void print(Object s){System.out.println(s.toString());}
 
-    public static List<APIElement> collectDataset(String[] projectPaths, String[] jarPaths){
+    public static List<APIElement> collectDataset(String[] projectPaths, String[] jarPaths, String datasetPath){
         int count  = 0;
         List<APIElement> testcases = new ArrayList<>();
         for(String eachProjectPath:projectPaths){
@@ -45,7 +44,7 @@ public class InferUtil {
                 UnzipUtil.unzip(eachProjectPath,eachProject.getAbsolutePath());
                 List<APIElement> apiElements = CompilableCodeExtraction.extractfromSource(eachProject,jarPaths);
                 if(apiElements.size()>0){
-                    FileUtil.getSingleTonFileUtilInst().writeCOSTERProjectData(Config.TEST_DATSET_PATH+eachProject.getName()+".csv",apiElements);
+                    FileUtil.getSingleTonFileUtilInst().writeCOSTERProjectData(datasetPath+eachProject.getName()+".csv",apiElements);
                     testcases.addAll(apiElements);
                 }
 
@@ -69,13 +68,13 @@ public class InferUtil {
         return testcases;
     }
 
-    public static List<APIElement> collectSODataset(String[] sourcefilePaths, String[] jarPaths){
-        File projectPath = new File(Config.SO_CODE_SNIPPET_PATH);
+    public static List<APIElement> collectSODataset(String[] sourcefilePaths, String[] jarPaths, String repositoryPath, String datasetPath){
+        File projectPath = new File(repositoryPath);
         List<APIElement> testcases = new ArrayList<>();
         try {
             List<APIElement> apiElements = SOCodeExtraction.extractFromSOPOST(projectPath,sourcefilePaths,jarPaths);
             if(apiElements.size()>0){
-                FileUtil.getSingleTonFileUtilInst().writeCOSTERProjectData(Config.SO_DATASET_PATH+projectPath.getName()+".csv",apiElements);
+                FileUtil.getSingleTonFileUtilInst().writeCOSTERProjectData(datasetPath+projectPath.getName()+".csv",apiElements);
                 testcases.addAll(apiElements);
             }
         } catch (Exception e) {
@@ -90,11 +89,11 @@ public class InferUtil {
     }
 
 
-    public static List<OLDEntry> collectCandidateList(String context){
+    public static List<OLDEntry> collectCandidateList(String context, String modelPath){
         List<OLDEntry> candidateList = new ArrayList<>();
         try {
-            IndexSearcher searcher = InferUtil.createSearcher(Config.MODEL_PATH);
-            TopDocs candidates = InferUtil.searchByContext(context,searcher,1000);
+            IndexSearcher searcher = InferUtil.createSearcher(modelPath);
+            TopDocs candidates = InferUtil.searchByContext(context,searcher);
 
             for (ScoreDoc eachCandidate : candidates.scoreDocs) {
                 Document eachCandDoc = searcher.doc(eachCandidate.doc);
@@ -111,8 +110,81 @@ public class InferUtil {
         return candidateList;
     }
 
+    public static IndexSearcher createSearcher(String indexDir) throws IOException {
+        Directory dir = FSDirectory.open(Paths.get(indexDir));
+        IndexReader reader = DirectoryReader.open(dir);
+        return new IndexSearcher(reader);
+    }
 
-    public static double calculateContextSimilarity(String queryContext, String candidateContext){
+    public static TopDocs searchById(String id, IndexSearcher searcher, int topn) throws Exception {
+        return searcher.search(new TermQuery(new Term("id", id)), topn);
+    }
+    private static TopDocs searchByContext(String context, IndexSearcher searcher) throws Exception {
+        QueryParser qp = new QueryParser("context", new WhitespaceAnalyzer());
+        Query firstNameQuery = qp.parse(QueryParser.escape(context));
+        return searcher.search(firstNameQuery, 1000);
+    }
+
+    public static Map<String, Double> sortByComparator(Map<String, Double> unsortMap, final boolean order, int topK) {
+
+        List<Map.Entry<String, Double>> list = new LinkedList<>(unsortMap.entrySet());
+        list.sort((o1, o2) -> {
+            if (order) {
+                return o1.getValue().compareTo(o2.getValue());
+            } else {
+                return o2.getValue().compareTo(o1.getValue());
+
+            }
+        });
+        Map<String, Double> sortedMap = new LinkedHashMap<>();
+        int count = 0;
+        for (Map.Entry<String, Double> entry : list) {
+            sortedMap.put(entry.getKey(), entry.getValue());
+            count++;
+            if(count >= topK*100)
+                break;
+        }
+
+        return sortedMap;
+    }
+
+
+
+    public static double calculateContextSimilarity(String queryContext, String candidateContext, String contextSim){
+        double contextSimialrityScore = 0;
+        switch (contextSim) {
+            case "cosine":
+                contextSimialrityScore = InferUtil.cosineSimilarity(queryContext, candidateContext);
+                break;
+            case "jaccard":
+                contextSimialrityScore = InferUtil.jaccardSimialrity(queryContext, candidateContext);
+                break;
+            case "lcs":
+                contextSimialrityScore = InferUtil.lcsSimilarity(queryContext, candidateContext);
+                break;
+        }
+        return contextSimialrityScore;
+    }
+    public static double calculateNameSimilarity(String queryAPIElement, String candidateFQN, String nameSim){
+        double nameSimilarityScore = 0;
+        switch (nameSim) {
+            case "levenshtein":
+                nameSimilarityScore = InferUtil.levenshteinSimilarity(queryAPIElement, candidateFQN);
+                break;
+            case "hamming":
+                nameSimilarityScore = InferUtil.hammingDistance(queryAPIElement, candidateFQN);
+                break;
+            case "lcs":
+                nameSimilarityScore = InferUtil.lcsSimilarity(queryAPIElement, candidateFQN);
+                break;
+        }
+        return nameSimilarityScore;
+    }
+    public static double calculateRecommendationScore (double likelihoodScore, double contSimScore, double nameSimScore){
+        return (Config.alpha*likelihoodScore)+(Config.beta*contSimScore)+(Config.gamma*nameSimScore);
+    }
+
+    private static double cosineSimilarity(String queryContext, String candidateContext){
         CosineSimilarity contextSimilarity = new CosineSimilarity();
         Map<CharSequence, Integer> queryVector = Arrays.stream(queryContext.split(""))
                 .collect(Collectors.toMap(c -> c, c -> 1, Integer::sum));
@@ -120,8 +192,26 @@ public class InferUtil {
                 .collect(Collectors.toMap(c -> c, c -> 1, Integer::sum));
 
         return (contextSimilarity.cosineSimilarity(queryVector,candVector));
+
     }
-    public static double calculateNameSimilarity(String queryAPIElement, String candidateFQN){
+
+    private static double jaccardSimialrity(String queryContext, String candidateContext){
+        JaccardSimilarity jaccardSimilarity = new JaccardSimilarity();
+        return jaccardSimilarity.apply(queryContext,candidateContext);
+    }
+
+    private static double lcsSimilarity(String query, String candidate){
+        LongestCommonSubsequence longestCommonSubsequence = new LongestCommonSubsequence();
+        int lcs = longestCommonSubsequence.apply(query,candidate);
+        if(candidate.length() == 0)
+            return 0;
+        else if(lcs <= candidate.length())
+            return 0;
+        else
+            return (1-(lcs/candidate.length()));
+    }
+
+    private static double levenshteinSimilarity(String queryAPIElement, String candidateFQN){
         LevenshteinDistance distance = new LevenshteinDistance();
         int lev =  distance.apply(queryAPIElement,candidateFQN);
         if(candidateFQN.length() == 0)
@@ -132,52 +222,15 @@ public class InferUtil {
             return (1-(lev/candidateFQN.length()));
 
     }
-    public static double calculateRecommendationScore (double likelihoodScore, double contSimScore, double nameSimScore){
-        return (Config.alpha*likelihoodScore)+(Config.beta*contSimScore)+(Config.gamma*nameSimScore);
-    }
 
-    public static IndexSearcher createSearcher(String indexDir) throws IOException {
-        Directory dir = FSDirectory.open(Paths.get(indexDir));
-        IndexReader reader = DirectoryReader.open(dir);
-        IndexSearcher searcher = new IndexSearcher(reader);
-        return searcher;
-    }
-
-    public static TopDocs searchById(String id, IndexSearcher searcher, int topn) throws Exception {
-//        QueryParser qp = new QueryParser("id", new StandardAnalyzer());
-//        Query idQuery = qp.parse(id);
-//        return searcher.search(idQuery, topn);
-        return searcher.search(new TermQuery(new Term("id", id)), topn);
-    }
-    private static TopDocs searchByContext(String context, IndexSearcher searcher, int topn) throws Exception {
-        QueryParser qp = new QueryParser("context", new WhitespaceAnalyzer());
-        Query firstNameQuery = qp.parse(QueryParser.escape(context));
-        return searcher.search(firstNameQuery, topn);
-    }
-
-    public static Map<String, Double> sortByComparator(Map<String, Double> unsortMap, final boolean order, int topK) {
-
-        List<Map.Entry<String, Double>> list = new LinkedList<Map.Entry<String, Double>>(unsortMap.entrySet());
-        list.sort(new Comparator<Map.Entry<String, Double>>() {
-            public int compare(Map.Entry<String, Double> o1,
-                               Map.Entry<String, Double> o2) {
-                if (order) {
-                    return o1.getValue().compareTo(o2.getValue());
-                } else {
-                    return o2.getValue().compareTo(o1.getValue());
-
-                }
-            }
-        });
-        Map<String, Double> sortedMap = new LinkedHashMap<String, Double>();
-        int count = 0;
-        for (Map.Entry<String, Double> entry : list) {
-            sortedMap.put(entry.getKey(), entry.getValue());
-            count++;
-            if(count >= topK*100)
-                break;
-        }
-
-        return sortedMap;
+    private static double hammingDistance(String queryAPIElement, String candidateFQN){
+        HammingDistance hammingDistance = new HammingDistance();
+        int hamDis = hammingDistance.apply(queryAPIElement,candidateFQN);
+        if(candidateFQN.length() == 0)
+            return 0;
+        else if(hamDis <= candidateFQN.length())
+            return 0;
+        else
+            return (1-(hamDis/candidateFQN.length()));
     }
 }

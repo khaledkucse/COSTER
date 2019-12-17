@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.DecimalFormat;
-import java.util.concurrent.Callable;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -20,7 +18,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import org.usask.srlab.coster.config.Config;
+
 import org.usask.srlab.coster.utils.InferUtil;
 import org.usask.srlab.coster.utils.NotifyingBlockingThreadPoolExecutor;
 import org.usask.srlab.coster.utils.ParseUtil;
@@ -33,32 +31,32 @@ public class RetrainOLD {
     private static void print(Object s){System.out.println(s.toString());}
 
     @SuppressWarnings("unchecked")
-    public static void retrainOLD() {
+    public static void retrain(String jarRepoPath, String repositoryPath, String datasetPath, String modelPath, int fqnThreshold) {
 
         print("Collecting Jar files and Github projects");
-        String[] jarPaths = ParseUtil.collectGithubJars(new File(Config.GITHUB_JAR_PATH));
-        String[] projectPaths = ParseUtil.collectGithubProjects(new File(Config.GITHUB_SUBJECT_SYSTEM_PATH));
+        String[] jarPaths = ParseUtil.collectGithubJars(new File(jarRepoPath));
+        String[] projectPaths = ParseUtil.collectGithubProjects(new File(repositoryPath));
 
         print("Collecting data set from the Github Dataset");
-        NotifyingBlockingThreadPoolExecutor pool = CreateOLD.collectDataset(projectPaths,jarPaths);
+        NotifyingBlockingThreadPoolExecutor pool = Train.collectDataset(projectPaths,jarPaths, datasetPath);
         try {
             pool.await();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         print("Reriving the Trained OLD");
-        JSONObject jsonObject =retrivedTrainedOLD();
+        JSONObject jsonObject = retriveTrainedOLD(modelPath, fqnThreshold);
 
         print("Populating the dataset in the OLD");
-        jsonObject = CreateOLD.populateDatainOLD(new File(Config.GITHUB_DATSET_PATH), jsonObject);
+        jsonObject = Train.populateDatainOLD(new File(datasetPath), jsonObject);
 
         print("Calculating the occurance likelihood score and storing the context along with FQN and occurance likelihood score in the index file");
-        jsonObject = TrainUtil.getSingletonTrainUtilInst().indexData(jsonObject);
+        jsonObject = TrainUtil.getSingletonTrainUtilInst().indexData(jsonObject, modelPath,fqnThreshold);
 
-        logger.info("Writting the OLD at "+ Config.MODEL_PATH+"OLD.json");
-        print("Writting the OLD at "+Config.MODEL_PATH+"OLD.json");
+        logger.info("Writting the OLD at "+ modelPath+"OLD.json");
+        print("Writting the OLD at "+modelPath+"OLD.json");
         try {
-            Files.write(Paths.get(Config.MODEL_PATH+"OLD.json"), jsonObject.toJSONString().getBytes());
+            Files.write(Paths.get(modelPath+"OLD.json"), jsonObject.toJSONString().getBytes());
         } catch (IOException e) {
             print("Error Occured while wrtting the OLD. See the detail in the log file");
             for(StackTraceElement eachStacktrace:e.getStackTrace())
@@ -71,12 +69,12 @@ public class RetrainOLD {
     }
 
     @SuppressWarnings("unchecked")
-    private static JSONObject retrivedTrainedOLD() {
+    private static JSONObject retriveTrainedOLD(String modelPath, int fqnThreshold) {
         JSONObject jsonOLD = new JSONObject();
         JSONParser jsonParser = new JSONParser();
 
-        try (FileReader reader = new FileReader(Config.MODEL_PATH+"OLD.json")) {
-            IndexSearcher searcher = InferUtil.createSearcher(Config.MODEL_PATH);
+        try (FileReader reader = new FileReader(modelPath+"OLD.json")) {
+            IndexSearcher searcher = InferUtil.createSearcher(modelPath);
             Object obj = jsonParser.parse(reader);
             jsonOLD = (JSONObject) obj;
 
@@ -87,7 +85,7 @@ public class RetrainOLD {
                     continue;
                 JSONObject fqnObject = (JSONObject) jsonOLD.get(eachfqn);
                 JSONArray contextIdArray = (JSONArray) fqnObject.get("context_list");
-                if(contextIdArray.size() < Config.FQN_THRESHOLD)
+                if(contextIdArray.size() < fqnThreshold)
                     continue;
 
                 JSONArray contextArray = new JSONArray();

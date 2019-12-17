@@ -1,5 +1,8 @@
 package org.usask.srlab.coster.utils;
 
+import java.io.File;
+import java.util.*;
+
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.eclipse.jdt.core.JavaCore;
@@ -7,8 +10,7 @@ import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 
-import java.io.File;
-import java.util.*;
+
 
 public class ParseUtil {
 

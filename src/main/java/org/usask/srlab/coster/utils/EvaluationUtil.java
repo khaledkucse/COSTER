@@ -1,10 +1,10 @@
 package org.usask.srlab.coster.utils;
 
 
-import org.usask.srlab.coster.model.TestResult;
-
 import java.util.List;
 import java.util.Set;
+
+import org.usask.srlab.coster.model.TestResult;
 
 public class EvaluationUtil {
 

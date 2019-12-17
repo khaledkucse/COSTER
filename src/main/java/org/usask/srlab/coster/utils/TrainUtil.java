@@ -1,20 +1,5 @@
 package org.usask.srlab.coster.utils;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.document.*;
-import org.apache.lucene.index.IndexWriter;
-import org.apache.lucene.index.IndexWriterConfig;
-import org.apache.lucene.store.FSDirectory;
-import org.apache.lucene.util.Version;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.usask.srlab.coster.config.Config;
-import org.usask.srlab.coster.model.IndexEntry;
-import org.usask.srlab.coster.model.OLDEntry;
-
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.text.DecimalFormat;
@@ -23,6 +8,22 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
+import org.apache.lucene.document.*;
+import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.index.IndexWriterConfig;
+import org.apache.lucene.store.FSDirectory;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+
+import org.usask.srlab.coster.model.IndexEntry;
+import org.usask.srlab.coster.model.OLDEntry;
+
+
 
 public class TrainUtil {
     private static final TrainUtil singletonTrainUtilInst = new TrainUtil();
@@ -135,11 +136,11 @@ public class TrainUtil {
         return new IndexEntry(eachFQNEntries,maxScore);
     }
 
-    public synchronized JSONObject indexData(JSONObject jsonOld){
+    public synchronized JSONObject indexData(JSONObject jsonOld, String modelPath, int fqnThreshold){
         logger.info("Calculating the occurance likelihood score and indexing the data");
         logger.info("Total number of FQNs in the train data: "+jsonOld.keySet().size());
         try {
-            IndexWriter writer = createWriter(Config.MODEL_PATH);
+            IndexWriter writer = createWriter(modelPath);
             writer.deleteAll();
             List<Document> documents;
             int count = 0;
@@ -151,7 +152,7 @@ public class TrainUtil {
 
                 JSONObject fqnObject =(JSONObject) jsonOld.get(eachfqn);
                 JSONArray contextArray = (JSONArray) fqnObject.get("context_list");
-                if(contextArray.size() < Config.FQN_THRESHOLD){
+                if(contextArray.size() < fqnThreshold){
                     continue;
                 }
                 JSONObject totalFrequency =(JSONObject) jsonOld.get(":global:");

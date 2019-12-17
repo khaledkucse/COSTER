@@ -1,17 +1,15 @@
 package org.usask.srlab.coster.extraction;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.eclipse.jdt.core.JavaCore;
-import org.eclipse.jdt.core.dom.*;
-import org.usask.srlab.coster.config.Config;
-import org.usask.srlab.coster.model.APIElement;
-import org.usask.srlab.coster.model.CompileUnit;
-import org.usask.srlab.coster.utils.ParseUtil;
-
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.*;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.eclipse.jdt.core.dom.*;
+
+import org.usask.srlab.coster.model.APIElement;
+import org.usask.srlab.coster.model.CompileUnit;
 
 public class SOCodeExtraction {
     private static final Logger logger = LogManager.getLogger(SOCodeExtraction.class.getName()); // logger variable for loggin in the file

@@ -1,17 +1,19 @@
 package org.usask.srlab.coster.extraction;
 
+import java.io.File;
+import java.text.DecimalFormat;
+import java.util.*;
+
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.dom.*;
+
 import org.usask.srlab.coster.config.Config;
 import org.usask.srlab.coster.model.APIElement;
 import org.usask.srlab.coster.model.CompileUnit;
 import org.usask.srlab.coster.utils.ParseUtil;
 
-import java.io.File;
-import java.text.DecimalFormat;
-import java.util.*;
 
 public class CompilableCodeExtraction {
     private static final Logger logger = LogManager.getLogger(CompilableCodeExtraction.class.getName()); // logger variable for loggin in the file
@@ -201,7 +203,7 @@ public class CompilableCodeExtraction {
     }
 
 
-    private static void getMethodContext(APIElement apiElement,Block block,String apiExpression,String recievervariable)
+    static void getMethodContext(APIElement apiElement,Block block,String apiExpression,String recievervariable)
     {
 
         List<String>[] prevCode = splitPrevPostCode(block,apiExpression,apiElement.getName());
@@ -221,7 +223,7 @@ public class CompilableCodeExtraction {
 
 
 
-    private static void getFieldContext(APIElement apiElement,Block block,String apiStatement)
+    static void getFieldContext(APIElement apiElement,Block block,String apiStatement)
     {
 
         List<String>[] prevCode = splitPrevPostCode(block,apiElement.getName(),apiStatement);

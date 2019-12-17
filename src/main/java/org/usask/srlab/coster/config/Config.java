@@ -26,7 +26,6 @@ public class Config {
 
     //Inference related Path variable
     public static final String TEST_SUBJECT_SYSTEM_PATH = DATA_PATH+"TestDataset/subjectSystem/";
-    public static final String TEST_CODE_SNIPPE_PATH = DATA_PATH+"TestDataset/codeSnippet/";
     public static final String TEST_DATSET_PATH = DATA_PATH+"TestDataset/dataset/";
 
 
