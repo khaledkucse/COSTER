@@ -122,19 +122,16 @@ public class FileInference {
 
     private static Map<String, Double> sortByComparator(Map<String, Double> unsortMap, final boolean order, int topK) {
 
-        List<Map.Entry<String, Double>> list = new LinkedList<Map.Entry<String, Double>>(unsortMap.entrySet());
-        list.sort(new Comparator<Map.Entry<String, Double>>() {
-            public int compare(Map.Entry<String, Double> o1,
-                               Map.Entry<String, Double> o2) {
-                if (order) {
-                    return o1.getValue().compareTo(o2.getValue());
-                } else {
-                    return o2.getValue().compareTo(o1.getValue());
+        List<Map.Entry<String, Double>> list = new LinkedList<>(unsortMap.entrySet());
+        list.sort((o1, o2) -> {
+            if (order) {
+                return o1.getValue().compareTo(o2.getValue());
+            } else {
+                return o2.getValue().compareTo(o1.getValue());
 
-                }
             }
         });
-        Map<String, Double> sortedMap = new LinkedHashMap<String, Double>();
+        Map<String, Double> sortedMap = new LinkedHashMap<>();
         int count = 0;
         for (Map.Entry<String, Double> entry : list) {
             sortedMap.put(entry.getKey(), entry.getValue());

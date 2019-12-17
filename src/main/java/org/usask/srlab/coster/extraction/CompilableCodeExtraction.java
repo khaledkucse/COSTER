@@ -18,7 +18,7 @@ import org.usask.srlab.coster.utils.ParseUtil;
 public class CompilableCodeExtraction {
     private static final Logger logger = LogManager.getLogger(CompilableCodeExtraction.class.getName()); // logger variable for loggin in the file
     private static final DecimalFormat df = new DecimalFormat(); // Decimal formet variable for formating decimal into 2 digits
-    private static void print(Object s){System.out.println(s.toString());}
+//    private static void print(Object s){System.out.println(s.toString());}
 
     public static List<APIElement> extractfromSource(File projectFile, String[] jarPaths)
     {
@@ -71,6 +71,7 @@ public class CompilableCodeExtraction {
         return sourceFilePath;
     }
 
+    @SuppressWarnings("unchecked")
     static ASTParser configEclipseJDTParser(String[] sources, String[] jarPaths){
         logger.info("Configure Eclipse JDT");
 
@@ -239,7 +240,7 @@ public class CompilableCodeExtraction {
         apiElement.setContext(returnedcontext);
 
     }
-
+    @SuppressWarnings("unchecked")
     private static List<String>[] splitPrevPostCode(Block block, String apiElement,String apiStatement){
         List<String>[] code = new ArrayList[3];
         code[0] = new ArrayList<>();
@@ -359,15 +360,15 @@ public class CompilableCodeExtraction {
         String[] tokens = code.trim().split(" ");
         for(String each_token:tokens) {
             try {
-                if (each_token.trim().equalsIgnoreCase("") || !each_token.trim().contains("(") || !each_token.trim().contains(")")) {}
-                else if (each_token.trim().indexOf("(") == 0 && each_token.trim().contains(".")) {
+                if (each_token.trim().equalsIgnoreCase("") || !each_token.trim().contains("(") || !each_token.trim().contains(")")) {
+                    continue;
+                }else if (each_token.trim().indexOf("(") == 0 && each_token.trim().contains(".")) {
                     each_token = each_token.substring(1);
                     String arguments = each_token.substring(each_token.indexOf("(") + 1, each_token.indexOf(")"));
                     List<String> argumentTokens = Arrays.asList(arguments.trim().split(","));
                     if (argumentTokens.contains(expression))
                         returnedmethods.add(each_token.substring(each_token.indexOf(".") + 1, each_token.indexOf("(")));
-                }
-                else if (each_token.trim().contains(".")) {
+                }else if (each_token.trim().contains(".")) {
                     String arguments = each_token.substring(each_token.indexOf("(") + 1, each_token.indexOf(")"));
                     List<String> argumentTokens = Arrays.asList(arguments.trim().split(","));
                     if (argumentTokens.contains(expression))

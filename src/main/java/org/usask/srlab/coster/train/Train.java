@@ -35,18 +35,20 @@ public class Train {
 
     private static void print(Object s){System.out.println(s.toString());}
 
-    public static void createOld(String jarRepoPath, String repositoryPath,String datasetPath, String modelPath, int fqnThreshold) {
+    public static void createOld(String jarRepoPath, String repositoryPath,String datasetPath, String modelPath, int fqnThreshold, boolean isExtraction) {
 
-        print("Collecting Jar files and Github projects");
-        String[] jarPaths = ParseUtil.collectGithubJars(new File(jarRepoPath));
-        String[] projectPaths = ParseUtil.collectGithubProjects(new File(repositoryPath));
+        if(isExtraction){
+            print("Collecting Jar files and Github projects");
+            String[] jarPaths = ParseUtil.collectGithubJars(new File(jarRepoPath));
+            String[] projectPaths = ParseUtil.collectGithubProjects(new File(repositoryPath));
 
-        print("Collecting data set from the Github Dataset");
-        collectDataset(projectPaths,jarPaths,datasetPath);
-        try {
-            pool.await();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            print("Collecting data set from the Github Dataset");
+            collectDataset(projectPaths,jarPaths,datasetPath);
+            try {
+                pool.await();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         print("Populating the dataset in the OLD");
@@ -111,30 +113,31 @@ public class Train {
     static JSONObject populateDatainOLD(File datasetDir, JSONObject jsonOLD){
         logger.info("Populating the data from the CSV file to the OLD");
         File[] projectFiles = datasetDir.listFiles();
-        logger.info("Total number of projects: "+ projectFiles.length);
-        int count = 0;
-        for(File eachProjectFile:projectFiles){
-            ArrayList<Pair<String, String>> filecontent = FileUtil.getSingleTonFileUtilInst().readCSVFiles(eachProjectFile);
-            for (Pair<String, String> eachData : filecontent) {
-                String context = eachData.getKey();
-                String fqn = eachData.getValue();
-                if (jsonOLD.containsKey(fqn)) {
-                    jsonOLD = TrainUtil.getSingletonTrainUtilInst().createOrUpdateOLDEntry(jsonOLD, context, fqn, false);
-                } else {
-                    jsonOLD = TrainUtil.getSingletonTrainUtilInst().createOrUpdateOLDEntry(jsonOLD, context, fqn, true);
+        if (projectFiles != null) {
+            logger.info("Total number of projects: " + projectFiles.length);
+            int count = 0;
+            for (File eachProjectFile : projectFiles) {
+                ArrayList<Pair<String, String>> filecontent = FileUtil.getSingleTonFileUtilInst().readCSVFiles(eachProjectFile);
+                for (Pair<String, String> eachData : filecontent) {
+                    String context = eachData.getKey();
+                    String fqn = eachData.getValue();
+                    if (jsonOLD.containsKey(fqn)) {
+                        jsonOLD = TrainUtil.getSingletonTrainUtilInst().createOrUpdateOLDEntry(jsonOLD, context, fqn, false);
+                    } else {
+                        jsonOLD = TrainUtil.getSingletonTrainUtilInst().createOrUpdateOLDEntry(jsonOLD, context, fqn, true);
+                    }
+                }
+
+                count++;
+
+                if (count % 500 == 0) {
+                    logger.info(count + " subject systems out of " + projectFiles.length + " are populated in the OLD. Percentage of completion: " + df.format((count * 100 / projectFiles.length)) + "%");
+                    print(count + " subject systems out of " + projectFiles.length + " are populated in the OLD. Percentage of completion: " + df.format((count * 100 / projectFiles.length)) + "%");
                 }
             }
-
-            count ++;
-
-            if(count%500 == 0){
-                logger.info(count+" subject systems out of "+projectFiles.length+" are populated in the OLD. Percentage of completion: "+df.format((count*100/projectFiles.length))+"%");
-                print(count+" subject systems out of "+projectFiles.length+" are populated in the OLD. Percentage of completion: "+df.format((count*100/projectFiles.length))+"%");
-            }
+            logger.info(count + " subject systems out of " + projectFiles.length + " are populated in the OLD. Percentage of completion: " + df.format((count * 100 / projectFiles.length)) + "%");
+            print(count + " subject systems out of " + projectFiles.length + " are populated in the OLD. Percentage of completion: " + df.format((count * 100 / projectFiles.length)) + "%");
         }
-        logger.info(count+" subject systems out of "+projectFiles.length+" are populated in the OLD. Percentage of completion: "+df.format((count*100/projectFiles.length))+"%");
-        print(count+" subject systems out of "+projectFiles.length+" are populated in the OLD. Percentage of completion: "+df.format((count*100/projectFiles.length))+"%");
-
         return jsonOLD;
     }
 }

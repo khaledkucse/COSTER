@@ -14,7 +14,7 @@ import org.usask.srlab.coster.model.CompileUnit;
 public class SOCodeExtraction {
     private static final Logger logger = LogManager.getLogger(SOCodeExtraction.class.getName()); // logger variable for loggin in the file
     private static final DecimalFormat df = new DecimalFormat(); // Decimal formet variable for formating decimal into 2 digits
-    private static void print(Object s){System.out.println(s.toString());}
+//    private static void print(Object s){System.out.println(s.toString());}
 
     public static List<APIElement> extractFromSOPOST(File projectFile, String[] sourcefilepaths, String[] jarPaths) {
         String[] sources = { projectFile.getAbsolutePath() };

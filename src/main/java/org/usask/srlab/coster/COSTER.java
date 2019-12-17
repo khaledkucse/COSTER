@@ -161,6 +161,7 @@ public class COSTER {
                     String datasetPath = Config.GITHUB_DATSET_PATH;
                     String modelPath = Config.MODEL_PATH;
                     int fqnThreshold = Config.FQN_THRESHOLD;
+                    boolean isExtraction = true;
                     try{
                         if (line.hasOption("r"))
                             repositoryPath = line.getOptionValue("r");
@@ -192,9 +193,11 @@ public class COSTER {
                             print("No threshold for context size of each FQN is selected.");
                             print("Selecting the deafult threshold value: " + fqnThreshold);
                         }
+                        if (line.hasOption("k"))
+                            isExtraction = false;
 
 
-                        Train.createOld(jarRepoPath, repositoryPath, datasetPath, modelPath,fqnThreshold);
+                        Train.createOld(jarRepoPath, repositoryPath, datasetPath, modelPath,fqnThreshold,isExtraction);
                     }catch (Exception ex){
                         print("Exception occured while Taking input.\n\n");
                     }
@@ -206,6 +209,7 @@ public class COSTER {
                     datasetPath = Config.GITHUB_DATSET_PATH;
                     modelPath = Config.MODEL_PATH;
                     fqnThreshold = Config.FQN_THRESHOLD;
+                    isExtraction = true;
                     try{
                         if (line.hasOption("r"))
                             repositoryPath = line.getOptionValue("r");
@@ -237,8 +241,10 @@ public class COSTER {
                             print("No threshold for context size of each FQN is selected.");
                             print("Selecting the deafult threshold value: " + fqnThreshold);
                         }
+                        if (line.hasOption("k"))
+                            isExtraction = false;
 
-                        RetrainOLD.retrain(jarRepoPath,repositoryPath,datasetPath,modelPath,fqnThreshold);
+                        RetrainOLD.retrain(jarRepoPath,repositoryPath,datasetPath,modelPath,fqnThreshold,isExtraction);
                     }catch (Exception ex){
                         print("Exception occured while taking input.\n\n");
                     }

@@ -31,19 +31,21 @@ public class RetrainOLD {
     private static void print(Object s){System.out.println(s.toString());}
 
     @SuppressWarnings("unchecked")
-    public static void retrain(String jarRepoPath, String repositoryPath, String datasetPath, String modelPath, int fqnThreshold) {
+    public static void retrain(String jarRepoPath, String repositoryPath, String datasetPath, String modelPath, int fqnThreshold,boolean isExtraction) {
+        if(isExtraction){
+            print("Collecting Jar files and Github projects");
+            String[] jarPaths = ParseUtil.collectGithubJars(new File(jarRepoPath));
+            String[] projectPaths = ParseUtil.collectGithubProjects(new File(repositoryPath));
 
-        print("Collecting Jar files and Github projects");
-        String[] jarPaths = ParseUtil.collectGithubJars(new File(jarRepoPath));
-        String[] projectPaths = ParseUtil.collectGithubProjects(new File(repositoryPath));
-
-        print("Collecting data set from the Github Dataset");
-        NotifyingBlockingThreadPoolExecutor pool = Train.collectDataset(projectPaths,jarPaths, datasetPath);
-        try {
-            pool.await();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            print("Collecting data set from the Github Dataset");
+            NotifyingBlockingThreadPoolExecutor pool = Train.collectDataset(projectPaths,jarPaths, datasetPath);
+            try {
+                pool.await();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
+
         print("Reriving the Trained OLD");
         JSONObject jsonObject = retriveTrainedOLD(modelPath, fqnThreshold);
 

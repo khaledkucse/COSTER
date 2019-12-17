@@ -14,9 +14,9 @@ import org.eclipse.jdt.core.dom.*;
 import org.usask.srlab.coster.model.APIElement;
 
 public class NonCompilableCodeExtraction {
-    private static final Logger logger = LogManager.getLogger(NonCompilableCodeExtraction.class.getName()); // logger variable for loggin in the file
-    private static final DecimalFormat df = new DecimalFormat(); // Decimal formet variable for formating decimal into 2 digits
-    private static void print(Object s){System.out.println(s.toString());}
+//    private static final Logger logger = LogManager.getLogger(NonCompilableCodeExtraction.class.getName()); // logger variable for loggin in the file
+//    private static final DecimalFormat df = new DecimalFormat(); // Decimal formet variable for formating decimal into 2 digits
+//    private static void print(Object s){System.out.println(s.toString());}
 
 
     public static List<APIElement> extractCode(String src, String[] jarPaths, String inputfilepath){

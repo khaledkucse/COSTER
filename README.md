@@ -138,9 +138,9 @@ private static final String ROOT_FOLDER = "path/to/your/project/folder";
 Step 2: 
 Download the data folder and model folder from the following Google Drive link:
 
-[coster_data](https://drive.google.com/open?id=1Nbei0Y0aURAyc7AgVo4V8wW8kv-6baF5)
+[coster_data](http://bit.ly/2EqTiOk)
 
-[coster_model](https://drive.google.com/open?id=1bVjk5BgX9Hcc5BBeyxjok0a5yH7lqxnQ)
+[coster_model](http://bit.ly/2PuqkmI)
 
 Extract them into the data and model directory respectively.
 
@@ -156,8 +156,8 @@ A step by step instruction is given in the following
 
 Step 1
 
-Same as the Step 2 of previous mechanism dowload the [coster_data](https://drive.google.com/open?id=1Nbei0Y0aURAyc7AgVo4V8wW8kv-6baF5)
-and [coster_model](https://drive.google.com/open?id=1bVjk5BgX9Hcc5BBeyxjok0a5yH7lqxnQ)
+Same as the Step 2 of previous mechanism dowload the [coster_data](http://bit.ly/2EqTiOk)
+and [coster_model](http://bit.ly/2PuqkmI)
 and extract them on the folders
 
 Step 2
