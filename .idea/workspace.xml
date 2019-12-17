@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3ba3ab19-9603-4c0a-bf78-15e66f9d7b4f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/COSTER.jar" beforeDir="false" afterPath="$PROJECT_DIR$/COSTER.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/coster.logs" beforeDir="false" afterPath="$PROJECT_DIR$/logs/coster.logs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/extraction/CompilableCodeExtraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/extraction/CompilableCodeExtraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/extraction/NonCompilableCodeExtraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/extraction/NonCompilableCodeExtraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/extraction/SOCodeExtraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/extraction/SOCodeExtraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/RetrainOLD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/RetrainOLD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/Train.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +39,8 @@
       <file leaf-file-name="COSTER.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="246" column="117" selection-start-line="246" selection-start-column="117" selection-end-line="246" selection-end-column="117" />
+            <state relative-caret-position="143">
+              <caret line="84" column="45" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,19 +53,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
               <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RetrainOLD.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/RetrainOLD.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="32" column="4" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1188#1218#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -146,13 +128,13 @@
         <option value="$PROJECT_DIR$/model/README.md" />
         <option value="$PROJECT_DIR$/logs/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/RetrainOLD.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/Train.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/extraction/NonCompilableCodeExtraction.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/extraction/CompilableCodeExtraction.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/extraction/SOCodeExtraction.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java" />
       </list>
     </option>
@@ -241,6 +223,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="coster" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="COSTER" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="coster" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -295,8 +286,7 @@
     <configuration name="COSTER" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.usask.srlab.coster.COSTER" />
       <module name="coster" />
-      <option name="PROGRAM_PARAMETERS" value="-f train" />
-      <option name="VM_PARAMETERS" value="-Xmx 8192M" />
+      <option name="PROGRAM_PARAMETERS" value="-h" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -413,12 +403,12 @@
       <workItem from="1575910391800" duration="47805000" />
       <workItem from="1576212434316" duration="2591000" />
       <workItem from="1576512605554" duration="23642000" />
-      <workItem from="1576541692844" duration="6391000" />
+      <workItem from="1576541692844" duration="8994000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137051000" />
+    <option name="totallyTimeSpent" value="139654000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -440,11 +430,11 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="5" weight="0.3294702" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.31770223" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.31770223" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49828178" visible="true" weight="0.2825607" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49828178" visible="true" weight="0.2825607" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.5017182" side_tool="true" weight="0.27869758" />
@@ -661,16 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="246" column="117" selection-start-line="246" selection-start-column="117" selection-end-line="246" selection-end-column="117" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/Train.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1116">
@@ -755,6 +735,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1188#1218#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="84" column="45" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

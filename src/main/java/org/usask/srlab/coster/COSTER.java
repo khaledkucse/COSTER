@@ -89,6 +89,13 @@ public class COSTER {
                 .desc("Path of the directory where jar files are stored. Used by all functionality. Default location is in /data directory")
                 .build()
         );
+        options.addOption(Option.builder("k")
+                .longOpt("extracton")
+                .hasArg()
+                .argName("Is Extration Needed [Optional]")
+                .desc("A boolean value dictates whether extraction of code needed or not for training and retraining. Default 1. Option: 1 (true), 0(false)")
+                .build()
+        );
         options.addOption(Option.builder("m")
                 .longOpt("modelPath")
                 .hasArg()
@@ -193,8 +200,11 @@ public class COSTER {
                             print("No threshold for context size of each FQN is selected.");
                             print("Selecting the deafult threshold value: " + fqnThreshold);
                         }
-                        if (line.hasOption("k"))
-                            isExtraction = false;
+                        if (line.hasOption("k")) {
+                            int temp = Integer.parseInt(line.getOptionValue("k"));
+                            if(temp == 0)
+                                isExtraction = false;
+                        }
 
 
                         Train.createOld(jarRepoPath, repositoryPath, datasetPath, modelPath,fqnThreshold,isExtraction);
@@ -241,8 +251,11 @@ public class COSTER {
                             print("No threshold for context size of each FQN is selected.");
                             print("Selecting the deafult threshold value: " + fqnThreshold);
                         }
-                        if (line.hasOption("k"))
-                            isExtraction = false;
+                        if (line.hasOption("k")) {
+                            int temp = Integer.parseInt(line.getOptionValue("k"));
+                            if(temp == 0)
+                                isExtraction = false;
+                        }
 
                         RetrainOLD.retrain(jarRepoPath,repositoryPath,datasetPath,modelPath,fqnThreshold,isExtraction);
                     }catch (Exception ex){
