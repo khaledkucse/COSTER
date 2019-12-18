@@ -24,16 +24,16 @@ public class FileInference {
     private static void print(Object s){System.out.println(s.toString());}
 
     public static void infer(String jarPath, String inputFilePath, String outPutFilePath, String modelPath, int topk, String contextSim, String nameSim) {
-        print("Collecting Jar files");
-        logger.info("Collecting Jar Files");
+        print("Collecting Jar files...");
+        logger.info("Collecting Jar Files...");
         String[] jarPaths = ParseUtil.collectGithubJars(new File(jarPath));
-        print("Collecting source code from the  input file");
-        logger.info("Collecting source code from the input file");
+        print("Collecting source code from the  input file...");
+        logger.info("Collecting source code from the input file...");
         ArrayList<String> srcList = FileUtil.getSingleTonFileUtilInst().getFileStringArray(inputFilePath);
         String src = StringUtils.join(srcList," ");
 
-        print("Extraiting the given source code and retirving the cases need to be resolved");
-        logger.info("Extraiting the given source code and retirving the cases need to be resolved");
+        print("Extraiting the API elements from the source code...");
+        logger.info("Extraiting the API elements from the source code...");
         List<APIElement> testCases = NonCompilableCodeExtraction.extractCode(src,jarPaths,inputFilePath);
 
 
@@ -44,23 +44,23 @@ public class FileInference {
             return;
         }
         int count = 0;
-        print("Inferring");
-        logger.info("Inferring");
+        print("Inferring...");
+        logger.info("Inferring...");
         for (APIElement eachCase : testCases) {
             testResults.add(inferEachCase(modelPath, eachCase,contextSim,nameSim,topk));
 
             count++;
             if (count % 100 == 0) {
-                logger.info(count + " cases out of " + testCases.size() + " are inferred. Percentage of completion: " + df.format((count * 100 / testCases.size())) + "%");
-                print(count + " cases out of " + testCases.size() + " are inferred. Percentage of completion: " + df.format((count * 100 / testCases.size())) + "%");
+                logger.info("API elements Inferred: "+count + "/" + testCases.size() + " (" + df.format((count * 100 / testCases.size())) + "%)");
+                print("API elements Inferred: "+count + "/" + testCases.size() + " (" + df.format((count * 100 / testCases.size())) + "%)");
             }
         }
 
-        logger.info(count + " cases out of " + testCases.size() + " are inferred. Percentage of completion: " + df.format((count * 100 / testCases.size())) + "%");
-        print(count + " cases out of " + testCases.size() + " are inferred. Percentage of completion: " + df.format((count * 100 / testCases.size())) + "%");
+        logger.info("API elements Inferred: "+count + "/" + testCases.size() + " (" + df.format((count * 100 / testCases.size())) + "%)");
+        print("API elements Inferred: "+count + "/" + testCases.size() + " (" + df.format((count * 100 / testCases.size())) + "%)");
 
-        logger.info("Writting the inffered FQNs as annotation above the source code at "+ outPutFilePath);
-        print("Writting the inffered FQNs as annotation above the source code at "+ outPutFilePath);
+        logger.info("Writing the inferred FQNs as annotation along with the source code at "+ outPutFilePath+"...");
+        print("Writting the inffered FQNs as annotation along with the source code at "+ outPutFilePath+"...");
 
         writitngOutputFile(outPutFilePath,srcList,testResults);
 

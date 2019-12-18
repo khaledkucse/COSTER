@@ -3,6 +3,7 @@ package org.usask.srlab.coster.extraction;
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;

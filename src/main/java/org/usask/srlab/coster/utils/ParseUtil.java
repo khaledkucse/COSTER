@@ -82,7 +82,7 @@ public class ParseUtil {
         return actualFQN;
     }
     public static String[] collectGithubJars(File jarFiles){
-        logger.info("Colelcting Jar Files");
+        logger.info("Collecting Jar Files");
         String[] extensions = { ".jar"};
         HashMap<String, List<File>> allJarJavaFiles = getFilteredRecursiveFiles(jarFiles, extensions);
         List<File> arrJars = allJarJavaFiles.get(".jar");
@@ -100,7 +100,7 @@ public class ParseUtil {
     }
 
     public static String[] collectGithubProjects(File subjectSytems){
-        logger.info("Colelcting GitHub Subject Systems/Projects");
+        logger.info("Collecting GitHub Subject Systems/Projects");
         String[] extensions = { ".zip"};
         HashMap<String, List<File>> allProject = getFilteredRecursiveFiles(subjectSytems, extensions);
         List<File> arrProjetcs = allProject.get(".zip");
@@ -142,7 +142,7 @@ public class ParseUtil {
         return files;
     }
     public static ArrayList<String> collectSOSnippets(File file) {
-        logger.info("Colelcting Stack Overflow Code Snippets");
+        logger.info("Collecting Stack Overflow Code Snippets");
         ArrayList<String> files = new ArrayList<>();
         if (file.isDirectory()){
             for (File sub : Objects.requireNonNull(file.listFiles()))

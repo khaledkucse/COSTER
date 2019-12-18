@@ -3,6 +3,7 @@ package org.usask.srlab.coster.extraction;
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -19,6 +20,7 @@ public class CompilableCodeExtraction {
     private static final Logger logger = LogManager.getLogger(CompilableCodeExtraction.class.getName()); // logger variable for loggin in the file
     private static final DecimalFormat df = new DecimalFormat(); // Decimal formet variable for formating decimal into 2 digits
 //    private static void print(Object s){System.out.println(s.toString());}
+    private static final AtomicInteger totalCase = new AtomicInteger(0);
 
     public static List<APIElement> extractfromSource(File projectFile, String[] jarPaths)
     {
@@ -130,6 +132,7 @@ public class CompilableCodeExtraction {
                         public boolean visit(VariableDeclarationFragment varDecNode) {
                             IVariableBinding variableBinding = varDecNode.resolveBinding();
                             if (variableBinding != null && !variableBinding.getType().isFromSource()) {
+                                totalCase.incrementAndGet();
                                 SimpleName varName = varDecNode.getName();
                                 String apiElement = varName.getIdentifier();
                                 int linenumber = cu.getLineNumber(varName.getStartPosition());
@@ -153,6 +156,7 @@ public class CompilableCodeExtraction {
                             if(assignmentNode.getLeftHandSide() instanceof SimpleName){
                                 ITypeBinding variableBinding = assignmentNode.getLeftHandSide().resolveTypeBinding();
                                 if (variableBinding != null && !variableBinding.isFromSource()) {
+                                    totalCase.incrementAndGet();
                                     SimpleName varName = (SimpleName) assignmentNode.getLeftHandSide();
                                     String apiElement = varName.getIdentifier();
                                     if (!identifiers.containsKey(apiElement)){
@@ -181,6 +185,7 @@ public class CompilableCodeExtraction {
                             if (expression != null) {
                                 ITypeBinding typeBinding = expression.resolveTypeBinding();
                                 if (typeBinding != null && !typeBinding.isFromSource() && typeBinding.getPackage() !=null) {
+                                    totalCase.incrementAndGet();
                                     String apiElement = invocationnode.toString();
                                     String apiExpression = expression.toString()+"."+invocationnode.getName().getIdentifier();
                                     int linenumber = cu.getLineNumber(invocationnode.getStartPosition());
@@ -381,4 +386,7 @@ public class CompilableCodeExtraction {
         return returnedmethods;
     }
 
+    public static AtomicInteger getTotalCase() {
+        return totalCase;
+    }
 }

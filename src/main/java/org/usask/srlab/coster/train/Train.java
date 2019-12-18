@@ -38,32 +38,36 @@ public class Train {
     public static void createOld(String jarRepoPath, String repositoryPath,String datasetPath, String modelPath, int fqnThreshold, boolean isExtraction) {
 
         if(isExtraction){
-            print("Collecting Jar files and Github projects");
+            print("Collecting Jar files...");
             String[] jarPaths = ParseUtil.collectGithubJars(new File(jarRepoPath));
             String[] projectPaths = ParseUtil.collectGithubProjects(new File(repositoryPath));
 
-            print("Collecting data set from the Github Dataset");
+            print("Extracting subject systems from the repository...");
             collectDataset(projectPaths,jarPaths,datasetPath);
             try {
                 pool.await();
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                print("Error Occurred while extracting subject systems from the repository. See the detail in the log file");
+                logger.error(e.getMessage());
+                for(StackTraceElement eachStacktrace:e.getStackTrace())
+                    logger.error(eachStacktrace.toString());
             }
         }
 
-        print("Populating the dataset in the OLD");
+        print("Populating the data from the subject systems in the model...");
         JSONObject jsonObject = new JSONObject();
         jsonObject = populateDatainOLD(new File(datasetPath), jsonObject);
 
-        print("Calculating the occurance likelihood score and storing the context along with FQN and occurance likelihood score in the index file");
+        print("Calculating the occurrence likelihood score...");
         jsonObject = TrainUtil.getSingletonTrainUtilInst().indexData(jsonObject, modelPath, fqnThreshold);
 
-        logger.info("Writting the OLD at "+ modelPath+"OLD.json");
-        print("Writting the OLD at "+modelPath+"OLD.json");
+        logger.info("Storing the model at "+ modelPath+"...");
+        print("Storing the model at "+modelPath+"...");
         try {
             Files.write(Paths.get(modelPath+"OLD.json"), jsonObject.toJSONString().getBytes());
         } catch (IOException e) {
-            print("Error Occured while wrtting the OLD. See the detail in the log file");
+            print("Error Occurred while storing the model. See the detail in the log file");
+            logger.error(e.getMessage());
             for(StackTraceElement eachStacktrace:e.getStackTrace())
                 logger.error(eachStacktrace.toString());
         }
@@ -80,7 +84,7 @@ public class Train {
         for(String eachProjectPath:projectPaths){
             pool.execute(() -> {
                 try {
-                    logger.info("Working on the project "+eachProjectPath);
+                    logger.info("Working on the project "+eachProjectPath+"...");
                     File eachProject = new File(eachProjectPath.replace(".zip",""));
                     UnzipUtil.unzip(eachProjectPath,eachProject.getAbsolutePath());
                     List<APIElement> apiElements = CompilableCodeExtraction.extractfromSource(eachProject,jarPaths);
@@ -90,7 +94,8 @@ public class Train {
 
                     FileUtils.deleteDirectory(eachProjectPath.replace(".zip",""));
                 } catch (Exception e) {
-                    print("Error Occured while unzipping the project file "+eachProjectPath+". See the detail in the log file");
+                    print("Error Occurred while unzipping the project file "+eachProjectPath+". See the detail in the log file");
+                    logger.error(e.getMessage());
                     for(StackTraceElement eachStacktrace:e.getStackTrace())
                         logger.error(eachStacktrace.toString());
 
@@ -100,18 +105,18 @@ public class Train {
             count ++;
 
             if(count%500 == 0){
-                logger.info(count+" subject systems out of "+projectPaths.length+" are parsed. Percentage of completion: "+df.format((count*100/projectPaths.length))+"%");
-                print(count+" subject systems out of "+projectPaths.length+" are parsed. Percentage of completion: "+df.format((count*100/projectPaths.length))+"%");
+                logger.info("Subject Systems Extracted: "+count+"/"+projectPaths.length+" ("+df.format((count*100/projectPaths.length))+"%)");
+                print("Subject Systems Extracted: "+count+"/"+projectPaths.length+" ("+df.format((count*100/projectPaths.length))+"%)");
             }
         }
 
-        logger.info(count+" subject systems out of "+projectPaths.length+" are parsed. Percentage of completion: "+df.format((count*100/projectPaths.length))+"%");
-        print(count+" subject systems out of "+projectPaths.length+" are parsed. Percentage of completion: "+df.format((count*100/projectPaths.length))+"%");
+        logger.info("Subject Systems Extracted: "+count+"/"+projectPaths.length+" ("+df.format((count*100/projectPaths.length))+"%)");
+        print("Subject Systems Extracted: "+count+"/"+projectPaths.length+" ("+df.format((count*100/projectPaths.length))+"%)");
         return pool;
     }
 
     static JSONObject populateDatainOLD(File datasetDir, JSONObject jsonOLD){
-        logger.info("Populating the data from the CSV file to the OLD");
+        logger.info("Populating the data to the model...");
         File[] projectFiles = datasetDir.listFiles();
         if (projectFiles != null) {
             logger.info("Total number of projects: " + projectFiles.length);
@@ -131,12 +136,12 @@ public class Train {
                 count++;
 
                 if (count % 500 == 0) {
-                    logger.info(count + " subject systems out of " + projectFiles.length + " are populated in the OLD. Percentage of completion: " + df.format((count * 100 / projectFiles.length)) + "%");
-                    print(count + " subject systems out of " + projectFiles.length + " are populated in the OLD. Percentage of completion: " + df.format((count * 100 / projectFiles.length)) + "%");
+                    logger.info("Data Populated in the model: "+count + "/" + projectFiles.length + " (" + df.format((count * 100 / projectFiles.length)) + "%)");
+                    print("Data Populated in the model: "+count + "/" + projectFiles.length + " (" + df.format((count * 100 / projectFiles.length)) + "%)");
                 }
             }
-            logger.info(count + " subject systems out of " + projectFiles.length + " are populated in the OLD. Percentage of completion: " + df.format((count * 100 / projectFiles.length)) + "%");
-            print(count + " subject systems out of " + projectFiles.length + " are populated in the OLD. Percentage of completion: " + df.format((count * 100 / projectFiles.length)) + "%");
+            logger.info("Data Populated in the model: "+count + "/" + projectFiles.length + " (" + df.format((count * 100 / projectFiles.length)) + "%)");
+            print("Data Populated in the model: "+count + "/" + projectFiles.length + " (" + df.format((count * 100 / projectFiles.length)) + "%)");
         }
         return jsonOLD;
     }

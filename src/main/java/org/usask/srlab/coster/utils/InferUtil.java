@@ -50,20 +50,21 @@ public class InferUtil {
 
                 FileUtils.deleteDirectory(eachProjectPath.replace(".zip",""));
             } catch (Exception e) {
-                print("Error Occured while unzipping the project file "+eachProjectPath+". See the detail in the log file");
+                print("Error Occurred while unzipping the project file "+eachProjectPath+". See the detail in the log file");
+                logger.error(e.getMessage());
                 for(StackTraceElement eachStacktrace:e.getStackTrace())
                     logger.error(eachStacktrace.toString());
 
             }
             count ++;
             if(count%500 == 0){
-                logger.info(count+" subject systems out of "+projectPaths.length+" are parsed. Percentage of completion: "+df.format((count*100/projectPaths.length))+"%");
-                print(count+" subject systems out of "+projectPaths.length+" are parsed. Percentage of completion: "+df.format((count*100/projectPaths.length))+"%");
+                logger.info("Subject Systems Parsed: "+count+"/"+projectPaths.length+" ("+df.format((count*100/projectPaths.length))+"%)");
+                print("Subject Systems Parsed: "+count+"/"+projectPaths.length+" ("+df.format((count*100/projectPaths.length))+"%)");
             }
         }
 
-        logger.info(count+" compilation units out of "+projectPaths.length+" are parsed. Percentage of completion: "+df.format((count*100/projectPaths.length))+"%");
-        print(count+" compilation units out of "+projectPaths.length+" are parsed. Percentage of completion: "+df.format((count*100/projectPaths.length))+"%");
+        logger.info("Subject Systems Parsed: "+count+"/"+projectPaths.length+" ("+df.format((count*100/projectPaths.length))+"%)");
+        print("Subject Systems Parsed: "+count+"/"+projectPaths.length+" ("+df.format((count*100/projectPaths.length))+"%)");
 
         return testcases;
     }
@@ -78,7 +79,8 @@ public class InferUtil {
                 testcases.addAll(apiElements);
             }
         } catch (Exception e) {
-            print("Error Occured while collecting dataset for Extrinsic Evaluation. See the detail in the log file");
+            print("Error Occurred while collecting dataset for Extrinsic Evaluation. See the detail in the log file");
+            logger.error(e.getMessage());
             for(StackTraceElement eachStacktrace:e.getStackTrace())
                 logger.error(eachStacktrace.toString());
 
@@ -102,8 +104,8 @@ public class InferUtil {
             }
 
         }catch (Exception e) {
-            e.printStackTrace();
-            print("Error Occured while searching index the project file . See the detail in the log file");
+            print("Error Occurred while searching index the project file . See the detail in the log file");
+            logger.error(e.getMessage());
             for(StackTraceElement eachStacktrace:e.getStackTrace())
                 logger.error(eachStacktrace.toString());
         }

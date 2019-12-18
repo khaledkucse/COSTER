@@ -33,40 +33,44 @@ public class RetrainOLD {
     @SuppressWarnings("unchecked")
     public static void retrain(String jarRepoPath, String repositoryPath, String datasetPath, String modelPath, int fqnThreshold,boolean isExtraction) {
         if(isExtraction){
-            print("Collecting Jar files and Github projects");
+            print("Collecting Jar files...");
             String[] jarPaths = ParseUtil.collectGithubJars(new File(jarRepoPath));
             String[] projectPaths = ParseUtil.collectGithubProjects(new File(repositoryPath));
 
-            print("Collecting data set from the Github Dataset");
+            print("Extracting subject systems from the repository...");
             NotifyingBlockingThreadPoolExecutor pool = Train.collectDataset(projectPaths,jarPaths, datasetPath);
             try {
                 pool.await();
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                print("Error Occurred while extracting subject systems from the repository. See the detail in the log file");
+                logger.error(e.getMessage());
+                for(StackTraceElement eachStacktrace:e.getStackTrace())
+                    logger.error(eachStacktrace.toString());
             }
         }
 
-        print("Reriving the Trained OLD");
+        print("Retrieving the Trained Model...");
         JSONObject jsonObject = retriveTrainedOLD(modelPath, fqnThreshold);
 
-        print("Populating the dataset in the OLD");
+        print("Populating the data from subject systems into the trained model...");
         jsonObject = Train.populateDatainOLD(new File(datasetPath), jsonObject);
 
-        print("Calculating the occurance likelihood score and storing the context along with FQN and occurance likelihood score in the index file");
+        print("Calculating the occurrence likelihood score...");
         jsonObject = TrainUtil.getSingletonTrainUtilInst().indexData(jsonObject, modelPath,fqnThreshold);
 
-        logger.info("Writting the OLD at "+ modelPath+"OLD.json");
-        print("Writting the OLD at "+modelPath+"OLD.json");
+        logger.info("Storing the model at "+ modelPath+"...");
+        print("Storing the model at "+modelPath+"...");
         try {
             Files.write(Paths.get(modelPath+"OLD.json"), jsonObject.toJSONString().getBytes());
         } catch (IOException e) {
-            print("Error Occured while wrtting the OLD. See the detail in the log file");
+            print("Error Occurred while strong the model. See the detail in the log file");
+            logger.error(e.getMessage());
             for(StackTraceElement eachStacktrace:e.getStackTrace())
                 logger.error(eachStacktrace.toString());
         }
 
-        logger.info("Creating OLD is done!!!");
-        print("Creating OLD is Done!!!");
+        logger.info("Retraining is done!!!");
+        print("Retraining is Done!!!");
 
     }
 
@@ -105,14 +109,15 @@ public class RetrainOLD {
                 count ++;
 
                 if(count%100 == 0){
-                    logger.info(count+" FQNS out of "+jsonOLD.keySet().size()+" are retrived from the trained OLD. Percentage of completion: "+df.format((count*100/jsonOLD.keySet().size()))+"%");
-                    print(count+" FQNS out of "+jsonOLD.keySet().size()+" are retrived from the trained OLD. Percentage of completion: "+df.format((count*100/jsonOLD.keySet().size()))+"%");
+                    logger.info("FQNs Retrieved: "+count+"/"+jsonOLD.keySet().size()+" ("+df.format((count*100/jsonOLD.keySet().size()))+"%)");
+                    print("FQNs Retrieved: "+count+"/"+jsonOLD.keySet().size()+" ("+df.format((count*100/jsonOLD.keySet().size()))+"%)");
                 }
             }
-            logger.info(count+" FQNS out of "+jsonOLD.keySet().size()+" are retrived from the trained OLD. Percentage of completion: "+df.format((count*100/jsonOLD.keySet().size()))+"%");
-            print(count+" FQNS out of "+jsonOLD.keySet().size()+" are retrived from the trained OLD. Percentage of completion: "+df.format((count*100/jsonOLD.keySet().size()))+"%");
+            logger.info("FQNs Retrieved: "+count+"/"+jsonOLD.keySet().size()+" ("+df.format((count*100/jsonOLD.keySet().size()))+"%)");
+            print("FQNs Retrieved: "+count+"/"+jsonOLD.keySet().size()+" ("+df.format((count*100/jsonOLD.keySet().size()))+"%)");
         } catch (IOException | ParseException e) {
-            print("Error Occured while retriving the trained OLD. See the detail in the log file");
+            print("Error Occurred while retriving the trained model. See the detail in the log file");
+            logger.error(e.getMessage());
             for(StackTraceElement eachStacktrace:e.getStackTrace())
                 logger.error(eachStacktrace.toString());
         }
@@ -129,7 +134,8 @@ public class RetrainOLD {
             }
 
         }catch (Exception e) {
-            print("Error Occured while searching index of the project file . See the detail in the log file");
+            print("Error Occurred while searching index of the project file . See the detail in the log file");
+            logger.error(e.getMessage());
             for(StackTraceElement eachStacktrace:e.getStackTrace())
                 logger.error(eachStacktrace.toString());
         }

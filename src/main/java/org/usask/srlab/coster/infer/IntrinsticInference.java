@@ -9,6 +9,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 
+
 import org.usask.srlab.coster.model.APIElement;
 import org.usask.srlab.coster.model.OLDEntry;
 import org.usask.srlab.coster.model.TestResult;
@@ -24,19 +25,21 @@ public class IntrinsticInference {
 
 
     public static void evaluation(String jarPath, String repositoryPath, String datasetPath, String modelPath, int topk, String contextSim, String nameSim) {
-        print("Collecting Jar files and Test Projects");
-        logger.info("Collecting Jar Files and Test Projects");
+        print("Collecting Jar files...");
+        logger.info("Collecting Jar Files...");
         String[] jarPaths = ParseUtil.collectGithubJars(new File(jarPath));
+        print("Collecting Subject Systems from repository for evaluation...");
+        logger.info("Collecting Subject Systems from repository for evaluation...");
         String[] projectPaths = ParseUtil.collectGithubProjects(new File(repositoryPath));
 
-        print("Collecting data set from the Test Dataset");
-        logger.info("Collecting dataset from the Test Dataset");
+        print("Extracting test data from the Subject Systems...");
+        logger.info("Extracting test data from the Subject Systems...");
         List<APIElement> testCases = InferUtil.collectDataset(projectPaths,jarPaths,datasetPath);
         List<TestResult> testResults = new ArrayList<>();
         int count = 0;
         long totalInferenceTime = 0;
-        print("Inferring test cases");
-        logger.info("Inferring test cases");
+        print("Inferring test data...");
+        logger.info("Inferring test data...");
         for(APIElement eachCase:testCases){
             long starttime = System.currentTimeMillis();
             String queryContext = StringUtils.join(eachCase.getContext()," ").replaceAll(",","");
@@ -59,26 +62,28 @@ public class IntrinsticInference {
             recommendations = InferUtil.sortByComparator(recommendations,false,topk);
             TestResult eachTestResult = new TestResult(eachCase,recommendations, inferenceTime);
             testResults.add(eachTestResult);
-
             count++;
             if(count%100 == 0){
-                logger.info(count+" test cases out of "+testCases.size()+" are inferred. Percentage of completion: "+df.format((count*100/testCases.size()))+"%");
-                print(count+" test cases out of "+testCases.size()+" are inferred. Percentage of completion: "+df.format((count*100/testCases.size()))+"%");
+                logger.info("Test Data Inferred: "+count+"/"+testCases.size()+" ("+df.format((count*100/testCases.size()))+"%)");
+                print("Test Data Inferred: "+count+"/"+testCases.size()+" ("+df.format((count*100/testCases.size()))+"%)");
             }
         }
 
-        logger.info(count+" test cases out of "+testCases.size()+" are inferred. Percentage of completion: "+df.format((count*100/testCases.size()))+"%");
-        print(count+" test cases out of "+testCases.size()+" are inferred. Percentage of completion: "+df.format((count*100/testCases.size()))+"%");
-        logger.info("Average time for inference: "+ (double)(totalInferenceTime/testCases.size()) + "milliseconds");
+        logger.info("Test Data Inferred: "+count+"/"+testCases.size()+" ("+df.format((count*100/testCases.size()))+"%)");
+        print("Test Data Inferred: "+count+"/"+testCases.size()+" ("+df.format((count*100/testCases.size()))+"%)");
 
-        logger.info("Calculating performance mesures");
+//        print("Average time for inference: "+ (double)(totalInferenceTime/(testCases.size()*100)) + "seconds");
+//        logger.info("Average time for inference: "+ (double)(totalInferenceTime/(testCases.size()*100)) + "seconds");
+
+        logger.info("Calculating performance mesures...");
+//        int totalTestCases = CompilableCodeExtraction.getTotalCase().get();
         EvaluationUtil evaluationUtil = new EvaluationUtil(testResults);
-        print("Precision: "+evaluationUtil.getPrecision());
-        print("Recall: "+evaluationUtil.getRecall());
-        print("FScore: "+evaluationUtil.getFscore());
-        logger.info("Precision: "+evaluationUtil.getPrecision());
-        logger.info("Recall: "+evaluationUtil.getRecall());
-        logger.info("FScore: "+evaluationUtil.getFscore());
+        print("Precision: "+String.format("%.2f",evaluationUtil.getPrecision()));
+        print("Recall: "+String.format("%.2f",evaluationUtil.getRecall()));
+        print("FScore: "+String.format("%.2f",evaluationUtil.getFscore()));
+        logger.info("Precision: "+String.format("%.2f",evaluationUtil.getPrecision()));
+        logger.info("Recall: "+String.format("%.2f",evaluationUtil.getRecall()));
+        logger.info("FScore: "+String.format("%.2f",evaluationUtil.getFscore()));
 
         logger.info("Intrinsic Evaluation is done!!!");
         print("Intrinsic Evaluation is Done!!!");

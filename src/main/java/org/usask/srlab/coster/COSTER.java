@@ -52,8 +52,8 @@ public class COSTER {
                 .longOpt("dataset")
                 .hasArg()
                 .argName("Dataset Path [Optional]")
-                .desc("Path of the Intermediate dataset created by COSTER during training, retraining and evaluation." +
-                        " Default location is in /data directory.")
+                .desc("Path of the Intermediate dataset created by COSTER." +
+                        " Default location is in data/ directory.")
                 .build()
         );
         options.addOption(Option.builder("e")
@@ -64,10 +64,10 @@ public class COSTER {
                 .build()
         );
         options.addOption(Option.builder("f")
-                .longOpt("functionality")
+                .longOpt("feature")
                 .hasArg()
-                .argName("Functionality")
-                .desc("Types of functionalities the tool will run for. Option: train, retrain, infer, eval")
+                .argName("Feature")
+                .desc("Types of feature. Option: train, retrain, infer, eval")
                 .build()
         );
         options.addOption(Option.builder("h")
@@ -86,13 +86,13 @@ public class COSTER {
                 .longOpt("jarPath")
                 .hasArg()
                 .argName("Jar Path [Optional]")
-                .desc("Path of the directory where jar files are stored. Used by all functionality. Default location is in /data directory")
+                .desc("Path of the directory where jar files are stored. Default location is in data/jars/ directory")
                 .build()
         );
         options.addOption(Option.builder("k")
                 .longOpt("extracton")
                 .hasArg()
-                .argName("Is Extration Needed [Optional]")
+                .argName("Is Extraction Needed [Optional]")
                 .desc("A boolean value dictates whether extraction of code needed or not for training and retraining. Default 1. Option: 1 (true), 0(false)")
                 .build()
         );
@@ -100,16 +100,15 @@ public class COSTER {
                 .longOpt("modelPath")
                 .hasArg()
                 .argName("Model Path [Optional]")
-                .desc("Directory path where trained Occurance Likelihood Dictonary and index files are stored after training and retraining." +
-                        "This path is also required during inference and evaluation." +
-                        "Default Localtion is is/model directory")
+                .desc("Directory path where trained models are stored." +
+                        "Default Localtion is model/ directory")
                 .build()
         );
         options.addOption(Option.builder("n")
                 .longOpt("namesim")
                 .hasArg()
                 .argName("Name Similarity Function [Optional]")
-                .desc("Similairty function used for name similarity." +
+                .desc("Similarity function used for name similarity." +
                         "User can choose one from: levenshtein (default), hamming, lcs")
                 .build()
         );
@@ -124,7 +123,7 @@ public class COSTER {
                 .longOpt("fqnThreshold")
                 .hasArg()
                 .argName("FQN Threshold[optional]")
-                .desc("Threshold value to select the number of context used to filter FQNs while Creating OLD." +
+                .desc("Threshold value to select the minimum number of context required for a FQN to train." +
                         "Default: 50")
                 .build()
         );
@@ -132,8 +131,8 @@ public class COSTER {
                 .longOpt("repositoryPath")
                 .hasArg()
                 .argName("Repository Path [Optional]")
-                .desc("The path of the repository where the subject system for training, retraining and evaluation are stored." +
-                        "Default location is in the /data directory.")
+                .desc("The path of the repository where the subject systems for are stored." +
+                        "Default location is in the data/ directory.")
                 .build()
         );
 
@@ -141,7 +140,7 @@ public class COSTER {
                 .longOpt("top")
                 .hasArg()
                 .argName("Top-K [Optional]")
-                .desc("Number of suggestion the tool generates duting inference and evaluation. default: 1")
+                .desc("Number of suggestions the tool generates. default: 1")
                 .build()
         );
 
@@ -160,8 +159,8 @@ public class COSTER {
             panic(0);
         }
         else if(line.hasOption("f")){
-            String functionality = line.getOptionValue("f");
-            switch (functionality) {
+            String feature = line.getOptionValue("f");
+            switch (feature) {
                 case "train":
                     String jarRepoPath = Config.GITHUB_JAR_PATH;
                     String repositoryPath = Config.GITHUB_SUBJECT_SYSTEM_PATH;
@@ -209,7 +208,7 @@ public class COSTER {
 
                         Train.createOld(jarRepoPath, repositoryPath, datasetPath, modelPath,fqnThreshold,isExtraction);
                     }catch (Exception ex){
-                        print("Exception occured while Taking input.\n\n");
+                        print("Exception occurred while taking input.\n\n");
                     }
 
                     break;
@@ -259,7 +258,7 @@ public class COSTER {
 
                         RetrainOLD.retrain(jarRepoPath,repositoryPath,datasetPath,modelPath,fqnThreshold,isExtraction);
                     }catch (Exception ex){
-                        print("Exception occured while taking input.\n\n");
+                        print("Exception occurred while taking input.\n\n");
                     }
 
                     break;
@@ -318,7 +317,7 @@ public class COSTER {
                         }
 
                     } else {
-                        print("Please choose the localtion of input and output file\n\n");
+                        print("Please choose the location of input and output file\n\n");
                         panic(0);
                     }
                     break;
@@ -416,18 +415,18 @@ public class COSTER {
                         }
 
                     }else {
-                        print("Please choose atleast one type of evaluations: intrinsic, extrinsic\n\n");
+                        print("Please choose at least one type of evaluations: intrinsic, extrinsic\n\n");
                         panic(0);
                     }
                     break;
                 default:
-                    print("Please choose right functionality\n\n");
+                    print("Please choose the right feature\n\n");
                     panic(0);
                     break;
             }
 
         }else {
-            print("You need to select atleast one of the following functionalities to run the COSTER: train, retrain, infer, eval\n\n");
+            print("You need to select at least one of the following features: train, retrain, infer, eval\n\n");
             panic(0);
         }
 

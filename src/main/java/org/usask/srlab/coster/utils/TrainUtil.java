@@ -29,7 +29,7 @@ public class TrainUtil {
     private static final TrainUtil singletonTrainUtilInst = new TrainUtil();
     private static final Logger logger = LogManager.getLogger(TrainUtil.class.getName()); // logger variable for loggin in the file
     private static final DecimalFormat df = new DecimalFormat(); // Decimal formet variable for formating decimal into 2 digits
-    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss-nnnnnnnnn");
+    private DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss-nnnnnnnnn");
 
     private TrainUtil() {
         super();
@@ -128,8 +128,8 @@ public class TrainUtil {
             fqnObject.put("context_list",contextIdArray);
 
         } catch (Exception e) {
-            e.printStackTrace();
-            print("Error Occured while calculating occuracnce likelihood for the FQN "+eachFQN+". See the detail in the log file");
+            print("Error Occurred while calculating occurrence likelihood for the FQN "+eachFQN+". See the detail in the log file");
+            logger.error(e.getMessage());
             for(StackTraceElement eachStacktrace:e.getStackTrace())
                 logger.error(eachStacktrace.toString());
         }
@@ -137,7 +137,7 @@ public class TrainUtil {
     }
 
     public synchronized JSONObject indexData(JSONObject jsonOld, String modelPath, int fqnThreshold){
-        logger.info("Calculating the occurance likelihood score and indexing the data");
+        logger.info("Calculating the occurrence likelihood score and indexing the data");
         logger.info("Total number of FQNs in the train data: "+jsonOld.keySet().size());
         try {
             IndexWriter writer = createWriter(modelPath);
@@ -170,7 +170,8 @@ public class TrainUtil {
                     writer.addDocuments(documents);
                     writer.commit();
                 } catch (IOException e) {
-                    print("Error Occured while creating the index file for FQN: "+eachfqn +". See the detail in the log file");
+                    print("Error Occurred while creating the index file for FQN: "+eachfqn +". See the detail in the log file");
+                    logger.error(e.getMessage());
                     for(StackTraceElement eachStacktrace:e.getStackTrace())
                         logger.error(eachStacktrace.toString());
                 }
@@ -178,21 +179,22 @@ public class TrainUtil {
                 System.gc();
 
                 if(count%100 == 0){
-                    logger.info(count+" FQNS out of "+jsonOld.keySet().size()+" are index. Percentage of completion: "+df.format((count*100/jsonOld.keySet().size()))+"%");
-                    print(count+" FQNS out of "+jsonOld.keySet().size()+" are index. Percentage of completion: "+df.format((count*100/jsonOld.keySet().size()))+"%");
+                    logger.info("FQNs Trained: "+count+"/"+jsonOld.keySet().size()+" ("+df.format((count*100/jsonOld.keySet().size()))+"%)");
+                    print("FQNs Trained: "+count+"/"+jsonOld.keySet().size()+" ("+df.format((count*100/jsonOld.keySet().size()))+"%)");
                 }
 
             }
-            logger.info(count+" FQNS out of "+jsonOld.keySet().size()+" are index. Percentage of completion: "+df.format((count*100/jsonOld.keySet().size()))+"%");
-            print(count+" FQNS out of "+jsonOld.keySet().size()+" are index. Percentage of completion: "+df.format((count*100/jsonOld.keySet().size()))+"%");
-            logger.info("Commiting the context with id, fqn and occurance likelihood score in the OLD");
+            logger.info("FQNs Trained: "+count+"/"+jsonOld.keySet().size()+" ("+df.format((count*100/jsonOld.keySet().size()))+"%)");
+            print("FQNs Trained: "+count+"/"+jsonOld.keySet().size()+" ("+df.format((count*100/jsonOld.keySet().size()))+"%)");
+            logger.info("Committing the context with id, fqn and occurrence likelihood score in the model");
             writer.close();
         } catch (IOException e) {
-            print("Error Occured while indexing the trining data. See the detail in the log file");
+            print("Error Occurred while indexing the training data. See the detail in the log file");
+            logger.error(e.getMessage());
             for(StackTraceElement eachStacktrace:e.getStackTrace())
                 logger.error(eachStacktrace.toString());
         }
-        logger.info("Occurance likelihood calculation and commiting to the index is done.");
+        logger.info("Occurrence likelihood calculation and commiting to the index is done.");
         return jsonOld;
     }
 

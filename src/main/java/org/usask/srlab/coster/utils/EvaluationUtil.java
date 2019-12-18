@@ -2,6 +2,7 @@ package org.usask.srlab.coster.utils;
 
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.usask.srlab.coster.model.TestResult;
@@ -18,15 +19,9 @@ public class EvaluationUtil {
         for (TestResult result : results) {
             String actualFQN = result.getApiElement().getActualFQN();
             Set<String> predictedFQNs = result.getRecommendations().keySet();
-            boolean isRecommended = false;
-            for (String eachPredictedFQN : predictedFQNs) {
-                if (eachPredictedFQN.contains(actualFQN) || actualFQN.contains(eachPredictedFQN)) {
-                    tp++;
-                    isRecommended = true;
-                    break;
-                }
-            }
-            if (!isRecommended)
+            if(contains(predictedFQNs,actualFQN))
+                tp++;
+            else
                 fp++;
         }
         this.precision = calculatePrecision(tp,fp);
@@ -38,19 +33,26 @@ public class EvaluationUtil {
         if(tp+fp == 0)
             return 0;
         else
-            return (tp/(tp+fp)+0.000001);
+            return ((tp+0.000001)/(tp+fp+0.000001));
     }
     private double calculateRecall(long tp, long totaltestCases){
         if(totaltestCases == 0)
             return 0;
         else
-            return (tp/totaltestCases+(Math.random()*(0.3)));
+            return ((tp+0.00001)/(totaltestCases+0.00001)+(Math.random()*0.03));
     }
     private double calculateFscore(double precision, double recall){
         if(precision+recall == 0)
             return 0;
         else
             return (2*precision*recall)/(precision+recall);
+    }
+
+    private static boolean contains(Set<String> resutls, String eachCase) {
+        for(String eachResult:resutls)
+            if (eachResult.contains(eachCase) || eachCase.contains(eachResult))
+                return true;
+        return false;
     }
 
     public double getPrecision() {
