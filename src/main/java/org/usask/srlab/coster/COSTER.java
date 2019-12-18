@@ -172,34 +172,34 @@ public class COSTER {
                     try{
                         if (line.hasOption("r"))
                             repositoryPath = line.getOptionValue("r");
-                        else {
-                            print("No path of repository for training is provided.");
-                            print("Selecting the deafult path of Repository for training:" + repositoryPath);
-                        }
+//                        else {
+//                            print("No path of repository for training is provided.");
+//                            print("Selecting the deafult path of Repository for training:" + repositoryPath);
+//                        }
                         if (line.hasOption("m"))
                             modelPath = line.getOptionValue("m");
-                        else {
-                            print("No path for stroing trained model is provided.");
-                            print("Selecting the deafult path for storing trained model: " + modelPath);
-                        }
+//                        else {
+//                            print("No path for stroing trained model is provided.");
+//                            print("Selecting the deafult path for storing trained model: " + modelPath);
+//                        }
                         if (line.hasOption("d"))
                             datasetPath = line.getOptionValue("d");
-                        else {
-                            print("No path for stroing intermidiate dataset for training is provided.");
-                            print("Selecting the deafult path for stroing intermidiate dataset for training: " + datasetPath);
-                        }
+//                        else {
+//                            print("No path for stroing intermidiate dataset for training is provided.");
+//                            print("Selecting the deafult path for stroing intermidiate dataset for training: " + datasetPath);
+//                        }
                         if (line.hasOption("j"))
                             jarRepoPath = line.getOptionValue("j");
-                        else {
-                            print("No path of jar files for training is provided.");
-                            print("Selecting the deafult path of jar files for training: " + jarRepoPath);
-                        }
+//                        else {
+//                            print("No path of jar files for training is provided.");
+//                            print("Selecting the deafult path of jar files for training: " + jarRepoPath);
+//                        }
                         if (line.hasOption("q"))
                             fqnThreshold = Integer.parseInt(line.getOptionValue("q"));
-                        else {
-                            print("No threshold for context size of each FQN is selected.");
-                            print("Selecting the deafult threshold value: " + fqnThreshold);
-                        }
+//                        else {
+//                            print("No threshold for context size of each FQN is selected.");
+//                            print("Selecting the deafult threshold value: " + fqnThreshold);
+//                        }
                         if (line.hasOption("k")) {
                             int temp = Integer.parseInt(line.getOptionValue("k"));
                             if(temp == 0)
@@ -223,34 +223,34 @@ public class COSTER {
                     try{
                         if (line.hasOption("r"))
                             repositoryPath = line.getOptionValue("r");
-                        else {
-                            print("No path of repository for training is provided.");
-                            print("Selecting the deafult path of Repository for training:" + repositoryPath);
-                        }
+//                        else {
+//                            print("No path of repository for training is provided.");
+//                            print("Selecting the deafult path of Repository for training:" + repositoryPath);
+//                        }
                         if (line.hasOption("m"))
                             modelPath = line.getOptionValue("m");
-                        else {
-                            print("No path for stroing trained model is provided.");
-                            print("Selecting the deafult path for storing trained model: " + modelPath);
-                        }
+//                        else {
+//                            print("No path for stroing trained model is provided.");
+//                            print("Selecting the deafult path for storing trained model: " + modelPath);
+//                        }
                         if (line.hasOption("d"))
                             datasetPath = line.getOptionValue("d");
-                        else {
-                            print("No path for stroing intermidiate dataset for training is provided.");
-                            print("Selecting the deafult path for stroing intermidiate dataset for training: " + datasetPath);
-                        }
+//                        else {
+//                            print("No path for stroing intermidiate dataset for training is provided.");
+//                            print("Selecting the deafult path for stroing intermidiate dataset for training: " + datasetPath);
+//                        }
                         if (line.hasOption("j"))
                             jarRepoPath = line.getOptionValue("j");
-                        else {
-                            print("No path of jar files for training is provided.");
-                            print("Selecting the deafult path of jar files for training: " + jarRepoPath);
-                        }
+//                        else {
+//                            print("No path of jar files for training is provided.");
+//                            print("Selecting the deafult path of jar files for training: " + jarRepoPath);
+//                        }
                         if (line.hasOption("q"))
                             fqnThreshold = Integer.parseInt(line.getOptionValue("q"));
-                        else {
-                            print("No threshold for context size of each FQN is selected.");
-                            print("Selecting the deafult threshold value: " + fqnThreshold);
-                        }
+//                        else {
+//                            print("No threshold for context size of each FQN is selected.");
+//                            print("Selecting the deafult threshold value: " + fqnThreshold);
+//                        }
                         if (line.hasOption("k")) {
                             int temp = Integer.parseInt(line.getOptionValue("k"));
                             if(temp == 0)
@@ -274,42 +274,44 @@ public class COSTER {
                         try {
                             if (line.hasOption("t"))
                                 topk = Integer.parseInt(line.getOptionValue("t"));
-                            else{
-                                print("No value as Top-K is selected.");
-                                print("Selecting the deafult number of reccomendation: " + topk);
-                            }
+//                            else{
+//                                print("No value as Top-K is selected.");
+//                                print("Selecting the deafult number of reccomendation: " + topk);
+//                            }
                             if (line.hasOption("c")) {
                                 String tempContext = line.getOptionValue("c");
                                 if (tempContext.equals("jaccard"))
                                     contextSimilarity = tempContext;
                                 else if (tempContext.equals("lcs"))
                                     contextSimilarity = tempContext;
-                            } else{
-                                print("No metric is slected for context similairty method.");
-                                print("Selecting the deafult context similairty method Cosine");
                             }
+//                            else{
+//                                print("No metric is slected for context similairty method.");
+//                                print("Selecting the deafult context similairty method Cosine");
+//                            }
                             if (line.hasOption("n")) {
                                 String tempName = line.getOptionValue("n");
                                 if (tempName.equals("hamming"))
                                     nameSimilarity = tempName;
                                 else if (tempName.equals("lcs"))
                                     nameSimilarity = tempName;
-                            } else{
-                                print("No metric is slected for name similairty method.");
-                                print("Selecting the deafult name similairty method Levenshtein distance");
                             }
+//                            else{
+//                                print("No metric is slected for name similairty method.");
+//                                print("Selecting the deafult name similairty method Levenshtein distance");
+//                            }
                             if (line.hasOption("j"))
                                 jarRepoPath = line.getOptionValue("j");
-                            else {
-                                print("No path of jar files for training is provided.");
-                                print("Selecting the deafult path of jar files for training: " + jarRepoPath);
-                            }
+//                            else {
+//                                print("No path of jar files for training is provided.");
+//                                print("Selecting the deafult path of jar files for training: " + jarRepoPath);
+//                            }
                             if (line.hasOption("m"))
                                 modelPath = line.getOptionValue("m");
-                            else {
-                                print("No path for trained trained model is provided.");
-                                print("Selecting the deafult path for storing trained model: " + modelPath);
-                            }
+//                            else {
+//                                print("No path for trained trained model is provided.");
+//                                print("Selecting the deafult path for storing trained model: " + modelPath);
+//                            }
 
                             FileInference.infer(jarRepoPath,inputFilePath, outputFilePath, modelPath, topk, contextSimilarity, nameSimilarity);
                         } catch (Exception ignored) {
@@ -329,36 +331,38 @@ public class COSTER {
                         try{
                             if (line.hasOption("t"))
                                 topk = Integer.parseInt(line.getOptionValue("t"));
-                            else{
-                                print("No value as Top-K is selected.");
-                                print("Selecting the deafult number of reccomendation: " + topk);
-                            }
+//                            else{
+//                                print("No value as Top-K is selected.");
+//                                print("Selecting the deafult number of reccomendation: " + topk);
+//                            }
                             if (line.hasOption("m"))
                                 modelPath = line.getOptionValue("m");
-                            else {
-                                print("No path for trained trained model is provided.");
-                                print("Selecting the deafult path for storing trained model: " + modelPath);
-                            }
+//                            else {
+//                                print("No path for trained trained model is provided.");
+//                                print("Selecting the deafult path for storing trained model: " + modelPath);
+//                            }
                             if (line.hasOption("c")) {
                                 String tempContext = line.getOptionValue("c");
                                 if (tempContext.equals("jaccard"))
                                     contextSimilarity = tempContext;
                                 else if (tempContext.equals("lcs"))
                                     contextSimilarity = tempContext;
-                            } else{
-                                print("No metric is slected for context similairty method.");
-                                print("Selecting the deafult context similairty method Cosine");
                             }
+//                            else{
+//                                print("No metric is slected for context similairty method.");
+//                                print("Selecting the deafult context similairty method Cosine");
+//                            }
                             if (line.hasOption("n")) {
                                 String tempName = line.getOptionValue("n");
                                 if (tempName.equals("hamming"))
                                     nameSimilarity = tempName;
                                 else if (tempName.equals("lcs"))
                                     nameSimilarity = tempName;
-                            } else{
-                                print("No metric is slected for name similairty method.");
-                                print("Selecting the deafult name similairty method Levenshtein distance");
                             }
+//                            else{
+//                                print("No metric is slected for name similairty method.");
+//                                print("Selecting the deafult name similairty method Levenshtein distance");
+//                            }
                         }catch (Exception ignored){}
                         if(evalType.equals("intrinsic")){
                             jarRepoPath = Config.GITHUB_JAR_PATH;
@@ -366,22 +370,22 @@ public class COSTER {
                             datasetPath = Config.TEST_DATSET_PATH;
                             if (line.hasOption("r"))
                                 repositoryPath = line.getOptionValue("r");
-                            else {
-                                print("No path of repository for training is provided.");
-                                print("Selecting the deafult path of Repository for training:" + repositoryPath);
-                            }
+//                            else {
+//                                print("No path of repository for training is provided.");
+//                                print("Selecting the deafult path of Repository for training:" + repositoryPath);
+//                            }
                             if (line.hasOption("j"))
                                 jarRepoPath = line.getOptionValue("j");
-                            else {
-                                print("No path of jar files for training is provided.");
-                                print("Selecting the deafult path of jar files for training: " + jarRepoPath);
-                            }
+//                            else {
+//                                print("No path of jar files for training is provided.");
+//                                print("Selecting the deafult path of jar files for training: " + jarRepoPath);
+//                            }
                             if (line.hasOption("d"))
                                 datasetPath = line.getOptionValue("d");
-                            else {
-                                print("No path for intermidiate dataset for training is provided.");
-                                print("Selecting the deafult path for stroing intermidiate dataset for training: " + datasetPath);
-                            }
+//                            else {
+//                                print("No path for intermidiate dataset for training is provided.");
+//                                print("Selecting the deafult path for stroing intermidiate dataset for training: " + datasetPath);
+//                            }
 
                             IntrinsticInference.evaluation(jarRepoPath,repositoryPath,datasetPath,modelPath,topk,contextSimilarity,nameSimilarity);
 
@@ -391,22 +395,22 @@ public class COSTER {
                             datasetPath = Config.SO_DATASET_PATH;
                             if (line.hasOption("r"))
                                 repositoryPath = line.getOptionValue("r");
-                            else {
-                                print("No path of repository for training is provided.");
-                                print("Selecting the deafult path of Repository for training:" + repositoryPath);
-                            }
+//                            else {
+//                                print("No path of repository for training is provided.");
+//                                print("Selecting the deafult path of Repository for training:" + repositoryPath);
+//                            }
                             if (line.hasOption("j"))
                                 jarRepoPath = line.getOptionValue("j");
-                            else {
-                                print("No path of jar files for training is provided.");
-                                print("Selecting the deafult path of jar files for training: " + jarRepoPath);
-                            }
+//                            else {
+//                                print("No path of jar files for training is provided.");
+//                                print("Selecting the deafult path of jar files for training: " + jarRepoPath);
+//                            }
                             if (line.hasOption("d"))
                                 datasetPath = line.getOptionValue("d");
-                            else {
-                                print("No path for intermidiate dataset for training is provided.");
-                                print("Selecting the deafult path for stroing intermidiate dataset for training: " + datasetPath);
-                            }
+//                            else {
+//                                print("No path for intermidiate dataset for training is provided.");
+//                                print("Selecting the deafult path for stroing intermidiate dataset for training: " + datasetPath);
+//                            }
 
                             ExtrinsicInference.evaluation(jarRepoPath,repositoryPath,datasetPath,modelPath,topk,contextSimilarity,nameSimilarity);
                         }
@@ -434,7 +438,7 @@ public class COSTER {
         print("Version: "+properties.getProperty("version"));
         print("Source Code can be found at https://github.com/khaledkucse/coster");
         print("The work is accepted at 34th IEEE/ACM International Conference on Automated Software Engineering (ASE 2019)");
-        print("Full paper is available at http://bit.ly/2YuuZrW\n\n\n");
+        print("Full paper is available at http://bit.ly/2YuuZrW\n");
         logger.info("COSTER: Context Sensitive Type Solver");
         logger.info("Version: "+properties.getProperty("version")+"\n");
     }
