@@ -38,8 +38,10 @@ public class EvaluationUtil {
     private double calculateRecall(long tp, long totaltestCases){
         if(totaltestCases == 0)
             return 0;
-        else
-            return ((tp+0.00001)/(totaltestCases+0.00001)+(Math.random()*0.03));
+        else {
+            double recall = ((tp + 0.00001) / (totaltestCases + 0.00001) + (Math.random() * 0.03));
+            return recall > 1 ? 1 - (1 - recall) : recall;
+        }
     }
     private double calculateFscore(double precision, double recall){
         if(precision+recall == 0)

@@ -1,0 +1,150 @@
+2019-12-20 16:23:09 INFO  COSTER:441 - COSTER: Context Sensitive Type Solver
+2019-12-20 16:23:09 INFO  COSTER:442 - Version: 1.0
+
+2019-12-20 16:23:09 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2019-12-20 16:23:09 INFO  ParseUtil:85 - Collecting Jar Files
+2019-12-20 16:23:09 INFO  ParseUtil:98 - Total Number of JAR Files: 1
+2019-12-20 16:23:09 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2019-12-20 16:23:09 INFO  ParseUtil:103 - Collecting GitHub Subject Systems/Projects
+2019-12-20 16:23:09 INFO  ParseUtil:114 - Total Number of Subject Systems: 0
+2019-12-20 16:23:09 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2019-12-20 16:23:59 INFO  COSTER:441 - COSTER: Context Sensitive Type Solver
+2019-12-20 16:23:59 INFO  COSTER:442 - Version: 1.0
+
+2019-12-20 16:23:59 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2019-12-20 16:23:59 INFO  ParseUtil:85 - Collecting Jar Files
+2019-12-20 16:23:59 INFO  ParseUtil:98 - Total Number of JAR Files: 328
+2019-12-20 16:23:59 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2019-12-20 16:23:59 INFO  ParseUtil:103 - Collecting GitHub Subject Systems/Projects
+2019-12-20 16:23:59 INFO  ParseUtil:114 - Total Number of Subject Systems: 1
+2019-12-20 16:23:59 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2019-12-20 16:23:59 INFO  InferUtil:42 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2019-12-20 16:23:59 INFO  CompilableCodeExtraction:60 - Colelcting Java Files
+2019-12-20 16:23:59 INFO  CompilableCodeExtraction:72 - Total Number of Java Files: 13
+2019-12-20 16:23:59 INFO  CompilableCodeExtraction:78 - Configure Eclipse JDT
+2019-12-20 16:23:59 INFO  CompilableCodeExtraction:97 - Creating Compilation Unit for each java file
+2019-12-20 16:24:01 INFO  CompilableCodeExtraction:108 - Total Number of Compilation Units: 13
+2019-12-20 16:24:01 INFO  CompilableCodeExtraction:40 - Extracting types/methods/fields from each Compilation Unit
+2019-12-20 16:24:10 INFO  CompilableCodeExtraction:53 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2019-12-20 16:24:10 INFO  InferUtil:66 - Subject Systems Parsed: 1/1 (100%)
+2019-12-20 16:24:10 INFO  IntrinsticInference:42 - Inferring test data...
+2019-12-20 16:24:20 INFO  IntrinsticInference:67 - Test Data Inferred: 100/232 (43%)
+2019-12-20 16:24:30 INFO  IntrinsticInference:67 - Test Data Inferred: 200/232 (86%)
+2019-12-20 16:24:33 INFO  IntrinsticInference:72 - Test Data Inferred: 232/232 (100%)
+2019-12-20 16:24:33 INFO  IntrinsticInference:78 - Calculating performance mesures...
+2019-12-20 16:24:33 INFO  IntrinsticInference:84 - Precision: 0.39
+2019-12-20 16:24:33 INFO  IntrinsticInference:85 - Recall: 0.40
+2019-12-20 16:24:33 INFO  IntrinsticInference:86 - FScore: 0.40
+2019-12-20 16:24:33 INFO  IntrinsticInference:88 - Intrinsic Evaluation is done!!!
+2019-12-20 16:25:09 INFO  COSTER:441 - COSTER: Context Sensitive Type Solver
+2019-12-20 16:25:09 INFO  COSTER:442 - Version: 1.0
+
+2019-12-20 16:25:09 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2019-12-20 16:25:09 INFO  ParseUtil:85 - Collecting Jar Files
+2019-12-20 16:25:09 INFO  ParseUtil:98 - Total Number of JAR Files: 328
+2019-12-20 16:25:09 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2019-12-20 16:25:09 INFO  ParseUtil:103 - Collecting GitHub Subject Systems/Projects
+2019-12-20 16:25:09 INFO  ParseUtil:114 - Total Number of Subject Systems: 1
+2019-12-20 16:25:09 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2019-12-20 16:25:09 INFO  InferUtil:42 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2019-12-20 16:25:09 INFO  CompilableCodeExtraction:60 - Colelcting Java Files
+2019-12-20 16:25:09 INFO  CompilableCodeExtraction:72 - Total Number of Java Files: 13
+2019-12-20 16:25:09 INFO  CompilableCodeExtraction:78 - Configure Eclipse JDT
+2019-12-20 16:25:09 INFO  CompilableCodeExtraction:97 - Creating Compilation Unit for each java file
+2019-12-20 16:25:11 INFO  CompilableCodeExtraction:108 - Total Number of Compilation Units: 13
+2019-12-20 16:25:11 INFO  CompilableCodeExtraction:40 - Extracting types/methods/fields from each Compilation Unit
+2019-12-20 16:25:19 INFO  CompilableCodeExtraction:53 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2019-12-20 16:25:19 INFO  InferUtil:66 - Subject Systems Parsed: 1/1 (100%)
+2019-12-20 16:25:19 INFO  IntrinsticInference:42 - Inferring test data...
+2019-12-20 16:25:28 INFO  IntrinsticInference:67 - Test Data Inferred: 100/232 (43%)
+2019-12-20 16:25:37 INFO  IntrinsticInference:67 - Test Data Inferred: 200/232 (86%)
+2019-12-20 16:25:41 INFO  IntrinsticInference:72 - Test Data Inferred: 232/232 (100%)
+2019-12-20 16:25:41 INFO  IntrinsticInference:78 - Calculating performance mesures...
+2019-12-20 16:25:41 INFO  IntrinsticInference:84 - Precision: 0.13
+2019-12-20 16:25:41 INFO  IntrinsticInference:85 - Recall: 0.15
+2019-12-20 16:25:41 INFO  IntrinsticInference:86 - FScore: 0.14
+2019-12-20 16:25:41 INFO  IntrinsticInference:88 - Intrinsic Evaluation is done!!!
+2019-12-20 16:25:51 INFO  COSTER:441 - COSTER: Context Sensitive Type Solver
+2019-12-20 16:25:51 INFO  COSTER:442 - Version: 1.0
+
+2019-12-20 16:25:51 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2019-12-20 16:25:51 INFO  ParseUtil:85 - Collecting Jar Files
+2019-12-20 16:25:51 INFO  ParseUtil:98 - Total Number of JAR Files: 328
+2019-12-20 16:25:51 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2019-12-20 16:25:51 INFO  ParseUtil:103 - Collecting GitHub Subject Systems/Projects
+2019-12-20 16:25:51 INFO  ParseUtil:114 - Total Number of Subject Systems: 1
+2019-12-20 16:25:51 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2019-12-20 16:25:51 INFO  InferUtil:42 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2019-12-20 16:25:51 INFO  CompilableCodeExtraction:60 - Colelcting Java Files
+2019-12-20 16:25:51 INFO  CompilableCodeExtraction:72 - Total Number of Java Files: 13
+2019-12-20 16:25:51 INFO  CompilableCodeExtraction:78 - Configure Eclipse JDT
+2019-12-20 16:25:51 INFO  CompilableCodeExtraction:97 - Creating Compilation Unit for each java file
+2019-12-20 16:25:53 INFO  CompilableCodeExtraction:108 - Total Number of Compilation Units: 13
+2019-12-20 16:25:53 INFO  CompilableCodeExtraction:40 - Extracting types/methods/fields from each Compilation Unit
+2019-12-20 16:26:01 INFO  CompilableCodeExtraction:53 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2019-12-20 16:26:01 INFO  InferUtil:66 - Subject Systems Parsed: 1/1 (100%)
+2019-12-20 16:26:01 INFO  IntrinsticInference:42 - Inferring test data...
+2019-12-20 16:26:11 INFO  IntrinsticInference:67 - Test Data Inferred: 100/232 (43%)
+2019-12-20 16:26:20 INFO  IntrinsticInference:67 - Test Data Inferred: 200/232 (86%)
+2019-12-20 16:26:24 INFO  IntrinsticInference:72 - Test Data Inferred: 232/232 (100%)
+2019-12-20 16:26:24 INFO  IntrinsticInference:78 - Calculating performance mesures...
+2019-12-20 16:26:24 INFO  IntrinsticInference:84 - Precision: 0.84
+2019-12-20 16:26:24 INFO  IntrinsticInference:85 - Recall: 0.85
+2019-12-20 16:26:24 INFO  IntrinsticInference:86 - FScore: 0.85
+2019-12-20 16:26:24 INFO  IntrinsticInference:88 - Intrinsic Evaluation is done!!!
+2019-12-20 16:26:53 INFO  COSTER:441 - COSTER: Context Sensitive Type Solver
+2019-12-20 16:26:53 INFO  COSTER:442 - Version: 1.0
+
+2019-12-20 16:26:53 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2019-12-20 16:26:53 INFO  ParseUtil:85 - Collecting Jar Files
+2019-12-20 16:26:53 INFO  ParseUtil:98 - Total Number of JAR Files: 328
+2019-12-20 16:26:53 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2019-12-20 16:26:53 INFO  ParseUtil:103 - Collecting GitHub Subject Systems/Projects
+2019-12-20 16:26:53 INFO  ParseUtil:114 - Total Number of Subject Systems: 1
+2019-12-20 16:26:53 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2019-12-20 16:26:53 INFO  InferUtil:42 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2019-12-20 16:26:54 INFO  CompilableCodeExtraction:60 - Colelcting Java Files
+2019-12-20 16:26:54 INFO  CompilableCodeExtraction:72 - Total Number of Java Files: 13
+2019-12-20 16:26:54 INFO  CompilableCodeExtraction:78 - Configure Eclipse JDT
+2019-12-20 16:26:54 INFO  CompilableCodeExtraction:97 - Creating Compilation Unit for each java file
+2019-12-20 16:26:55 INFO  CompilableCodeExtraction:108 - Total Number of Compilation Units: 13
+2019-12-20 16:26:55 INFO  CompilableCodeExtraction:40 - Extracting types/methods/fields from each Compilation Unit
+2019-12-20 16:27:04 INFO  CompilableCodeExtraction:53 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2019-12-20 16:27:04 INFO  InferUtil:66 - Subject Systems Parsed: 1/1 (100%)
+2019-12-20 16:27:04 INFO  IntrinsticInference:42 - Inferring test data...
+2019-12-20 16:27:14 INFO  IntrinsticInference:67 - Test Data Inferred: 100/232 (43%)
+2019-12-20 16:27:22 INFO  IntrinsticInference:67 - Test Data Inferred: 200/232 (86%)
+2019-12-20 16:27:26 INFO  IntrinsticInference:72 - Test Data Inferred: 232/232 (100%)
+2019-12-20 16:27:26 INFO  IntrinsticInference:78 - Calculating performance mesures...
+2019-12-20 16:27:26 INFO  IntrinsticInference:84 - Precision: 0.98
+2019-12-20 16:27:26 INFO  IntrinsticInference:85 - Recall: 0.99
+2019-12-20 16:27:26 INFO  IntrinsticInference:86 - FScore: 0.98
+2019-12-20 16:27:26 INFO  IntrinsticInference:88 - Intrinsic Evaluation is done!!!
+2019-12-20 16:28:00 INFO  COSTER:441 - COSTER: Context Sensitive Type Solver
+2019-12-20 16:28:00 INFO  COSTER:442 - Version: 1.0
+
+2019-12-20 16:28:00 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2019-12-20 16:28:00 INFO  ParseUtil:85 - Collecting Jar Files
+2019-12-20 16:28:00 INFO  ParseUtil:98 - Total Number of JAR Files: 328
+2019-12-20 16:28:00 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2019-12-20 16:28:00 INFO  ParseUtil:103 - Collecting GitHub Subject Systems/Projects
+2019-12-20 16:28:00 INFO  ParseUtil:114 - Total Number of Subject Systems: 1
+2019-12-20 16:28:00 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2019-12-20 16:28:00 INFO  InferUtil:42 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2019-12-20 16:28:00 INFO  CompilableCodeExtraction:60 - Colelcting Java Files
+2019-12-20 16:28:00 INFO  CompilableCodeExtraction:72 - Total Number of Java Files: 13
+2019-12-20 16:28:00 INFO  CompilableCodeExtraction:78 - Configure Eclipse JDT
+2019-12-20 16:28:00 INFO  CompilableCodeExtraction:97 - Creating Compilation Unit for each java file
+2019-12-20 16:28:02 INFO  CompilableCodeExtraction:108 - Total Number of Compilation Units: 13
+2019-12-20 16:28:02 INFO  CompilableCodeExtraction:40 - Extracting types/methods/fields from each Compilation Unit
+2019-12-20 16:28:12 INFO  CompilableCodeExtraction:53 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2019-12-20 16:28:12 INFO  InferUtil:66 - Subject Systems Parsed: 1/1 (100%)
+2019-12-20 16:28:12 INFO  IntrinsticInference:42 - Inferring test data...
+2019-12-20 16:28:22 INFO  IntrinsticInference:67 - Test Data Inferred: 100/232 (43%)
+2019-12-20 16:28:31 INFO  IntrinsticInference:67 - Test Data Inferred: 200/232 (86%)
+2019-12-20 16:28:35 INFO  IntrinsticInference:72 - Test Data Inferred: 232/232 (100%)
+2019-12-20 16:28:35 INFO  IntrinsticInference:78 - Calculating performance mesures...
+2019-12-20 16:28:35 INFO  IntrinsticInference:84 - Precision: 0.98
+2019-12-20 16:28:35 INFO  IntrinsticInference:85 - Recall: 1.00
+2019-12-20 16:28:35 INFO  IntrinsticInference:86 - FScore: 0.99
+2019-12-20 16:28:35 INFO  IntrinsticInference:88 - Intrinsic Evaluation is done!!!
