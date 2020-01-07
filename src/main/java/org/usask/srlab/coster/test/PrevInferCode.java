@@ -29,7 +29,7 @@ public class PrevInferCode {
         print("Total number of fqns: "+fqns.size());
 
         print("Collect Context for API elements");
-        String[] jarPaths = ParseUtil.collectGithubJars(new File(Config.GITHUB_JAR_PATH));
+        String[] jarPaths = ParseUtil.collectJarFiles(new File(Config.GITHUB_JAR_PATH));
         List<APIElement> apiElements = CompilableCodeExtraction.extractfromSource(new File(Config.GITHUB_SUBJECT_SYSTEM_PATH),jarPaths);
 
         print("Infer API elements");

@@ -2,6 +2,7 @@ package org.usask.srlab.coster.config;
 
 public class Config {
     //Global Path variables
+//    private static String ROOT_PATH = "/home/khaledkucse/Project/backup/coster/";
     private static String ROOT_PATH = "./";
     private static final String DATA_PATH = ROOT_PATH+"data/";
     private static final String JAR_PATH = DATA_PATH+"jars/";

@@ -7,6 +7,7 @@ import org.apache.log4j.PropertyConfigurator;
 import org.usask.srlab.coster.config.Config;
 import org.usask.srlab.coster.infer.ExtrinsicInference;
 import org.usask.srlab.coster.infer.FileInference;
+import org.usask.srlab.coster.infer.ImportStmtComplete;
 import org.usask.srlab.coster.infer.IntrinsticInference;
 import org.usask.srlab.coster.train.Train;
 import org.usask.srlab.coster.train.RetrainOLD;
@@ -416,6 +417,56 @@ public class COSTER {
 
                     }else {
                         print("Please choose at least one type of evaluations: intrinsic, extrinsic\n\n");
+                        panic(0);
+                    }
+                    break;
+                case "complete":
+                    if (line.hasOption("i") && line.hasOption("o")) {
+                        String inputFilePath = line.getOptionValue("i");
+                        String outputFilePath = line.getOptionValue("o");
+                        int topk = 1;
+                        String contextSimilarity = "cosine", nameSimilarity = "levenshtein";
+                        jarRepoPath = Config.GITHUB_JAR_PATH;
+                        try {
+                            if (line.hasOption("t"))
+                                topk = Integer.parseInt(line.getOptionValue("t"));
+//                            else{
+//                                print("No value as Top-K is selected.");
+//                                print("Selecting the deafult number of reccomendation: " + topk);
+//                            }
+                            if (line.hasOption("c")) {
+                                String tempContext = line.getOptionValue("c");
+                                if (tempContext.equals("jaccard"))
+                                    contextSimilarity = tempContext;
+                                else if (tempContext.equals("lcs"))
+                                    contextSimilarity = tempContext;
+                            }
+//                            else{
+//                                print("No metric is slected for context similairty method.");
+//                                print("Selecting the deafult context similairty method Cosine");
+//                            }
+                            if (line.hasOption("n")) {
+                                String tempName = line.getOptionValue("n");
+                                if (tempName.equals("hamming"))
+                                    nameSimilarity = tempName;
+                                else if (tempName.equals("lcs"))
+                                    nameSimilarity = tempName;
+                            }
+//                            else{
+//                                print("No metric is slected for name similairty method.");
+//                                print("Selecting the deafult name similairty method Levenshtein distance");
+//                            }
+                            if (line.hasOption("j"))
+                                jarRepoPath = line.getOptionValue("j");
+//                            else {
+//                                print("No path of jar files for training is provided.");
+//                                print("Selecting the deafult path of jar files for training: " + jarRepoPath);
+//                            }
+                            ImportStmtComplete.complete(jarRepoPath,inputFilePath,outputFilePath);
+                        }
+                        catch (Exception Ignored){}
+                    } else {
+                        print("Please choose the location of input and output file\n\n");
                         panic(0);
                     }
                     break;

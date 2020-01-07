@@ -22,7 +22,7 @@ import org.usask.srlab.coster.utils.ParseUtil;
 
 
 public class ExtrinsicInference {
-    private static final Logger logger = LogManager.getLogger(IntrinsticInference.class.getName()); // logger variable for loggin in the file
+    private static final Logger logger = LogManager.getLogger(ExtrinsicInference.class.getName()); // logger variable for loggin in the file
     private static final DecimalFormat df = new DecimalFormat(); // Decimal formet variable for formating decimal into 2 digits
 
     private static void print(Object s){System.out.println(s.toString());}
@@ -30,7 +30,7 @@ public class ExtrinsicInference {
     public static void evaluation(String jarPath, String repositoryPath, String datasetPath, String modelPath, int topk, String contextSim, String nameSim){
         print("Collecting Jar files...");
         logger.info("Collecting Jar Files...");
-        String[] jarPaths = ParseUtil.collectGithubJars(new File(jarPath));
+        String[] jarPaths = ParseUtil.collectJarFiles(new File(jarPath));
         print("Collecting StackOverflow code snippets...");
         logger.info("Collecting StackOverflow code snippets...");
         ArrayList<String> snippetPaths = ParseUtil.collectSOSnippets(new File(repositoryPath));

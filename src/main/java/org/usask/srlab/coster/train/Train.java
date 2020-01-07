@@ -39,7 +39,7 @@ public class Train {
 
         if(isExtraction){
             print("Collecting Jar files...");
-            String[] jarPaths = ParseUtil.collectGithubJars(new File(jarRepoPath));
+            String[] jarPaths = ParseUtil.collectJarFiles(new File(jarRepoPath));
             String[] projectPaths = ParseUtil.collectGithubProjects(new File(repositoryPath));
 
             print("Extracting subject systems from the repository...");

@@ -26,7 +26,7 @@ public class FileInference {
     public static void infer(String jarPath, String inputFilePath, String outPutFilePath, String modelPath, int topk, String contextSim, String nameSim) {
         print("Collecting Jar files...");
         logger.info("Collecting Jar Files...");
-        String[] jarPaths = ParseUtil.collectGithubJars(new File(jarPath));
+        String[] jarPaths = ParseUtil.collectJarFiles(new File(jarPath));
         print("Collecting source code from the  input file...");
         logger.info("Collecting source code from the input file...");
         ArrayList<String> srcList = FileUtil.getSingleTonFileUtilInst().getFileStringArray(inputFilePath);

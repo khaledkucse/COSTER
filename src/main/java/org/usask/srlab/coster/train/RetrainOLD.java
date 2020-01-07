@@ -34,7 +34,7 @@ public class RetrainOLD {
     public static void retrain(String jarRepoPath, String repositoryPath, String datasetPath, String modelPath, int fqnThreshold,boolean isExtraction) {
         if(isExtraction){
             print("Collecting Jar files...");
-            String[] jarPaths = ParseUtil.collectGithubJars(new File(jarRepoPath));
+            String[] jarPaths = ParseUtil.collectJarFiles(new File(jarRepoPath));
             String[] projectPaths = ParseUtil.collectGithubProjects(new File(repositoryPath));
 
             print("Extracting subject systems from the repository...");

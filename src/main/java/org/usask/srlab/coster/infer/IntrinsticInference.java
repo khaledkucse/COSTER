@@ -27,7 +27,7 @@ public class IntrinsticInference {
     public static void evaluation(String jarPath, String repositoryPath, String datasetPath, String modelPath, int topk, String contextSim, String nameSim) {
         print("Collecting Jar files...");
         logger.info("Collecting Jar Files...");
-        String[] jarPaths = ParseUtil.collectGithubJars(new File(jarPath));
+        String[] jarPaths = ParseUtil.collectJarFiles(new File(jarPath));
         print("Collecting Subject Systems from repository for evaluation...");
         logger.info("Collecting Subject Systems from repository for evaluation...");
         String[] projectPaths = ParseUtil.collectGithubProjects(new File(repositoryPath));

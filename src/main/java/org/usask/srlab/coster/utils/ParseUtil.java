@@ -81,11 +81,11 @@ public class ParseUtil {
             actualFQN = actualFQN.substring(0, actualFQN.indexOf("<"));
         return actualFQN;
     }
-    public static String[] collectGithubJars(File jarFiles){
+    public static String[] collectJarFiles(File jarFiles){
         logger.info("Collecting Jar Files");
         String[] extensions = { ".jar"};
-        HashMap<String, List<File>> allJarJavaFiles = getFilteredRecursiveFiles(jarFiles, extensions);
-        List<File> arrJars = allJarJavaFiles.get(".jar");
+        HashMap<String, List<File>> allJarFiles = getFilteredRecursiveFiles(jarFiles, extensions);
+        List<File> arrJars = allJarFiles.get(".jar");
         if (arrJars == null) {
             arrJars = new ArrayList<>();
         }
@@ -166,6 +166,17 @@ public class ParseUtil {
                 // Skip file
             }
         }
+        return files;
+    }
+
+    public static ArrayList<String> collectSnippets(File file) {
+        logger.info("Collecting Code Snippets");
+        ArrayList<String> files = new ArrayList<>();
+        if (file.isDirectory())
+            for (File sub : Objects.requireNonNull(file.listFiles()))
+                files.addAll(collectSnippets(sub));
+        else if (file.getName().endsWith(".java"))
+            files.add(file.getAbsolutePath());
         return files;
     }
 }
