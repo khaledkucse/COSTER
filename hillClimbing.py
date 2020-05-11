@@ -119,10 +119,10 @@ def radial_dir(pos_init, p=0.1, ob='min'):
 
 
 # Initial Paramerters
-step_size = 0.7
+step_size = 0.1
 pos_init = (0, 0, 0)
 ob = 'max'
-rounds = list(range(1))
+rounds = list(range(1000))
 
 # run the program consecutive times pursuing the optimization goal
 for r in rounds:
