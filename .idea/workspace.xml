@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ba3ab19-9603-4c0a-bf78-15e66f9d7b4f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ImportStmtComplete.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COSTER.jar" beforeDir="false" afterPath="$PROJECT_DIR$/COSTER.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/coster.logs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ExtrinsicInference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ExtrinsicInference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/IntrinsticInference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/IntrinsticInference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/test/PrevInferCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/test/PrevInferCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/RetrainOLD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/RetrainOLD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/Train.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/ParseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/ParseUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/test/tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/test/tests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,14 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="3186">
-                <caret line="177" column="22" lean-forward="true" selection-start-line="177" selection-start-column="22" selection-end-line="177" selection-end-column="22" />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="tests.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/test/tests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="23" selection-start-line="23" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -94,7 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/org/usask/srlab/coster/utils/ParseUtil.java" />
         <option value="$PROJECT_DIR$/src/org/usask/srlab/coster/infer/SOCodeColelctor.java" />
         <option value="$PROJECT_DIR$/src/org/usask/srlab/coster/test/GroundTruthCreator.java" />
         <option value="$PROJECT_DIR$/src/org/usask/srlab/coster/train/CalculateAPIUsages.java" />
@@ -145,6 +129,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ImportStmtComplete.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/test/tests.java" />
       </list>
     </option>
   </component>
@@ -181,10 +166,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-183" />
+    <option name="x" value="-122" />
     <option name="y" value="34" />
-    <option name="width" value="1848" />
-    <option name="height" value="791" />
+    <option name="width" value="1838" />
+    <option name="height" value="798" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -192,6 +177,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,7 +190,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -363,12 +348,18 @@
       <workItem from="1576541692844" duration="20831000" />
       <workItem from="1577891705435" duration="10904000" />
       <workItem from="1578425935175" duration="987000" />
-      <workItem from="1578428179438" duration="2842000" />
+      <workItem from="1578428179438" duration="3442000" />
+      <workItem from="1578961525457" duration="462000" />
+      <workItem from="1578963385294" duration="96000" />
+      <workItem from="1578963640641" duration="66000" />
+      <workItem from="1583531530038" duration="631000" />
+      <workItem from="1583791478609" duration="31000" />
+      <workItem from="1584472504135" duration="6000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166224000" />
+    <option name="totallyTimeSpent" value="168116000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -381,7 +372,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="34" width="1868" height="1046" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32942554" />
@@ -393,7 +383,7 @@
       <window_info anchor="bottom" id="Run" order="3" weight="0.31770223" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49828178" visible="true" weight="0.13189845" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49828178" visible="true" weight="0.14845474" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.5017182" side_tool="true" weight="0.27869758" />
@@ -423,299 +413,31 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/usask/srlab/coster/model/Output.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/usask/srlab/coster/model/TestResult.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/usask/srlab/coster/utils/InferUtil.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/usask/srlab/coster/utils/EvaluationUtil.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-core/8.2.0/lucene-core-8.2.0.jar!/org/apache/lucene/index/IndexWriter.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/test/tests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="88" column="11" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
+        <state relative-caret-position="414">
+          <caret line="23" selection-start-line="23" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/usask/srlab/coster/infer/IntrinsticInfer.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/usask/srlab/coster/utils/TrainUtil.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/usask/srlab/coster/COSTER.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/usask/srlab/coster/train/CreateOLD.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/usask/srlab/coster/config/Config.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/resources/coster.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/test/tests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        <state relative-caret-position="414">
+          <caret line="23" selection-start-line="23" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/model/IndexEntry.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/test/tests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="414">
+          <caret line="23" selection-start-line="23" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/model/OLDEntry.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/test/tests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/time/format/DateTimeFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="304" column="4" selection-start-line="304" selection-start-column="4" selection-end-line="304" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DockerFile" />
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-cli/commons-cli/1.4/commons-cli-1.4.jar!/org/apache/commons/cli/HelpFormatter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/model/TestResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/tasks/Train.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/tasks/Retrain.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/tasks/IntrinsicInfer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/tasks/ExtrinsicInfer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/tasks/FileInfer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/RecieverVariableAnalysis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5563">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/SOCodeColelctor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2574">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="5" column="70" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret selection-end-line="5" selection-end-column="77" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/model/APIElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/RetrainOLD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/NotifyingBlockingThreadPoolExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/TrainUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2807">
-          <caret line="196" column="93" lean-forward="true" selection-start-line="196" selection-start-column="93" selection-end-line="196" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/DictonaryCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-519">
-          <caret line="58" column="48" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/EvaluationUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-882">
-          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/IntrinsticInference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/InferUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="90" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2286">
-          <caret line="145" column="4" selection-start-line="145" selection-start-column="4" selection-end-line="151" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/extraction/NonCompilableCodeExtraction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1278">
-          <caret line="83" column="40" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="464" column="67" selection-start-line="464" selection-start-column="67" selection-end-line="464" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1577893309640" expanded="true" signature="9691:9949" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="38" column="41" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/Train.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ImportStmtComplete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/FileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/ParseUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="75" column="5" selection-start-line="17" selection-start-column="4" selection-end-line="75" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ExtrinsicInference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="36" column="32" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/extraction/CompilableCodeExtraction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="105" column="40" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#17793#17794#0" expanded="true" />
-            <element signature="e#17825#17826#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/extraction/SOCodeExtraction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="25" column="77" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="3186">
-            <caret line="177" column="22" lean-forward="true" selection-start-line="177" selection-start-column="22" selection-end-line="177" selection-end-column="22" />
-          </first_editor>
-          <second_editor />
+        <state relative-caret-position="306">
+          <caret line="23" selection-start-line="23" selection-end-line="32" />
         </state>
       </provider>
     </entry>

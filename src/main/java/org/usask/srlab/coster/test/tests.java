@@ -2,6 +2,7 @@ package org.usask.srlab.coster.test;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import java.util.BitSet;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -19,4 +20,15 @@ public class tests {
         System.out.println(System.currentTimeMillis());
         System.out.println(System.currentTimeMillis());
     }
+
+//    private static BitSet removeAt (BitSet b,       int at, int len, int newSize) {
+//        BitSet clone = (BitSet) b.clone();
+//        int max = b.length();
+//        while (at < max) {
+//            clone.set(at, b.get(at + len));
+//            at++;
+//        }
+//        clone.set();
+//    }
+
 }
