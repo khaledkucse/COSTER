@@ -531,7 +531,7 @@ public class COSTER {
 //                                print("No path of jar files for training is provided.");
 //                                print("Selecting the deafult path of jar files for training: " + jarRepoPath);
 //                            }
-                            ImportStmtComplete.complete(jarRepoPath,inputFilePath,outputFilePath);
+                            ImportStmtComplete.complete(inputFilePath,outputFilePath);
                         }
                         catch (Exception Ignored){}
                     } else {

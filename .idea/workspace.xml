@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="830074f3-d605-41ba-a4e9-a67a9e873454" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/IntrinsticInference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/IntrinsticInference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ImportStmtComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ImportStmtComplete.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +18,8 @@
       <file leaf-file-name="COSTER.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="460" column="59" selection-start-line="460" selection-start-column="59" selection-end-line="460" selection-end-column="59" />
+            <state relative-caret-position="360">
+              <caret line="533" column="56" lean-forward="true" selection-start-line="533" selection-start-column="56" selection-end-line="533" selection-end-column="56" />
               <folding>
                 <element signature="e#1289#1290#0" expanded="true" />
                 <element signature="e#1324#1325#0" expanded="true" />
@@ -59,6 +58,15 @@
                 <element signature="e#2725#2726#0" expanded="true" />
                 <element signature="e#2759#2760#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImportStmtComplete.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ImportStmtComplete.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="24" column="86" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -177,6 +185,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/Train.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/IntrinsticInference.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ImportStmtComplete.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" />
       </list>
     </option>
@@ -341,12 +350,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589741735423</updated>
-      <workItem from="1589741736761" duration="13481000" />
+      <workItem from="1589741736761" duration="13535000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13481000" />
+    <option name="totallyTimeSpent" value="13535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="34" width="1868" height="1046" extended-state="6" />
@@ -603,10 +612,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ImportStmtComplete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="24" column="86" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="460" column="59" selection-start-line="460" selection-start-column="59" selection-end-line="460" selection-end-column="59" />
+        <state relative-caret-position="360">
+          <caret line="533" column="56" lean-forward="true" selection-start-line="533" selection-start-column="56" selection-end-line="533" selection-end-column="56" />
           <folding>
             <element signature="e#1289#1290#0" expanded="true" />
             <element signature="e#1324#1325#0" expanded="true" />

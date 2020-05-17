@@ -2,6 +2,7 @@ package org.usask.srlab.coster.infer;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.usask.srlab.coster.COSTER;
 import org.usask.srlab.coster.extraction.SOCodeExtraction;
 import org.usask.srlab.coster.model.APIElement;
 import org.usask.srlab.coster.utils.FileUtil;
@@ -18,10 +19,10 @@ public class ImportStmtComplete {
 
     private static void print(Object s){System.out.println(s.toString());}
 
-    public static void complete(String jarPath, String inputFilePath, String outputFilePath) {
+    public static void complete(String inputFilePath, String outputFilePath) {
         print("Collecting Jar files...");
         logger.info("Collecting Jar Files...");
-        String[] jarPaths = ParseUtil.collectJarFiles(new File(jarPath));
+        String[] jarPaths = ParseUtil.collectJarFiles(new File(COSTER.getJarRepoPath()));
         print("Collecting code snippet...");
         logger.info("Collecting code snippet...");
         ArrayList<String> snippetPath = ParseUtil.collectSnippets(new File(inputFilePath));
