@@ -1,4 +1,4 @@
-package dictionary;
+package org.usask.srlab.coster.dictionary;
 
 import java.io.Serializable;
 import java.util.Arrays;

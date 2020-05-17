@@ -1,4 +1,4 @@
-package dictionary;
+package org.usask.srlab.coster.dictionary;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
-import config.Config;
+import org.usask.srlab.coster.config.Config;
 import org.apache.bcel.classfile.ClassFormatException;
 import org.apache.bcel.classfile.ClassParser;
 import org.apache.bcel.classfile.Field;
@@ -33,8 +33,8 @@ import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.Modifier;
 import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
-import utils.FileUtil;
-import utils.NotifyingBlockingThreadPoolExecutor;
+import org.usask.srlab.coster.utils.FileUtil;
+import org.usask.srlab.coster.utils.NotifyingBlockingThreadPoolExecutor;
 
 
 /**
@@ -70,8 +70,6 @@ public class DictonaryCreator {
 	private static final AtomicInteger numOfJars = new AtomicInteger(0), numOfProjects = new AtomicInteger(0), numOfTypes = new AtomicInteger(0), numOfMethods = new AtomicInteger(0), numOfFields = new AtomicInteger(0);
 	
 	private final HashSet<String> types = new HashSet<>(), methods = new HashSet<>(), fields = new HashSet<>();
-
-	private static String logFilePath = Config.BAKER_LOG_PATH+"baker_create_oracle.log";
 
     /**
      * The only public method of the class that creates dictonary.
@@ -119,7 +117,6 @@ public class DictonaryCreator {
 			if (new File(out, jarLocation.getName() + "-types").exists())
 				return;
 			final String jarFilePath = jarLocation.getAbsolutePath();
-			FileUtil.appendLineToFile(logFilePath,"Parsing jar file " + jarFilePath);
             pool.execute(new Runnable() {
 				@Override
 				public void run() {
@@ -127,19 +124,11 @@ public class DictonaryCreator {
 						DictonaryCreator ees = new DictonaryCreator();
 						ees.extractFromJarFile(jarFilePath);
 
-                        FileUtil.appendLineToFile(logFilePath,"Jars: " + numOfJars);
-                        FileUtil.appendLineToFile(logFilePath,"Projects: " + numOfProjects);
-                        FileUtil.appendLineToFile(logFilePath,"Types: " + numOfTypes);
-                        FileUtil.appendLineToFile(logFilePath,"Methods: " + numOfMethods);
-                        FileUtil.appendLineToFile(logFilePath,"Fields: " + numOfFields);
 
 						FileUtil.writeToFile(new File(out, jarLocation.getName() + "-types").getAbsolutePath(), ees.types);
 						FileUtil.writeToFile(new File(out, jarLocation.getName() + "-methods").getAbsolutePath(), ees.methods);
 						FileUtil.writeToFile(new File(out, jarLocation.getName() + "-fields").getAbsolutePath(), ees.fields);
-					} catch (Throwable t) {
-					    FileUtil.appendLineToFile(logFilePath,"Error in parsing jar file " + jarFilePath);
-                        FileUtil.appendLineToFile(logFilePath,t.getMessage());
-					}
+					} catch (Throwable t) {}
 				}
 			});
 		}
@@ -190,11 +179,9 @@ public class DictonaryCreator {
 	    if (repository.isDirectory()) {
             if (new File(repository, ".git").exists()) {
                 numOfProjects.incrementAndGet();
-                FileUtil.appendLineToFile(logFilePath,"Projects: " + numOfProjects);
                 final File out = new File(dictonaryOutpath);
                 if (new File(out, repository.getParentFile().getName() + "___" + repository.getName() + "-types").exists())
                     return;
-                FileUtil.appendLineToFile(logFilePath,"Parsing project " + repository.getAbsolutePath());
                 pool.execute(new Runnable() {
                     @Override
                     public void run() {
@@ -202,19 +189,11 @@ public class DictonaryCreator {
                             DictonaryCreator ees = new DictonaryCreator();
                             ees.extractFromSourceProject(repository);
 
-                            FileUtil.appendLineToFile(logFilePath,"Jars: " + numOfJars);
-                            FileUtil.appendLineToFile(logFilePath,"Projects: " + numOfProjects);
-                            FileUtil.appendLineToFile(logFilePath,"Types: " + numOfTypes);
-                            FileUtil.appendLineToFile(logFilePath,"Methods: " + numOfMethods);
-                            FileUtil.appendLineToFile(logFilePath,"Fields: " + numOfFields);
-
 
                             FileUtil.writeToFile(new File(out, repository.getParentFile().getName() + "___" + repository.getName() + "-types").getAbsolutePath(), ees.types);
                             FileUtil.writeToFile(new File(out, repository.getParentFile().getName() + "___" + repository.getName() + "-methods").getAbsolutePath(), ees.methods);
                             FileUtil.writeToFile(new File(out, repository.getParentFile().getName() + "___" + repository.getName() + "-fields").getAbsolutePath(), ees.fields);
                         } catch (Throwable t) {
-                            FileUtil.appendLineToFile(logFilePath,"Error in parsing project " + repository.getAbsolutePath());
-                            FileUtil.appendLineToFile(logFilePath,t.getMessage());
                         }
                     }
                 });

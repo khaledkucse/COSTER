@@ -1,4 +1,4 @@
-package dictionary;
+package org.usask.srlab.coster.dictionary;
 
 import java.io.File;
 import java.util.ArrayList;

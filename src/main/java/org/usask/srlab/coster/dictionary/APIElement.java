@@ -1,4 +1,4 @@
-package dictionary;
+package org.usask.srlab.coster.dictionary;
 
 public abstract class APIElement {
 	

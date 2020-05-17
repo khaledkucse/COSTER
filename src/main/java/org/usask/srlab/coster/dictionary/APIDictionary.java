@@ -1,6 +1,8 @@
-package dictionary;
+package org.usask.srlab.coster.dictionary;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -10,7 +12,7 @@ import java.util.List;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.map.hash.TObjectIntHashMap;
 import gnu.trove.set.TIntSet;
-import utils.FileUtil;
+import org.usask.srlab.coster.dictionary.FileUtil;
 
 public class APIDictionary implements Serializable {
 	private static final long serialVersionUID = -8764767855443226874L;
