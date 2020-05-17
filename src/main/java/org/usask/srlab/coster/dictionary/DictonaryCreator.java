@@ -12,7 +12,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
-import org.usask.srlab.coster.config.Config;
 import org.apache.bcel.classfile.ClassFormatException;
 import org.apache.bcel.classfile.ClassParser;
 import org.apache.bcel.classfile.Field;
@@ -33,7 +32,7 @@ import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.Modifier;
 import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
-import org.usask.srlab.coster.utils.FileUtil;
+import org.usask.srlab.coster.utils.DictonaryUtil;
 import org.usask.srlab.coster.utils.NotifyingBlockingThreadPoolExecutor;
 
 
@@ -80,7 +79,7 @@ public class DictonaryCreator {
 	public static void createDictonary(String libraryDirPath, String dictonaryOutpath, String repositoryPath) {
 
         extractFromJars(libraryDirPath, dictonaryOutpath);
-		extractFromSource(new File(repositoryPath),dictonaryOutpath);
+//		extractFromSource(new File(repositoryPath),dictonaryOutpath);
 
         System.out.println("Total Jars: " + numOfJars);
 		System.out.println("Total Projects: " + numOfProjects);
@@ -125,9 +124,9 @@ public class DictonaryCreator {
 						ees.extractFromJarFile(jarFilePath);
 
 
-						FileUtil.writeToFile(new File(out, jarLocation.getName() + "-types").getAbsolutePath(), ees.types);
-						FileUtil.writeToFile(new File(out, jarLocation.getName() + "-methods").getAbsolutePath(), ees.methods);
-						FileUtil.writeToFile(new File(out, jarLocation.getName() + "-fields").getAbsolutePath(), ees.fields);
+						DictonaryUtil.writeToFile(new File(out, jarLocation.getName() + "-types").getAbsolutePath(), ees.types);
+						DictonaryUtil.writeToFile(new File(out, jarLocation.getName() + "-methods").getAbsolutePath(), ees.methods);
+						DictonaryUtil.writeToFile(new File(out, jarLocation.getName() + "-fields").getAbsolutePath(), ees.fields);
 					} catch (Throwable t) {}
 				}
 			});
@@ -190,9 +189,9 @@ public class DictonaryCreator {
                             ees.extractFromSourceProject(repository);
 
 
-                            FileUtil.writeToFile(new File(out, repository.getParentFile().getName() + "___" + repository.getName() + "-types").getAbsolutePath(), ees.types);
-                            FileUtil.writeToFile(new File(out, repository.getParentFile().getName() + "___" + repository.getName() + "-methods").getAbsolutePath(), ees.methods);
-                            FileUtil.writeToFile(new File(out, repository.getParentFile().getName() + "___" + repository.getName() + "-fields").getAbsolutePath(), ees.fields);
+                            DictonaryUtil.writeToFile(new File(out, repository.getParentFile().getName() + "___" + repository.getName() + "-types").getAbsolutePath(), ees.types);
+                            DictonaryUtil.writeToFile(new File(out, repository.getParentFile().getName() + "___" + repository.getName() + "-methods").getAbsolutePath(), ees.methods);
+                            DictonaryUtil.writeToFile(new File(out, repository.getParentFile().getName() + "___" + repository.getName() + "-fields").getAbsolutePath(), ees.fields);
                         } catch (Throwable t) {
                         }
                     }
@@ -209,7 +208,7 @@ public class DictonaryCreator {
      * @param projectFile: Path of the project file
      */
 	private void extractFromSourceProject(File projectFile) {
-		ArrayList<File> files = FileUtil.getPaths(projectFile);
+		ArrayList<File> files = DictonaryUtil.getPaths(projectFile);
 		String[] paths = new String[files.size()];
 		for (int i = 0; i < files.size(); i++) {
 			paths[i] = files.get(i).getAbsolutePath();

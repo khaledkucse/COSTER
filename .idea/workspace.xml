@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="830074f3-d605-41ba-a4e9-a67a9e873454" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_trove4j_trove4j_3_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coster.iml" beforeDir="false" afterPath="$PROJECT_DIR$/coster.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIPackageNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIPackageNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/DictonaryCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/DictonaryCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/UnionSignatures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/UnionSignatures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/FileUtil.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,42 +27,17 @@
       <file leaf-file-name="DictonaryCreator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/DictonaryCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="8" selection-start-column="8" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-2872">
+              <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UnionSignatures.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/UnionSignatures.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="APIDictionary.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIDictionary.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5177">
-              <caret line="58" column="40" lean-forward="true" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#9276#9285#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileUtil.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FileUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/FileUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            <state relative-caret-position="475">
+              <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,8 +48,8 @@
       <file leaf-file-name="FileUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/FileUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="58" selection-end-column="5" />
+            <state relative-caret-position="-353">
+              <caret line="124" column="13" lean-forward="true" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -125,16 +89,16 @@
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/ParseUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/InferUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/DictonaryCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIElement.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIField.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIMethod.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIPackageNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIType.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/FileUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIDictionary.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/UnionSignatures.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/DictonaryCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/FileUtil.java" />
       </list>
     </option>
   </component>
@@ -301,12 +265,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589741735423</updated>
-      <workItem from="1589741736761" duration="6339000" />
+      <workItem from="1589741736761" duration="6634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6339000" />
+    <option name="totallyTimeSpent" value="6634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="34" width="1868" height="1046" extended-state="6" />
@@ -461,16 +425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/DictonaryCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -478,31 +432,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIDictionary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIPackageNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-83">
-          <caret column="42" selection-start-column="42" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="42" selection-start-column="42" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="42" selection-start-column="42" selection-end-column="42" />
+        <state relative-caret-position="-5159">
+          <caret line="58" column="40" lean-forward="true" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9276#9285#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -513,38 +450,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/FileUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIField.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
-          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="58" selection-end-column="5" />
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/FileUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="18">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIDictionary.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIPackageNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5177">
-          <caret line="58" column="40" lean-forward="true" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+        <state relative-caret-position="18">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/APIType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#9276#9285#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/UnionSignatures.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="450">
           <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-353">
+          <caret line="124" column="13" lean-forward="true" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/DictonaryCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2872">
+          <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

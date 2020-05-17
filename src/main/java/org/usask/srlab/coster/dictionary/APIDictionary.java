@@ -1,8 +1,6 @@
 package org.usask.srlab.coster.dictionary;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -11,8 +9,7 @@ import java.util.List;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.map.hash.TObjectIntHashMap;
-import gnu.trove.set.TIntSet;
-import org.usask.srlab.coster.dictionary.FileUtil;
+import org.usask.srlab.coster.utils.DictonaryUtil;
 
 public class APIDictionary implements Serializable {
 	private static final long serialVersionUID = -8764767855443226874L;
@@ -57,7 +54,7 @@ public class APIDictionary implements Serializable {
 		System.out.println("Building types");
 		for (File file : dir.listFiles()) {
 			if (file.getName().endsWith("-types")) {
-				ArrayList<String> content = FileUtil.getFileStringArray(file.getAbsolutePath());
+				ArrayList<String> content = DictonaryUtil.getFileStringArray(file.getAbsolutePath());
 				for (String line : content)
 					addType(line);
 			}
@@ -67,11 +64,11 @@ public class APIDictionary implements Serializable {
 		System.out.println("Building methods and fields");
 		for (File file : dir.listFiles()) {
 			if (file.getName().endsWith("-methods")) {
-				ArrayList<String> content = FileUtil.getFileStringArray(file.getAbsolutePath());
+				ArrayList<String> content = DictonaryUtil.getFileStringArray(file.getAbsolutePath());
 				for (String line : content)
 					addMethod(line);
 			} else if (file.getName().endsWith("-fields")) {
-				ArrayList<String> content = FileUtil.getFileStringArray(file.getAbsolutePath());
+				ArrayList<String> content = DictonaryUtil.getFileStringArray(file.getAbsolutePath());
 				for (String line : content)
 					addField(line);
 			}
@@ -88,15 +85,15 @@ public class APIDictionary implements Serializable {
 		System.out.println("Building types");
 		for (File file : dir.listFiles()) {
 			if (file.getName().endsWith(".jar-types")) {
-				ArrayList<String> content = FileUtil.getFileStringArray(file.getAbsolutePath());
+				ArrayList<String> content = DictonaryUtil.getFileStringArray(file.getAbsolutePath());
 				for (String line : content)
 					addType(line);
 			}
 		}
-		List<String> names = FileUtil.getFileStringArray(list);
+		List<String> names = DictonaryUtil.getFileStringArray(list);
 		names = names.subList(0, Math.min(max, names.size()));
 		for (String name : names) {
-			ArrayList<String> content = FileUtil.getFileStringArray(dir.getAbsolutePath() + "/" + name.replace("/", "___") + "-types");
+			ArrayList<String> content = DictonaryUtil.getFileStringArray(dir.getAbsolutePath() + "/" + name.replace("/", "___") + "-types");
 			for (String line : content)
 				addType(line);
 		}
@@ -105,13 +102,13 @@ public class APIDictionary implements Serializable {
 		System.out.println("Building fields");
 		for (File file : dir.listFiles()) {
 			if (file.getName().endsWith(".jar-fields")) {
-				ArrayList<String> content = FileUtil.getFileStringArray(file.getAbsolutePath());
+				ArrayList<String> content = DictonaryUtil.getFileStringArray(file.getAbsolutePath());
 				for (String line : content)
 					addField(line);
 			}
 		}
 		for (String name : names) {
-			ArrayList<String> content = FileUtil.getFileStringArray(dir.getAbsolutePath() + "/" + name.replace("/", "___") + "-fields");
+			ArrayList<String> content = DictonaryUtil.getFileStringArray(dir.getAbsolutePath() + "/" + name.replace("/", "___") + "-fields");
 			for (String line : content)
 				addField(line);
 		}
@@ -120,13 +117,13 @@ public class APIDictionary implements Serializable {
 		System.out.println("Building methods");
 		for (File file : dir.listFiles()) {
 			if (file.getName().endsWith(".jar-methods")) {
-				ArrayList<String> content = FileUtil.getFileStringArray(file.getAbsolutePath());
+				ArrayList<String> content = DictonaryUtil.getFileStringArray(file.getAbsolutePath());
 				for (String line : content)
 					addMethod(line);
 			} 
 		}
 		for (String name : names) {
-			ArrayList<String> content = FileUtil.getFileStringArray(dir.getAbsolutePath() + "/" + name.replace("/", "___") + "-methods");
+			ArrayList<String> content = DictonaryUtil.getFileStringArray(dir.getAbsolutePath() + "/" + name.replace("/", "___") + "-methods");
 			for (String line : content)
 				addMethod(line);
 		}

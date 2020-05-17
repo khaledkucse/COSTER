@@ -11,13 +11,13 @@ public class UnionSignatures {
 //		int numOfTypes = 0, numOfMethods = 0, numOfFields = 0;
 //		for (File file : in.listFiles()) {
 //			if (file.getName().endsWith("-types")) {
-//				ArrayList<String> content = FileUtil.getFileStringArray(file.getAbsolutePath());
+//				ArrayList<String> content = DictonaryUtil.getFileStringArray(file.getAbsolutePath());
 //				numOfTypes += content.size();
 //			} else if (file.getName().endsWith("-methods")) {
-//				ArrayList<String> content = FileUtil.getFileStringArray(file.getAbsolutePath());
+//				ArrayList<String> content = DictonaryUtil.getFileStringArray(file.getAbsolutePath());
 //				numOfMethods += content.size();
 //			} else if (file.getName().endsWith("-fields")) {
-//				ArrayList<String> content = FileUtil.getFileStringArray(file.getAbsolutePath());
+//				ArrayList<String> content = DictonaryUtil.getFileStringArray(file.getAbsolutePath());
 //				numOfFields += content.size();
 //			}
 //		}
@@ -27,7 +27,7 @@ public class UnionSignatures {
 		long beforeUsedMem = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 		APIDictionary dict = new APIDictionary();
 		dict.build(in, "/home/khaledkucse/Project/java/TypeResolutionParser/data/repos-10stars-100commits.csv", 5000);
-//		FileUtil.writeObjectToFile(dict, "T:/temp/dictionary.dat", false);
+//		DictonaryUtil.writeObjectToFile(dict, "T:/temp/dictionary.dat", false);
 		long afterUsedMem = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 		System.out.println("Memory usage: " + (afterUsedMem - beforeUsedMem) / 1000 / 1000);
 		System.out.println("Types: " + dict.numOfTypes);
@@ -59,15 +59,15 @@ public class UnionSignatures {
 //		int i = 0;
 //		for (File file : in.listFiles()) {
 //			if (file.getName().endsWith("-types")) {
-//				ArrayList<String> content = FileUtil.getFileStringArray(file.getAbsolutePath());
+//				ArrayList<String> content = DictonaryUtil.getFileStringArray(file.getAbsolutePath());
 //				for (String s : content)
 //					types.add(s);
 //			} else if (file.getName().endsWith("-methods")) {
-//				ArrayList<String> content = FileUtil.getFileStringArray(file.getAbsolutePath());
+//				ArrayList<String> content = DictonaryUtil.getFileStringArray(file.getAbsolutePath());
 //				for (String s : content)
 //					methods.add(s);
 //			} else if (file.getName().endsWith("-fields")) {
-//				ArrayList<String> content = FileUtil.getFileStringArray(file.getAbsolutePath());
+//				ArrayList<String> content = DictonaryUtil.getFileStringArray(file.getAbsolutePath());
 //				for (String s : content)
 //					fields.add(s);
 //			}
@@ -80,9 +80,9 @@ public class UnionSignatures {
 //		System.out.println("Fields: " + fields.size());
 //		System.out.println("Memory usage: " + (afterUsedMem - beforeUsedMem) / 1000 / 1000);
 //		
-//		FileUtil.writeObjectToFile(types, "T:/temp/types.dat", false);
-//		FileUtil.writeObjectToFile(methods, "T:/temp/methods.dat", false);
-//		FileUtil.writeObjectToFile(fields, "T:/temp/fields.dat", false);
+//		DictonaryUtil.writeObjectToFile(types, "T:/temp/types.dat", false);
+//		DictonaryUtil.writeObjectToFile(methods, "T:/temp/methods.dat", false);
+//		DictonaryUtil.writeObjectToFile(fields, "T:/temp/fields.dat", false);
 	}
 
 }
