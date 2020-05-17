@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="830074f3-d605-41ba-a4e9-a67a9e873454" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/Train.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="COSTER.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="COSTER.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="253" column="29" selection-start-line="253" selection-start-column="29" selection-end-line="253" selection-end-column="29" />
+            <state relative-caret-position="288">
+              <caret line="292" column="40" selection-start-line="292" selection-start-column="40" selection-end-line="292" selection-end-column="40" />
               <folding>
                 <element signature="e#1289#1290#0" expanded="true" />
                 <element signature="e#1324#1325#0" expanded="true" />
@@ -56,6 +57,18 @@
                 <element signature="e#2681#2682#0" expanded="true" />
                 <element signature="e#2725#2726#0" expanded="true" />
                 <element signature="e#2759#2760#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Train.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/Train.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="67" column="55" selection-start-line="67" selection-start-column="55" selection-end-line="67" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,6 +155,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ExtrinsicInference.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/Train.java" />
       </list>
     </option>
   </component>
@@ -305,12 +319,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589741735423</updated>
-      <workItem from="1589741736761" duration="12820000" />
+      <workItem from="1589741736761" duration="13029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12820000" />
+    <option name="totallyTimeSpent" value="13029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="34" width="1868" height="1046" extended-state="6" />
@@ -529,16 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/Train.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -555,8 +559,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="253" column="29" selection-start-line="253" selection-start-column="29" selection-end-line="253" selection-end-column="29" />
+        <state relative-caret-position="288">
+          <caret line="292" column="40" selection-start-line="292" selection-start-column="40" selection-end-line="292" selection-end-column="40" />
           <folding>
             <element signature="e#1289#1290#0" expanded="true" />
             <element signature="e#1324#1325#0" expanded="true" />
@@ -594,6 +598,16 @@
             <element signature="e#2681#2682#0" expanded="true" />
             <element signature="e#2725#2726#0" expanded="true" />
             <element signature="e#2759#2760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/Train.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="67" column="55" selection-start-line="67" selection-start-column="55" selection-end-line="67" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

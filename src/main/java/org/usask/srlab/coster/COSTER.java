@@ -30,7 +30,7 @@ public class COSTER {
         System.exit(exitval);
     }
 
-    public static boolean isIsExtraction() {
+    public static boolean getIsExtraction() {
         return isExtraction;
     }
 
@@ -290,7 +290,7 @@ public class COSTER {
                         }
 
 
-                        Train.createOld(jarRepoPath, repositoryPath, datasetPath, modelPath,fqnThreshold,isExtraction);
+                        Train.createOld();
                     }catch (Exception ex){
                         print("Exception occurred while taking input.\n\n");
                     }

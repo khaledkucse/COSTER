@@ -17,6 +17,7 @@ import org.codehaus.plexus.util.FileUtils;
 import org.json.simple.JSONObject;
 
 
+import org.usask.srlab.coster.COSTER;
 import org.usask.srlab.coster.extraction.CompilableCodeExtraction;
 import org.usask.srlab.coster.model.APIElement;
 import org.usask.srlab.coster.utils.*;
@@ -35,15 +36,15 @@ public class Train {
 
     private static void print(Object s){System.out.println(s.toString());}
 
-    public static void createOld(String jarRepoPath, String repositoryPath,String datasetPath, String modelPath, int fqnThreshold, boolean isExtraction) {
-
-        if(isExtraction){
+//    public static void createOld(String jarRepoPath, String repositoryPath,String datasetPath, String modelPath, int fqnThreshold, boolean isExtraction) {
+    public static void createOld(){
+        if(COSTER.getIsExtraction()){
             print("Collecting Jar files...");
-            String[] jarPaths = ParseUtil.collectJarFiles(new File(jarRepoPath));
-            String[] projectPaths = ParseUtil.collectGithubProjects(new File(repositoryPath));
+            String[] jarPaths = ParseUtil.collectJarFiles(new File(COSTER.getJarRepoPath()));
+            String[] projectPaths = ParseUtil.collectGithubProjects(new File(COSTER.getRepositoryPath()));
 
             print("Extracting subject systems from the repository...");
-            collectDataset(projectPaths,jarPaths,datasetPath);
+            collectDataset(projectPaths,jarPaths,COSTER.getDatasetPath());
             try {
                 pool.await();
             } catch (InterruptedException e) {
@@ -56,15 +57,15 @@ public class Train {
 
         print("Populating the data from the subject systems in the model...");
         JSONObject jsonObject = new JSONObject();
-        jsonObject = populateDatainOLD(new File(datasetPath), jsonObject);
+        jsonObject = populateDatainOLD(new File(COSTER.getDatasetPath()), jsonObject);
 
         print("Calculating the occurrence likelihood score...");
-        jsonObject = TrainUtil.getSingletonTrainUtilInst().indexData(jsonObject, modelPath, fqnThreshold);
+        jsonObject = TrainUtil.getSingletonTrainUtilInst().indexData(jsonObject, COSTER.getModelPath(), COSTER.getFqnThreshold());
 
-        logger.info("Storing the model at "+ modelPath+"...");
-        print("Storing the model at "+modelPath+"...");
+        logger.info("Storing the model at "+ COSTER.getModelPath()+"...");
+        print("Storing the model at "+COSTER.getModelPath()+"...");
         try {
-            Files.write(Paths.get(modelPath+"OLD.json"), jsonObject.toJSONString().getBytes());
+            Files.write(Paths.get(COSTER.getModelPath()+"OLD.json"), jsonObject.toJSONString().getBytes());
         } catch (IOException e) {
             print("Error Occurred while storing the model. See the detail in the log file");
             logger.error(e.getMessage());
