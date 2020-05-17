@@ -36,7 +36,6 @@ public class Train {
 
     private static void print(Object s){System.out.println(s.toString());}
 
-//    public static void createOld(String jarRepoPath, String repositoryPath,String datasetPath, String modelPath, int fqnThreshold, boolean isExtraction) {
     public static void createOld(){
         if(COSTER.getIsExtraction()){
             print("Collecting Jar files...");

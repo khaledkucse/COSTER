@@ -297,12 +297,6 @@ public class COSTER {
 
                     break;
                 case "retrain":
-//                    jarRepoPath = Config.GITHUB_JAR_PATH;
-//                    repositoryPath = Config.GITHUB_SUBJECT_SYSTEM_PATH;
-//                    datasetPath = Config.GITHUB_DATSET_PATH;
-//                    modelPath = Config.MODEL_PATH;
-//                    fqnThreshold = Config.FQN_THRESHOLD;
-//                    isExtraction = true;
                     try{
                         if (line.hasOption("r"))
                             COSTER.setRepositoryPath(line.getOptionValue("r"));
@@ -340,7 +334,7 @@ public class COSTER {
                                 COSTER.setIsExtraction(false);
                         }
 
-                        RetrainOLD.retrain(jarRepoPath,repositoryPath,datasetPath,modelPath,fqnThreshold,isExtraction);
+                        RetrainOLD.retrain();
                     }catch (Exception ex){
                         print("Exception occurred while taking input.\n\n");
                     }

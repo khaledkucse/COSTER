@@ -19,6 +19,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 
+import org.usask.srlab.coster.COSTER;
 import org.usask.srlab.coster.utils.InferUtil;
 import org.usask.srlab.coster.utils.NotifyingBlockingThreadPoolExecutor;
 import org.usask.srlab.coster.utils.ParseUtil;
@@ -31,14 +32,14 @@ public class RetrainOLD {
     private static void print(Object s){System.out.println(s.toString());}
 
     @SuppressWarnings("unchecked")
-    public static void retrain(String jarRepoPath, String repositoryPath, String datasetPath, String modelPath, int fqnThreshold,boolean isExtraction) {
-        if(isExtraction){
+    public static void retrain(){
+        if(COSTER.getIsExtraction()){
             print("Collecting Jar files...");
-            String[] jarPaths = ParseUtil.collectJarFiles(new File(jarRepoPath));
-            String[] projectPaths = ParseUtil.collectGithubProjects(new File(repositoryPath));
+            String[] jarPaths = ParseUtil.collectJarFiles(new File(COSTER.getJarRepoPath()));
+            String[] projectPaths = ParseUtil.collectGithubProjects(new File(COSTER.getRepositoryPath()));
 
             print("Extracting subject systems from the repository...");
-            NotifyingBlockingThreadPoolExecutor pool = Train.collectDataset(projectPaths,jarPaths, datasetPath);
+            NotifyingBlockingThreadPoolExecutor pool = Train.collectDataset(projectPaths,jarPaths, COSTER.getDatasetPath());
             try {
                 pool.await();
             } catch (InterruptedException e) {
@@ -50,18 +51,18 @@ public class RetrainOLD {
         }
 
         print("Retrieving the Trained Model...");
-        JSONObject jsonObject = retriveTrainedOLD(modelPath, fqnThreshold);
+        JSONObject jsonObject = retriveTrainedOLD(COSTER.getModelPath(), COSTER.getFqnThreshold());
 
         print("Populating the data from subject systems into the trained model...");
-        jsonObject = Train.populateDatainOLD(new File(datasetPath), jsonObject);
+        jsonObject = Train.populateDatainOLD(new File(COSTER.getDatasetPath()), jsonObject);
 
         print("Calculating the occurrence likelihood score...");
-        jsonObject = TrainUtil.getSingletonTrainUtilInst().indexData(jsonObject, modelPath,fqnThreshold);
+        jsonObject = TrainUtil.getSingletonTrainUtilInst().indexData(jsonObject, COSTER.getModelPath(),COSTER.getFqnThreshold());
 
-        logger.info("Storing the model at "+ modelPath+"...");
-        print("Storing the model at "+modelPath+"...");
+        logger.info("Storing the model at "+ COSTER.getModelPath()+"...");
+        print("Storing the model at "+COSTER.getModelPath()+"...");
         try {
-            Files.write(Paths.get(modelPath+"OLD.json"), jsonObject.toJSONString().getBytes());
+            Files.write(Paths.get(COSTER.getModelPath()+"OLD.json"), jsonObject.toJSONString().getBytes());
         } catch (IOException e) {
             print("Error Occurred while strong the model. See the detail in the log file");
             logger.error(e.getMessage());
