@@ -30,6 +30,14 @@ public class COSTER {
         System.exit(exitval);
     }
 
+    public static boolean isIsExtraction() {
+        return isExtraction;
+    }
+
+    public static void setIsExtraction(boolean isExtraction) {
+        COSTER.isExtraction = isExtraction;
+    }
+
     public static String getJarRepoPath() {
         return jarRepoPath;
     }
@@ -244,39 +252,33 @@ public class COSTER {
             String feature = line.getOptionValue("f");
             switch (feature) {
                 case "train":
-//                    String jarRepoPath = Config.GITHUB_JAR_PATH;
-//                    String repositoryPath = Config.GITHUB_SUBJECT_SYSTEM_PATH;
-//                    String datasetPath = Config.GITHUB_DATSET_PATH;
-//                    String modelPath = Config.MODEL_PATH;
-//                    int fqnThreshold = Config.FQN_THRESHOLD;
-//                    boolean isExtraction = true;
                     try{
                         if (line.hasOption("r"))
-                            repositoryPath = line.getOptionValue("r");
+                            COSTER.setRepositoryPath(line.getOptionValue("r"));
 //                        else {
 //                            print("No path of repository for training is provided.");
 //                            print("Selecting the deafult path of Repository for training:" + repositoryPath);
 //                        }
                         if (line.hasOption("m"))
-                            modelPath = line.getOptionValue("m");
+                            COSTER.setModelPath(line.getOptionValue("m"));
 //                        else {
 //                            print("No path for stroing trained model is provided.");
 //                            print("Selecting the deafult path for storing trained model: " + modelPath);
 //                        }
                         if (line.hasOption("d"))
-                            datasetPath = line.getOptionValue("d");
+                            COSTER.setDatasetPath(line.getOptionValue("d"));
 //                        else {
 //                            print("No path for stroing intermidiate dataset for training is provided.");
 //                            print("Selecting the deafult path for stroing intermidiate dataset for training: " + datasetPath);
 //                        }
                         if (line.hasOption("j"))
-                            jarRepoPath = line.getOptionValue("j");
+                            COSTER.setJarRepoPath(line.getOptionValue("j"));
 //                        else {
 //                            print("No path of jar files for training is provided.");
 //                            print("Selecting the deafult path of jar files for training: " + jarRepoPath);
 //                        }
                         if (line.hasOption("q"))
-                            fqnThreshold = Integer.parseInt(line.getOptionValue("q"));
+                            COSTER.setFqnThreshold(Integer.parseInt(line.getOptionValue("q")));
 //                        else {
 //                            print("No threshold for context size of each FQN is selected.");
 //                            print("Selecting the deafult threshold value: " + fqnThreshold);
@@ -284,7 +286,7 @@ public class COSTER {
                         if (line.hasOption("k")) {
                             int temp = Integer.parseInt(line.getOptionValue("k"));
                             if(temp == 0)
-                                isExtraction = false;
+                                COSTER.setIsExtraction(false);
                         }
 
 
@@ -303,31 +305,31 @@ public class COSTER {
 //                    isExtraction = true;
                     try{
                         if (line.hasOption("r"))
-                            repositoryPath = line.getOptionValue("r");
+                            COSTER.setRepositoryPath(line.getOptionValue("r"));
 //                        else {
 //                            print("No path of repository for training is provided.");
 //                            print("Selecting the deafult path of Repository for training:" + repositoryPath);
 //                        }
                         if (line.hasOption("m"))
-                            modelPath = line.getOptionValue("m");
+                            COSTER.setModelPath(line.getOptionValue("m"));
 //                        else {
 //                            print("No path for stroing trained model is provided.");
 //                            print("Selecting the deafult path for storing trained model: " + modelPath);
 //                        }
                         if (line.hasOption("d"))
-                            datasetPath = line.getOptionValue("d");
+                            COSTER.setDatasetPath(line.getOptionValue("d"));
 //                        else {
 //                            print("No path for stroing intermidiate dataset for training is provided.");
 //                            print("Selecting the deafult path for stroing intermidiate dataset for training: " + datasetPath);
 //                        }
                         if (line.hasOption("j"))
-                            jarRepoPath = line.getOptionValue("j");
+                            COSTER.setJarRepoPath(line.getOptionValue("j"));
 //                        else {
 //                            print("No path of jar files for training is provided.");
 //                            print("Selecting the deafult path of jar files for training: " + jarRepoPath);
 //                        }
                         if (line.hasOption("q"))
-                            fqnThreshold = Integer.parseInt(line.getOptionValue("q"));
+                            COSTER.setFqnThreshold(Integer.parseInt(line.getOptionValue("q")));
 //                        else {
 //                            print("No threshold for context size of each FQN is selected.");
 //                            print("Selecting the deafult threshold value: " + fqnThreshold);
@@ -335,7 +337,7 @@ public class COSTER {
                         if (line.hasOption("k")) {
                             int temp = Integer.parseInt(line.getOptionValue("k"));
                             if(temp == 0)
-                                isExtraction = false;
+                                COSTER.setIsExtraction(false);
                         }
 
                         RetrainOLD.retrain(jarRepoPath,repositoryPath,datasetPath,modelPath,fqnThreshold,isExtraction);
@@ -348,12 +350,10 @@ public class COSTER {
                     if (line.hasOption("i") && line.hasOption("o")) {
                         String inputFilePath = line.getOptionValue("i");
                         String outputFilePath = line.getOptionValue("o");
-                        jarRepoPath = Config.SO_JAR_PATH;
-//                        String contextSimilarity = "cosine", nameSimilarity = "levenshtein";
-//                        modelPath = Config.MODEL_PATH;
+                        COSTER.setJarRepoPath(Config.SO_JAR_PATH);
                         try {
                             if (line.hasOption("t"))
-                                topk = Integer.parseInt(line.getOptionValue("t"));
+                                COSTER.setTopk(Integer.parseInt(line.getOptionValue("t")));
 //                            else{
 //                                print("No value as Top-K is selected.");
 //                                print("Selecting the deafult number of reccomendation: " + topk);
@@ -361,9 +361,9 @@ public class COSTER {
                             if (line.hasOption("c")) {
                                 String tempContext = line.getOptionValue("c");
                                 if (tempContext.equals("jaccard"))
-                                    contextSimilarity = tempContext;
+                                    COSTER.setContextSimilarity(tempContext);
                                 else if (tempContext.equals("lcs"))
-                                    contextSimilarity = tempContext;
+                                    COSTER.setContextSimilarity(tempContext);
                             }
 //                            else{
 //                                print("No metric is slected for context similairty method.");
@@ -372,22 +372,22 @@ public class COSTER {
                             if (line.hasOption("n")) {
                                 String tempName = line.getOptionValue("n");
                                 if (tempName.equals("hamming"))
-                                    nameSimilarity = tempName;
+                                    COSTER.setNameSimilarity(tempName);
                                 else if (tempName.equals("lcs"))
-                                    nameSimilarity = tempName;
+                                    COSTER.setNameSimilarity(tempName);
                             }
 //                            else{
 //                                print("No metric is slected for name similairty method.");
 //                                print("Selecting the deafult name similairty method Levenshtein distance");
 //                            }
                             if (line.hasOption("j"))
-                                jarRepoPath = line.getOptionValue("j");
+                                COSTER.setJarRepoPath(line.getOptionValue("j"));
 //                            else {
 //                                print("No path of jar files for training is provided.");
 //                                print("Selecting the deafult path of jar files for training: " + jarRepoPath);
 //                            }
                             if (line.hasOption("m"))
-                                modelPath = line.getOptionValue("m");
+                                COSTER.setModelPath(line.getOptionValue("m"));
 //                            else {
 //                                print("No path for trained trained model is provided.");
 //                                print("Selecting the deafult path for storing trained model: " + modelPath);
@@ -409,13 +409,13 @@ public class COSTER {
 //                        modelPath = Config.MODEL_PATH;
                         try{
                             if (line.hasOption("t"))
-                                topk = Integer.parseInt(line.getOptionValue("t"));
+                                COSTER.setTopk(Integer.parseInt(line.getOptionValue("t")));
 //                            else{
 //                                print("No value as Top-K is selected.");
 //                                print("Selecting the deafult number of reccomendation: " + topk);
 //                            }
                             if (line.hasOption("m"))
-                                modelPath = line.getOptionValue("m");
+                                COSTER.setModelPath(line.getOptionValue("m"));
 //                            else {
 //                                print("No path for trained trained model is provided.");
 //                                print("Selecting the deafult path for storing trained model: " + modelPath);
@@ -423,9 +423,9 @@ public class COSTER {
                             if (line.hasOption("c")) {
                                 String tempContext = line.getOptionValue("c");
                                 if (tempContext.equals("jaccard"))
-                                    contextSimilarity = tempContext;
+                                    COSTER.setContextSimilarity(tempContext);
                                 else if (tempContext.equals("lcs"))
-                                    contextSimilarity = tempContext;
+                                    COSTER.setContextSimilarity(tempContext);
                             }
 //                            else{
 //                                print("No metric is slected for context similairty method.");
@@ -434,9 +434,9 @@ public class COSTER {
                             if (line.hasOption("n")) {
                                 String tempName = line.getOptionValue("n");
                                 if (tempName.equals("hamming"))
-                                    nameSimilarity = tempName;
+                                    COSTER.setNameSimilarity(tempName);
                                 else if (tempName.equals("lcs"))
-                                    nameSimilarity = tempName;
+                                    COSTER.setNameSimilarity(tempName);
                             }
 //                            else{
 //                                print("No metric is slected for name similairty method.");
@@ -444,23 +444,23 @@ public class COSTER {
 //                            }
                         }catch (Exception ignored){}
                         if(evalType.equals("intrinsic")){
-                            jarRepoPath = Config.GITHUB_JAR_PATH;
-                            repositoryPath = Config.TEST_SUBJECT_SYSTEM_PATH;
-                            datasetPath = Config.TEST_DATSET_PATH;
+                            COSTER.setJarRepoPath(Config.GITHUB_JAR_PATH);
+                            COSTER.setRepositoryPath(Config.TEST_SUBJECT_SYSTEM_PATH);
+                            COSTER.setDatasetPath(Config.TEST_DATSET_PATH);
                             if (line.hasOption("r"))
-                                repositoryPath = line.getOptionValue("r");
+                                COSTER.setRepositoryPath(line.getOptionValue("r"));
 //                            else {
 //                                print("No path of repository for training is provided.");
 //                                print("Selecting the deafult path of Repository for training:" + repositoryPath);
 //                            }
                             if (line.hasOption("j"))
-                                jarRepoPath = line.getOptionValue("j");
+                                COSTER.setJarRepoPath(line.getOptionValue("j"));
 //                            else {
 //                                print("No path of jar files for training is provided.");
 //                                print("Selecting the deafult path of jar files for training: " + jarRepoPath);
 //                            }
                             if (line.hasOption("d"))
-                                datasetPath = line.getOptionValue("d");
+                                COSTER.setDatasetPath(line.getOptionValue("d"));
 //                            else {
 //                                print("No path for intermidiate dataset for training is provided.");
 //                                print("Selecting the deafult path for stroing intermidiate dataset for training: " + datasetPath);
@@ -469,23 +469,23 @@ public class COSTER {
                             IntrinsticInference.evaluation(jarRepoPath,repositoryPath,datasetPath,modelPath,topk,contextSimilarity,nameSimilarity);
 
                         }else if(evalType.equals("extrinsic")) {
-                            jarRepoPath = Config.SO_JAR_PATH;
-                            repositoryPath = Config.SO_CODE_SNIPPET_PATH;
-                            datasetPath = Config.SO_DATASET_PATH;
+                            COSTER.setJarRepoPath(Config.SO_JAR_PATH);
+                            COSTER.setRepositoryPath(Config.SO_CODE_SNIPPET_PATH);
+                            COSTER.setDatasetPath(Config.SO_DATASET_PATH);
                             if (line.hasOption("r"))
-                                repositoryPath = line.getOptionValue("r");
+                                COSTER.setRepositoryPath(line.getOptionValue("r"));
 //                            else {
 //                                print("No path of repository for training is provided.");
 //                                print("Selecting the deafult path of Repository for training:" + repositoryPath);
 //                            }
                             if (line.hasOption("j"))
-                                jarRepoPath = line.getOptionValue("j");
+                                COSTER.setJarRepoPath(line.getOptionValue("j"));
 //                            else {
 //                                print("No path of jar files for training is provided.");
 //                                print("Selecting the deafult path of jar files for training: " + jarRepoPath);
 //                            }
                             if (line.hasOption("d"))
-                                datasetPath = line.getOptionValue("d");
+                                COSTER.setDatasetPath(line.getOptionValue("d"));
 //                            else {
 //                                print("No path for intermidiate dataset for training is provided.");
 //                                print("Selecting the deafult path for stroing intermidiate dataset for training: " + datasetPath);
@@ -503,11 +503,10 @@ public class COSTER {
                     if (line.hasOption("i") && line.hasOption("o")) {
                         String inputFilePath = line.getOptionValue("i");
                         String outputFilePath = line.getOptionValue("o");
-//                        String contextSimilarity = "cosine", nameSimilarity = "levenshtein";
-                        jarRepoPath = Config.GITHUB_JAR_PATH;
+                        COSTER.setJarRepoPath(Config.SO_JAR_PATH);
                         try {
                             if (line.hasOption("t"))
-                                topk = Integer.parseInt(line.getOptionValue("t"));
+                                COSTER.setTopk(Integer.parseInt(line.getOptionValue("t")));
 //                            else{
 //                                print("No value as Top-K is selected.");
 //                                print("Selecting the deafult number of reccomendation: " + topk);
@@ -515,9 +514,9 @@ public class COSTER {
                             if (line.hasOption("c")) {
                                 String tempContext = line.getOptionValue("c");
                                 if (tempContext.equals("jaccard"))
-                                    contextSimilarity = tempContext;
+                                    COSTER.setContextSimilarity(tempContext);
                                 else if (tempContext.equals("lcs"))
-                                    contextSimilarity = tempContext;
+                                    COSTER.setContextSimilarity(tempContext);
                             }
 //                            else{
 //                                print("No metric is slected for context similairty method.");
@@ -526,16 +525,16 @@ public class COSTER {
                             if (line.hasOption("n")) {
                                 String tempName = line.getOptionValue("n");
                                 if (tempName.equals("hamming"))
-                                    nameSimilarity = tempName;
+                                    COSTER.setNameSimilarity(tempName);
                                 else if (tempName.equals("lcs"))
-                                    nameSimilarity = tempName;
+                                    COSTER.setNameSimilarity(tempName);
                             }
 //                            else{
 //                                print("No metric is slected for name similairty method.");
 //                                print("Selecting the deafult name similairty method Levenshtein distance");
 //                            }
                             if (line.hasOption("j"))
-                                jarRepoPath = line.getOptionValue("j");
+                                COSTER.setJarRepoPath(line.getOptionValue("j"));
 //                            else {
 //                                print("No path of jar files for training is provided.");
 //                                print("Selecting the deafult path of jar files for training: " + jarRepoPath);

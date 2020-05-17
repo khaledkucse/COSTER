@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="830074f3-d605-41ba-a4e9-a67a9e873454" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/coster.logs" beforeDir="false" afterPath="$PROJECT_DIR$/logs/coster.logs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ExtrinsicInference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ExtrinsicInference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/COSTER.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/COSTER.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/config/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/config/Config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/dictionary/DictonaryCreator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/dictionary/DictonaryCreator$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/dictionary/DictonaryCreator$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/dictionary/DictonaryCreator$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/dictionary/DictonaryCreator$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/dictionary/DictonaryCreator$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/dictionary/DictonaryCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/dictionary/DictonaryCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/infer/ExtrinsicInference.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/infer/ExtrinsicInference.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,9 +17,13 @@
       <file leaf-file-name="COSTER.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="474" column="52" lean-forward="true" selection-start-line="474" selection-start-column="52" selection-end-line="474" selection-end-column="52" />
+            <state relative-caret-position="223">
+              <caret line="253" column="29" selection-start-line="253" selection-start-column="29" selection-end-line="253" selection-end-column="29" />
               <folding>
+                <element signature="e#1289#1290#0" expanded="true" />
+                <element signature="e#1324#1325#0" expanded="true" />
+                <element signature="e#1388#1389#0" expanded="true" />
+                <element signature="e#1438#1439#0" expanded="true" />
                 <element signature="e#1288#1289#0" expanded="true" />
                 <element signature="e#1322#1323#0" expanded="true" />
                 <element signature="e#1383#1384#0" expanded="true" />
@@ -146,8 +140,8 @@
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/DictonaryUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/dictionary/DictonaryCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ExtrinsicInference.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" />
       </list>
     </option>
   </component>
@@ -311,12 +305,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589741735423</updated>
-      <workItem from="1589741736761" duration="11342000" />
+      <workItem from="1589741736761" duration="12820000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11342000" />
+    <option name="totallyTimeSpent" value="12820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="34" width="1868" height="1046" extended-state="6" />
@@ -561,9 +555,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="474" column="52" lean-forward="true" selection-start-line="474" selection-start-column="52" selection-end-line="474" selection-end-column="52" />
+        <state relative-caret-position="223">
+          <caret line="253" column="29" selection-start-line="253" selection-start-column="29" selection-end-line="253" selection-end-column="29" />
           <folding>
+            <element signature="e#1289#1290#0" expanded="true" />
+            <element signature="e#1324#1325#0" expanded="true" />
+            <element signature="e#1388#1389#0" expanded="true" />
+            <element signature="e#1438#1439#0" expanded="true" />
             <element signature="e#1288#1289#0" expanded="true" />
             <element signature="e#1322#1323#0" expanded="true" />
             <element signature="e#1383#1384#0" expanded="true" />
