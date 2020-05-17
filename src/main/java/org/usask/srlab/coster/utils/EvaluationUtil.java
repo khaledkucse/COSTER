@@ -39,7 +39,7 @@ public class EvaluationUtil {
         if(totaltestCases == 0)
             return 0;
         else {
-            double recall = ((tp + 0.00001) / (totaltestCases + 0.00001) + (Math.random() * 0.03));
+            double recall = ((tp + 0.00001) / (totaltestCases + 0.00001));
             return recall > 1 ? 1 - (1 - recall) : recall;
         }
     }

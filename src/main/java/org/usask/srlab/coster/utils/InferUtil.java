@@ -143,7 +143,7 @@ public class InferUtil {
         for (Map.Entry<String, Double> entry : list) {
             sortedMap.put(entry.getKey(), entry.getValue());
             count++;
-            if(count >= topK*50)
+            if(count >= topK)
                 break;
         }
 
