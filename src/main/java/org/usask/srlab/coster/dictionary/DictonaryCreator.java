@@ -32,6 +32,7 @@ import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.Modifier;
 import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
+import org.usask.srlab.coster.config.Config;
 import org.usask.srlab.coster.utils.DictonaryUtil;
 import org.usask.srlab.coster.utils.NotifyingBlockingThreadPoolExecutor;
 
@@ -74,18 +75,10 @@ public class DictonaryCreator {
      * The only public method of the class that creates dictonary.
      * @param libraryDirPath: path of the library/jar files
      * @param dictonaryOutpath: path of the dictonary directory where class/types, methods, fields will be stored
-     * @param repositoryPath: path of the repository where all the subject systems are reside.
      */
-	public static void createDictonary(String libraryDirPath, String dictonaryOutpath, String repositoryPath) {
+	public static void createDictonary(String libraryDirPath, String dictonaryOutpath) {
 
         extractFromJars(libraryDirPath, dictonaryOutpath);
-//		extractFromSource(new File(repositoryPath),dictonaryOutpath);
-
-        System.out.println("Total Jars: " + numOfJars);
-		System.out.println("Total Projects: " + numOfProjects);
-		System.out.println("Total Classes/Types: " + numOfTypes);
-		System.out.println("Total Methods: " + numOfMethods);
-		System.out.println("Total Fields: " + numOfFields);
 	}
 
     /**
@@ -124,9 +117,7 @@ public class DictonaryCreator {
 						ees.extractFromJarFile(jarFilePath);
 
 
-						DictonaryUtil.writeToFile(new File(out, jarLocation.getName() + "-types").getAbsolutePath(), ees.types);
-						DictonaryUtil.writeToFile(new File(out, jarLocation.getName() + "-methods").getAbsolutePath(), ees.methods);
-						DictonaryUtil.writeToFile(new File(out, jarLocation.getName() + "-fields").getAbsolutePath(), ees.fields);
+						DictonaryUtil.writeToFile(new File(out, jarLocation.getName().replace(".jar","") ).getAbsolutePath(), ees.types);
 					} catch (Throwable t) {}
 				}
 			});
@@ -190,8 +181,6 @@ public class DictonaryCreator {
 
 
                             DictonaryUtil.writeToFile(new File(out, repository.getParentFile().getName() + "___" + repository.getName() + "-types").getAbsolutePath(), ees.types);
-                            DictonaryUtil.writeToFile(new File(out, repository.getParentFile().getName() + "___" + repository.getName() + "-methods").getAbsolutePath(), ees.methods);
-                            DictonaryUtil.writeToFile(new File(out, repository.getParentFile().getName() + "___" + repository.getName() + "-fields").getAbsolutePath(), ees.fields);
                         } catch (Throwable t) {
                         }
                     }
@@ -370,6 +359,10 @@ public class DictonaryCreator {
 			sb.append(type.toString() + ",");
 		sb.append(") " + method.getReturnType().toString());
 		return sb.toString();
+	}
+
+	public static void main(String[] args) {
+		createDictonary(Config.SO_JAR_PATH,Config.SO_DICTONARY_PATH);
 	}
 
 }

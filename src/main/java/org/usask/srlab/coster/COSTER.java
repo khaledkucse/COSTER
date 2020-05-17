@@ -17,6 +17,9 @@ import java.util.Properties;
 public class COSTER {
     private static final Logger logger = LogManager.getLogger(COSTER.class.getName()); // logger variable for loggin in the file
     private static void print(Object s){System.out.println(s.toString());}
+    private static String jarRepoPath, repositoryPath,datasetPath,modelPath, contextSimilarity, nameSimilarity;
+    private static int fqnThreshold, topk;
+    private static boolean isExtraction;
 
 
     private static Options options;
@@ -26,6 +29,19 @@ public class COSTER {
         formatter.printHelp(200, "java -jar COSTER.jar", "COSTER-HELP", options, "", true);
         System.exit(exitval);
     }
+
+    private static void init(){
+        jarRepoPath = Config.GITHUB_JAR_PATH;
+        repositoryPath = Config.GITHUB_SUBJECT_SYSTEM_PATH;
+        datasetPath = Config.GITHUB_DATSET_PATH;
+        modelPath = Config.MODEL_PATH;
+        fqnThreshold = Config.FQN_THRESHOLD;
+        isExtraction = true;
+        contextSimilarity = "cosine";
+        nameSimilarity = "levenshtein";
+        topk = Config.DEFAULT_TOP_K;
+    }
+
 
 
     public static void main(String[] args) {
@@ -163,12 +179,12 @@ public class COSTER {
             String feature = line.getOptionValue("f");
             switch (feature) {
                 case "train":
-                    String jarRepoPath = Config.GITHUB_JAR_PATH;
-                    String repositoryPath = Config.GITHUB_SUBJECT_SYSTEM_PATH;
-                    String datasetPath = Config.GITHUB_DATSET_PATH;
-                    String modelPath = Config.MODEL_PATH;
-                    int fqnThreshold = Config.FQN_THRESHOLD;
-                    boolean isExtraction = true;
+//                    String jarRepoPath = Config.GITHUB_JAR_PATH;
+//                    String repositoryPath = Config.GITHUB_SUBJECT_SYSTEM_PATH;
+//                    String datasetPath = Config.GITHUB_DATSET_PATH;
+//                    String modelPath = Config.MODEL_PATH;
+//                    int fqnThreshold = Config.FQN_THRESHOLD;
+//                    boolean isExtraction = true;
                     try{
                         if (line.hasOption("r"))
                             repositoryPath = line.getOptionValue("r");
@@ -214,12 +230,12 @@ public class COSTER {
 
                     break;
                 case "retrain":
-                    jarRepoPath = Config.GITHUB_JAR_PATH;
-                    repositoryPath = Config.GITHUB_SUBJECT_SYSTEM_PATH;
-                    datasetPath = Config.GITHUB_DATSET_PATH;
-                    modelPath = Config.MODEL_PATH;
-                    fqnThreshold = Config.FQN_THRESHOLD;
-                    isExtraction = true;
+//                    jarRepoPath = Config.GITHUB_JAR_PATH;
+//                    repositoryPath = Config.GITHUB_SUBJECT_SYSTEM_PATH;
+//                    datasetPath = Config.GITHUB_DATSET_PATH;
+//                    modelPath = Config.MODEL_PATH;
+//                    fqnThreshold = Config.FQN_THRESHOLD;
+//                    isExtraction = true;
                     try{
                         if (line.hasOption("r"))
                             repositoryPath = line.getOptionValue("r");
@@ -267,10 +283,10 @@ public class COSTER {
                     if (line.hasOption("i") && line.hasOption("o")) {
                         String inputFilePath = line.getOptionValue("i");
                         String outputFilePath = line.getOptionValue("o");
-                        int topk = 1;
-                        String contextSimilarity = "cosine", nameSimilarity = "levenshtein";
-                        jarRepoPath = Config.SO_JAR_PATH;
-                        modelPath = Config.MODEL_PATH;
+//                        int topk = 1;
+//                        String contextSimilarity = "cosine", nameSimilarity = "levenshtein";
+//                        jarRepoPath = Config.SO_JAR_PATH;
+//                        modelPath = Config.MODEL_PATH;
                         try {
                             if (line.hasOption("t"))
                                 topk = Integer.parseInt(line.getOptionValue("t"));
@@ -325,9 +341,9 @@ public class COSTER {
                 case "eval":
                     if (line.hasOption("e")) {
                         String evalType = line.getOptionValue("e");
-                        int topk = 1;
-                        String contextSimilarity = "cosine", nameSimilarity = "levenshtein";
-                        modelPath = Config.MODEL_PATH;
+//                        int topk = 1;
+//                        String contextSimilarity = "cosine", nameSimilarity = "levenshtein";
+//                        modelPath = Config.MODEL_PATH;
                         try{
                             if (line.hasOption("t"))
                                 topk = Integer.parseInt(line.getOptionValue("t"));
@@ -424,9 +440,6 @@ public class COSTER {
                     if (line.hasOption("i") && line.hasOption("o")) {
                         String inputFilePath = line.getOptionValue("i");
                         String outputFilePath = line.getOptionValue("o");
-                        int topk = 1;
-                        String contextSimilarity = "cosine", nameSimilarity = "levenshtein";
-                        jarRepoPath = Config.GITHUB_JAR_PATH;
                         try {
                             if (line.hasOption("t"))
                                 topk = Integer.parseInt(line.getOptionValue("t"));
@@ -482,6 +495,8 @@ public class COSTER {
         }
 
     }
+
+
 
     private static void welcomeMessage(Properties properties){
         print("COSTER: Context Sensitive Type Solver");

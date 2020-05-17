@@ -14,6 +14,7 @@ public class Config {
     //Dictonary Related Path variable
     public static final String FULL_JAR_PATH = JAR_PATH+"full/";
     public static final String DICTONARY_PATH = DATA_PATH+"dictonary/";
+    public static final String SO_DICTONARY_PATH = DICTONARY_PATH+"so/";
     public static final String JAR_DICTONARY_PATH = DICTONARY_PATH+"jar/";
     public static final String SUBJECT_SYSTEM_DICTONARY_PATH = DICTONARY_PATH+"subjectSystem/";
 
@@ -40,6 +41,7 @@ public class Config {
     public static final double alpha  = 0.5;
     public static final double beta  = 0.8;
     public static final double gamma  = 0.75;
+    public static final int DEFAULT_TOP_K  = 1;
 
 
     private static final String [] JAVA_KEYWORDS = {"abstract","boolean","break","byte","case","catch","char","class","const","continue",
