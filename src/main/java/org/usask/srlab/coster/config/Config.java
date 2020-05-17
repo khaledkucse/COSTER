@@ -41,7 +41,7 @@ public class Config {
     public static final double alpha  = 0.5;
     public static final double beta  = 0.8;
     public static final double gamma  = 0.75;
-    public static final int DEFAULT_TOP_K  = 1;
+    public static final int DEFAULT_TOP  = 1;
 
 
     private static final String [] JAVA_KEYWORDS = {"abstract","boolean","break","byte","case","catch","char","class","const","continue",

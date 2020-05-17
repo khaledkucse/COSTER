@@ -35,14 +35,84 @@ public class COSTER {
         repositoryPath = Config.GITHUB_SUBJECT_SYSTEM_PATH;
         datasetPath = Config.GITHUB_DATSET_PATH;
         modelPath = Config.MODEL_PATH;
+        topk = Config.DEFAULT_TOP;
         fqnThreshold = Config.FQN_THRESHOLD;
         isExtraction = true;
         contextSimilarity = "cosine";
         nameSimilarity = "levenshtein";
-        topk = Config.DEFAULT_TOP_K;
     }
 
+    public static String getJarRepoPath() {
+        return jarRepoPath;
+    }
 
+    public static void setJarRepoPath(String jarRepoPath) {
+        COSTER.jarRepoPath = jarRepoPath;
+    }
+
+    public static String getRepositoryPath() {
+        return repositoryPath;
+    }
+
+    public static void setRepositoryPath(String repositoryPath) {
+        COSTER.repositoryPath = repositoryPath;
+    }
+
+    public static String getDatasetPath() {
+        return datasetPath;
+    }
+
+    public static void setDatasetPath(String datasetPath) {
+        COSTER.datasetPath = datasetPath;
+    }
+
+    public static String getModelPath() {
+        return modelPath;
+    }
+
+    public static void setModelPath(String modelPath) {
+        COSTER.modelPath = modelPath;
+    }
+
+    public static String getContextSimilarity() {
+        return contextSimilarity;
+    }
+
+    public static void setContextSimilarity(String contextSimilarity) {
+        COSTER.contextSimilarity = contextSimilarity;
+    }
+
+    public static String getNameSimilarity() {
+        return nameSimilarity;
+    }
+
+    public static void setNameSimilarity(String nameSimilarity) {
+        COSTER.nameSimilarity = nameSimilarity;
+    }
+
+    public static int getFqnThreshold() {
+        return fqnThreshold;
+    }
+
+    public static void setFqnThreshold(int fqnThreshold) {
+        COSTER.fqnThreshold = fqnThreshold;
+    }
+
+    public static int getTopk() {
+        return topk;
+    }
+
+    public static void setTopk(int topk) {
+        COSTER.topk = topk;
+    }
+
+    public static boolean isIsExtraction() {
+        return isExtraction;
+    }
+
+    public static void setIsExtraction(boolean isExtraction) {
+        COSTER.isExtraction = isExtraction;
+    }
 
     public static void main(String[] args) {
         PropertyConfigurator.configure(COSTER.class.getClass().getResourceAsStream("/log4j.properties"));
@@ -283,10 +353,6 @@ public class COSTER {
                     if (line.hasOption("i") && line.hasOption("o")) {
                         String inputFilePath = line.getOptionValue("i");
                         String outputFilePath = line.getOptionValue("o");
-//                        int topk = 1;
-//                        String contextSimilarity = "cosine", nameSimilarity = "levenshtein";
-//                        jarRepoPath = Config.SO_JAR_PATH;
-//                        modelPath = Config.MODEL_PATH;
                         try {
                             if (line.hasOption("t"))
                                 topk = Integer.parseInt(line.getOptionValue("t"));
@@ -341,9 +407,6 @@ public class COSTER {
                 case "eval":
                     if (line.hasOption("e")) {
                         String evalType = line.getOptionValue("e");
-//                        int topk = 1;
-//                        String contextSimilarity = "cosine", nameSimilarity = "levenshtein";
-//                        modelPath = Config.MODEL_PATH;
                         try{
                             if (line.hasOption("t"))
                                 topk = Integer.parseInt(line.getOptionValue("t"));
@@ -406,9 +469,6 @@ public class COSTER {
                             IntrinsticInference.evaluation(jarRepoPath,repositoryPath,datasetPath,modelPath,topk,contextSimilarity,nameSimilarity);
 
                         }else if(evalType.equals("extrinsic")) {
-                            jarRepoPath = Config.SO_JAR_PATH;
-                            repositoryPath = Config.SO_CODE_SNIPPET_PATH;
-                            datasetPath = Config.SO_DATASET_PATH;
                             if (line.hasOption("r"))
                                 repositoryPath = line.getOptionValue("r");
 //                            else {
