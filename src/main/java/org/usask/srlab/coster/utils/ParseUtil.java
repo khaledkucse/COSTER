@@ -81,6 +81,8 @@ public class ParseUtil {
             actualFQN = actualFQN.substring(0, actualFQN.indexOf("<"));
         return actualFQN;
     }
+
+
     public static String[] collectJarFiles(File jarFiles){
         logger.info("Collecting Jar Files");
         String[] extensions = { ".jar"};
@@ -99,6 +101,7 @@ public class ParseUtil {
         return jarPath;
     }
 
+
     public static String[] collectGithubProjects(File subjectSytems){
         logger.info("Collecting GitHub Subject Systems/Projects");
         String[] extensions = { ".zip"};
@@ -114,6 +117,7 @@ public class ParseUtil {
         logger.info("Total Number of Subject Systems: "+ projectPaths.length);
         return projectPaths;
     }
+
 
     public static ArrayList<File> collectJavaFiles(File file) {
         ArrayList<File> files = new ArrayList<>();
@@ -141,6 +145,8 @@ public class ParseUtil {
         }
         return files;
     }
+
+
     public static ArrayList<String> collectSOSnippets(File file) {
         logger.info("Collecting Stack Overflow Code Snippets");
         ArrayList<String> files = new ArrayList<>();
