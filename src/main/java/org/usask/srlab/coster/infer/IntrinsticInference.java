@@ -9,7 +9,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 
-
+import org.usask.srlab.coster.COSTER;
 import org.usask.srlab.coster.model.APIElement;
 import org.usask.srlab.coster.model.OLDEntry;
 import org.usask.srlab.coster.model.TestResult;
@@ -24,17 +24,17 @@ public class IntrinsticInference {
     private static void print(Object s){System.out.println(s.toString());}
 
 
-    public static void evaluation(String jarPath, String repositoryPath, String datasetPath, String modelPath, int topk, String contextSim, String nameSim) {
+    public static void evaluation() {
         print("Collecting Jar files...");
         logger.info("Collecting Jar Files...");
-        String[] jarPaths = ParseUtil.collectJarFiles(new File(jarPath));
+        String[] jarPaths = ParseUtil.collectJarFiles(new File(COSTER.getJarRepoPath()));
         print("Collecting Subject Systems from repository for evaluation...");
         logger.info("Collecting Subject Systems from repository for evaluation...");
-        String[] projectPaths = ParseUtil.collectGithubProjects(new File(repositoryPath));
+        String[] projectPaths = ParseUtil.collectGithubProjects(new File(COSTER.getRepositoryPath()));
 
         print("Extracting test data from the Subject Systems...");
         logger.info("Extracting test data from the Subject Systems...");
-        List<APIElement> testCases = InferUtil.collectDataset(projectPaths,jarPaths,datasetPath);
+        List<APIElement> testCases = InferUtil.collectDataset(projectPaths,jarPaths,COSTER.getDatasetPath());
         List<TestResult> testResults = new ArrayList<>();
         int count = 0;
         long totalInferenceTime = 0;
@@ -44,13 +44,13 @@ public class IntrinsticInference {
             long starttime = System.currentTimeMillis();
             String queryContext = StringUtils.join(eachCase.getContext()," ").replaceAll(",","");
             String queryAPIelement = eachCase.getName();
-            List<OLDEntry> candidateList = InferUtil.collectCandidateList(queryContext,modelPath);
+            List<OLDEntry> candidateList = InferUtil.collectCandidateList(queryContext,COSTER.getModelPath());
             Map<String, Double> recommendations = new HashMap<>();
             for(OLDEntry eachCandidate:candidateList){
                 String candidateContext = eachCandidate.getContext();
                 String candidateFQN = eachCandidate.getFqn();
-                double contextSimialrityScore = InferUtil.calculateContextSimilarity(queryContext,candidateContext,contextSim);
-                double nameSimilarityScore = InferUtil.calculateNameSimilarity(queryAPIelement,candidateFQN, nameSim);
+                double contextSimialrityScore = InferUtil.calculateContextSimilarity(queryContext,candidateContext,COSTER.getContextSimilarity());
+                double nameSimilarityScore = InferUtil.calculateNameSimilarity(queryAPIelement,candidateFQN, COSTER.getNameSimilarity());
                 double recommendationScore = InferUtil.calculateRecommendationScore(eachCandidate.getScore(),contextSimialrityScore,nameSimilarityScore);
                 if(recommendations.containsKey(candidateFQN) && recommendations.get(candidateFQN) < recommendationScore)
                     recommendations.put(candidateFQN,recommendationScore);
@@ -59,7 +59,7 @@ public class IntrinsticInference {
             }
             long inferenceTime = System.currentTimeMillis()-starttime;
             totalInferenceTime += inferenceTime;
-            recommendations = InferUtil.sortByComparator(recommendations,false,topk);
+            recommendations = InferUtil.sortByComparator(recommendations,false,COSTER.getTopk());
             TestResult eachTestResult = new TestResult(eachCase,recommendations, inferenceTime);
             testResults.add(eachTestResult);
             count++;

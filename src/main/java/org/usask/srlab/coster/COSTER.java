@@ -387,7 +387,7 @@ public class COSTER {
 //                                print("Selecting the deafult path for storing trained model: " + modelPath);
 //                            }
 
-                            FileInference.infer(jarRepoPath,inputFilePath, outputFilePath, modelPath, topk, contextSimilarity, nameSimilarity);
+                            FileInference.infer(inputFilePath, outputFilePath);
                         } catch (Exception ignored) {
                         }
 
@@ -399,8 +399,6 @@ public class COSTER {
                 case "eval":
                     if (line.hasOption("e")) {
                         String evalType = line.getOptionValue("e");
-//                        String contextSimilarity = "cosine", nameSimilarity = "levenshtein";
-//                        modelPath = Config.MODEL_PATH;
                         try{
                             if (line.hasOption("t"))
                                 COSTER.setTopk(Integer.parseInt(line.getOptionValue("t")));
@@ -460,7 +458,7 @@ public class COSTER {
 //                                print("Selecting the deafult path for stroing intermidiate dataset for training: " + datasetPath);
 //                            }
 
-                            IntrinsticInference.evaluation(jarRepoPath,repositoryPath,datasetPath,modelPath,topk,contextSimilarity,nameSimilarity);
+                            IntrinsticInference.evaluation();
 
                         }else if(evalType.equals("extrinsic")) {
                             COSTER.setJarRepoPath(Config.SO_JAR_PATH);

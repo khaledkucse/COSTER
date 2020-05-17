@@ -9,6 +9,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 
+import org.usask.srlab.coster.COSTER;
 import org.usask.srlab.coster.extraction.NonCompilableCodeExtraction;
 import org.usask.srlab.coster.model.APIElement;
 import org.usask.srlab.coster.model.OLDEntry;
@@ -23,10 +24,10 @@ public class FileInference {
 
     private static void print(Object s){System.out.println(s.toString());}
 
-    public static void infer(String jarPath, String inputFilePath, String outPutFilePath, String modelPath, int topk, String contextSim, String nameSim) {
+    public static void infer(String inputFilePath, String outPutFilePath) {
         print("Collecting Jar files...");
         logger.info("Collecting Jar Files...");
-        String[] jarPaths = ParseUtil.collectJarFiles(new File(jarPath));
+        String[] jarPaths = ParseUtil.collectJarFiles(new File(COSTER.getJarRepoPath()));
         print("Collecting source code from the  input file...");
         logger.info("Collecting source code from the input file...");
         ArrayList<String> srcList = FileUtil.getSingleTonFileUtilInst().getFileStringArray(inputFilePath);
@@ -47,7 +48,7 @@ public class FileInference {
         print("Inferring...");
         logger.info("Inferring...");
         for (APIElement eachCase : testCases) {
-            testResults.add(inferEachCase(modelPath, eachCase,contextSim,nameSim,topk));
+            testResults.add(inferEachCase(COSTER.getModelPath(), eachCase,COSTER.getContextSimilarity(),COSTER.getNameSimilarity(),COSTER.getTopk()));
 
             count++;
             if (count % 100 == 0) {
