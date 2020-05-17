@@ -30,6 +30,70 @@ public class COSTER {
         System.exit(exitval);
     }
 
+    public static String getJarRepoPath() {
+        return jarRepoPath;
+    }
+
+    public static void setJarRepoPath(String jarRepoPath) {
+        COSTER.jarRepoPath = jarRepoPath;
+    }
+
+    public static String getRepositoryPath() {
+        return repositoryPath;
+    }
+
+    public static void setRepositoryPath(String repositoryPath) {
+        COSTER.repositoryPath = repositoryPath;
+    }
+
+    public static String getDatasetPath() {
+        return datasetPath;
+    }
+
+    public static void setDatasetPath(String datasetPath) {
+        COSTER.datasetPath = datasetPath;
+    }
+
+    public static String getModelPath() {
+        return modelPath;
+    }
+
+    public static void setModelPath(String modelPath) {
+        COSTER.modelPath = modelPath;
+    }
+
+    public static String getContextSimilarity() {
+        return contextSimilarity;
+    }
+
+    public static void setContextSimilarity(String contextSimilarity) {
+        COSTER.contextSimilarity = contextSimilarity;
+    }
+
+    public static String getNameSimilarity() {
+        return nameSimilarity;
+    }
+
+    public static void setNameSimilarity(String nameSimilarity) {
+        COSTER.nameSimilarity = nameSimilarity;
+    }
+
+    public static int getFqnThreshold() {
+        return fqnThreshold;
+    }
+
+    public static void setFqnThreshold(int fqnThreshold) {
+        COSTER.fqnThreshold = fqnThreshold;
+    }
+
+    public static int getTopk() {
+        return topk;
+    }
+
+    public static void setTopk(int topk) {
+        COSTER.topk = topk;
+    }
+
     private static void init(){
         jarRepoPath = Config.GITHUB_JAR_PATH;
         repositoryPath = Config.GITHUB_SUBJECT_SYSTEM_PATH;
@@ -427,7 +491,7 @@ public class COSTER {
 //                                print("Selecting the deafult path for stroing intermidiate dataset for training: " + datasetPath);
 //                            }
 
-                            ExtrinsicInference.evaluation(jarRepoPath,repositoryPath,datasetPath,modelPath,topk,contextSimilarity,nameSimilarity);
+                            ExtrinsicInference.evaluation();
                         }
 
                     }else {

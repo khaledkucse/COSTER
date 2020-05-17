@@ -12,7 +12,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 
-
+import org.usask.srlab.coster.COSTER;
 import org.usask.srlab.coster.model.APIElement;
 import org.usask.srlab.coster.model.OLDEntry;
 import org.usask.srlab.coster.model.TestResult;
@@ -27,20 +27,21 @@ public class ExtrinsicInference {
 
     private static void print(Object s){System.out.println(s.toString());}
 
-    public static void evaluation(String jarPath, String repositoryPath, String datasetPath, String modelPath, int topk, String contextSim, String nameSim){
+//    public static void evaluation(String jarPath, String repositoryPath, String datasetPath, String modelPath, int topk, String contextSim, String nameSim){
+public static void evaluation(){
         print("Collecting Jar files...");
         logger.info("Collecting Jar Files...");
-        String[] jarPaths = ParseUtil.collectJarFiles(new File(jarPath));
+        String[] jarPaths = ParseUtil.collectJarFiles(new File(COSTER.getJarRepoPath()));
         print("Collecting StackOverflow code snippets...");
         logger.info("Collecting StackOverflow code snippets...");
-        ArrayList<String> snippetPaths = ParseUtil.collectSOSnippets(new File(repositoryPath));
+        ArrayList<String> snippetPaths = ParseUtil.collectSOSnippets(new File(COSTER.getRepositoryPath()));
         String[] sourcefilePaths = new String[snippetPaths.size()];
         sourcefilePaths = snippetPaths.toArray(sourcefilePaths);
         logger.info("Total Number of StackOverflow Code Snippet: "+ sourcefilePaths.length);
 
         print("Extracting test data from the StackOverflow code snippets...");
         logger.info("Extracting test data from the StackOverflow code snippets...");
-        List<APIElement> testCases = InferUtil.collectSODataset(sourcefilePaths,jarPaths,repositoryPath,datasetPath);
+        List<APIElement> testCases = InferUtil.collectSODataset(sourcefilePaths,jarPaths,COSTER.getRepositoryPath(),COSTER.getDatasetPath());
 
         List<TestResult> testResults = new ArrayList<>();
         int count = 0;
@@ -51,13 +52,13 @@ public class ExtrinsicInference {
             long starttime = System.currentTimeMillis();
             String queryContext = StringUtils.join(eachCase.getContext()," ").replaceAll(",","");
             String queryAPIelement = eachCase.getName();
-            List<OLDEntry> candidateList = InferUtil.collectCandidateList(queryContext, modelPath);
+            List<OLDEntry> candidateList = InferUtil.collectCandidateList(queryContext, COSTER.getModelPath());
             Map<String, Double> recommendations = new HashMap<>();
             for(OLDEntry eachCandidate:candidateList){
                 String candidateContext = eachCandidate.getContext();
                 String candidateFQN = eachCandidate.getFqn();
-                double contextSimialrityScore = InferUtil.calculateContextSimilarity(queryContext,candidateContext, contextSim);
-                double nameSimilarityScore = InferUtil.calculateNameSimilarity(queryAPIelement,candidateFQN, nameSim);
+                double contextSimialrityScore = InferUtil.calculateContextSimilarity(queryContext,candidateContext, COSTER.getContextSimilarity());
+                double nameSimilarityScore = InferUtil.calculateNameSimilarity(queryAPIelement,candidateFQN, COSTER.getNameSimilarity());
                 double recommendationScore = InferUtil.calculateRecommendationScore(eachCandidate.getScore(),contextSimialrityScore,nameSimilarityScore);
                 if(recommendations.containsKey(candidateFQN) && recommendations.get(candidateFQN) < recommendationScore)
                     recommendations.put(candidateFQN,recommendationScore);
@@ -66,7 +67,7 @@ public class ExtrinsicInference {
             }
             long inferenceTime = System.currentTimeMillis()-starttime;
             totalInferenceTime += inferenceTime;
-            recommendations = InferUtil.sortByComparator(recommendations,false,topk);
+            recommendations = InferUtil.sortByComparator(recommendations,false,COSTER.getTopk());
             TestResult eachTestResult = new TestResult(eachCase,recommendations, inferenceTime);
             testResults.add(eachTestResult);
 
