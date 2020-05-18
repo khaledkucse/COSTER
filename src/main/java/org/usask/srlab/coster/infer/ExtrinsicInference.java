@@ -29,20 +29,26 @@ public class ExtrinsicInference {
 
 //    public static void evaluation(String jarPath, String repositoryPath, String datasetPath, String modelPath, int topk, String contextSim, String nameSim){
 public static void evaluation(){
-        print("Collecting Jar files...");
-        logger.info("Collecting Jar Files...");
-        String[] jarPaths = ParseUtil.collectJarFiles(new File(COSTER.getJarRepoPath()));
-        print("Collecting StackOverflow code snippets...");
-        logger.info("Collecting StackOverflow code snippets...");
-        ArrayList<String> snippetPaths = ParseUtil.collectSOSnippets(new File(COSTER.getRepositoryPath()));
-        String[] sourcefilePaths = new String[snippetPaths.size()];
-        sourcefilePaths = snippetPaths.toArray(sourcefilePaths);
-        logger.info("Total Number of StackOverflow Code Snippet: "+ sourcefilePaths.length);
+        List<APIElement> testCases = new ArrayList<>();
+        if(COSTER.getIsExtraction()) {
+            print("Collecting Jar files...");
+            logger.info("Collecting Jar Files...");
+            String[] jarPaths = ParseUtil.collectJarFiles(new File(COSTER.getJarRepoPath()));
+            print("Collecting StackOverflow code snippets...");
+            logger.info("Collecting StackOverflow code snippets...");
+            ArrayList<String> snippetPaths = ParseUtil.collectSOSnippets(new File(COSTER.getRepositoryPath()));
+            String[] sourcefilePaths = new String[snippetPaths.size()];
+            sourcefilePaths = snippetPaths.toArray(sourcefilePaths);
+            logger.info("Total Number of StackOverflow Code Snippet: "+ sourcefilePaths.length);
 
-        print("Extracting test data from the StackOverflow code snippets...");
-        logger.info("Extracting test data from the StackOverflow code snippets...");
-        List<APIElement> testCases = InferUtil.collectSODataset(sourcefilePaths,jarPaths,COSTER.getRepositoryPath(),COSTER.getDatasetPath());
+            print("Extracting test data from the StackOverflow code snippets...");
+            logger.info("Extracting test data from the StackOverflow code snippets...");
+            testCases = InferUtil.collectSODataset(sourcefilePaths,jarPaths,COSTER.getRepositoryPath(),COSTER.getDatasetPath());
+        }
 
+        else{
+            testCases = InferUtil.collectTestAPISFromDATASET(COSTER.getDatasetPath());
+        }
         List<TestResult> testResults = new ArrayList<>();
         int count = 0;
         long totalInferenceTime = 0;
@@ -53,17 +59,22 @@ public static void evaluation(){
             String queryContext = StringUtils.join(eachCase.getContext()," ").replaceAll(",","");
             String queryAPIelement = eachCase.getName();
             List<OLDEntry> candidateList = InferUtil.collectCandidateList(queryContext, COSTER.getModelPath());
+            print(eachCase.getContext());
+            print(eachCase.getActualFQN());
+            print(candidateList.get(0).getFqn());
+            print(candidateList.get(0).getScore());
             Map<String, Double> recommendations = new HashMap<>();
             for(OLDEntry eachCandidate:candidateList){
                 String candidateContext = eachCandidate.getContext();
                 String candidateFQN = eachCandidate.getFqn();
-                double contextSimialrityScore = InferUtil.calculateContextSimilarity(queryContext,candidateContext, COSTER.getContextSimilarity());
-                double nameSimilarityScore = InferUtil.calculateNameSimilarity(queryAPIelement,candidateFQN, COSTER.getNameSimilarity());
-                double recommendationScore = InferUtil.calculateRecommendationScore(eachCandidate.getScore(),contextSimialrityScore,nameSimilarityScore);
-                if(recommendations.containsKey(candidateFQN) && recommendations.get(candidateFQN) < recommendationScore)
-                    recommendations.put(candidateFQN,recommendationScore);
-                else
-                    recommendations.put(candidateFQN,recommendationScore);
+                double recommendationScore = 0;
+//                double contextSimialrityScore = InferUtil.calculateContextSimilarity(queryContext,candidateContext, COSTER.getContextSimilarity());
+//                double nameSimilarityScore = InferUtil.calculateNameSimilarity(queryAPIelement,candidateFQN, COSTER.getNameSimilarity());
+//                double recommendationScore = InferUtil.calculateRecommendationScore(eachCandidate.getScore(),contextSimialrityScore,nameSimilarityScore);
+//                if(recommendations.containsKey(candidateFQN) && recommendations.get(candidateFQN) < recommendationScore)
+//                    recommendations.put(candidateFQN,recommendationScore);
+//                else
+                recommendations.put(candidateFQN,recommendationScore);
             }
             long inferenceTime = System.currentTimeMillis()-starttime;
             totalInferenceTime += inferenceTime;

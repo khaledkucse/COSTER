@@ -3,9 +3,7 @@ package org.usask.srlab.coster.utils;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
+import java.util.*;
 
 import javafx.util.Pair;
 
@@ -233,6 +231,30 @@ public class FileUtil {
         }
         return filecontent;
     }
+
+	public synchronized ArrayList<APIElement> readTestCase(File file){
+		ArrayList<APIElement> filecontent = new ArrayList<>();
+		try (Reader reader = Files.newBufferedReader(Paths.get(file.getAbsolutePath()));
+			 CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT
+					 .withFirstRecordAsHeader()
+					 .withIgnoreHeaderCase()
+					 .withTrim());) {
+			for (CSVRecord csvRecord : csvParser) {
+				String lc = csvRecord.get("Local Context");
+				List<String> localContext = Arrays.asList(lc.trim().split(" "));
+				String gc = csvRecord.get("Global Context");
+				List<String> globalContext = Arrays.asList(gc.trim().split(" "));
+				String cc = csvRecord.get("Combined Context");
+				List<String> combinedContext = Arrays.asList(cc.trim().split(" "));
+
+				APIElement apiElement = new APIElement(csvRecord.get("API Element"),csvRecord.get("File Path"),Integer.parseInt(csvRecord.get("Line Number")),localContext,globalContext,combinedContext,csvRecord.get("FQN"));
+				filecontent.add(apiElement);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return filecontent;
+	}
 
 	public synchronized HashMap<String, String> getFilesContentInDirectory(String fp) {
 		ArrayList<File> allFiles = getFiles(new File(fp));

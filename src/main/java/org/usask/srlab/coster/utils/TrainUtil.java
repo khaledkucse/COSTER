@@ -32,6 +32,7 @@ public class TrainUtil {
     private static final Logger logger = LogManager.getLogger(TrainUtil.class.getName()); // logger variable for loggin in the file
     private static final DecimalFormat df = new DecimalFormat(); // Decimal formet variable for formating decimal into 2 digits
     private DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss-nnnnnnnnn");
+    private static HashMap<String, String> dictonary;
 
     private TrainUtil() {
         super();
@@ -137,11 +138,22 @@ public class TrainUtil {
         }
         return new IndexEntry(eachFQNEntries,maxScore);
     }
-    
-    public synchronized HashMap<String, String> dictonaryCheckup(){
 
-        return FileUtil.getSingleTonFileUtilInst().getFilesContentInDirectory(Config.SO_DICTONARY_PATH);
+
+    public synchronized String dictonaryMapping(String curStr){
+        String formated=null;
+        String[] tokens = curStr.split("\\.");
+        if(!Config.isInitialAllowed(tokens[0]))
+            return DictonaryUtil.getKey(dictonary, tokens[tokens.length-1]);
+        else
+            return curStr;
     }
+
+    public synchronized void dictonaryCheckup(){
+
+        dictonary = FileUtil.getSingleTonFileUtilInst().getFilesContentInDirectory(Config.SO_DICTONARY_PATH);
+    }
+
 
     public synchronized JSONObject indexData(JSONObject jsonOld, String modelPath, int fqnThreshold){
         logger.info("Calculating the occurrence likelihood score and indexing the data");
@@ -159,9 +171,9 @@ public class TrainUtil {
 
                 JSONObject fqnObject =(JSONObject) jsonOld.get(eachfqn);
                 JSONArray contextArray = (JSONArray) fqnObject.get("context_list");
-                if(contextArray.size() < fqnThreshold){
-                    continue;
-                }
+//                if(contextArray.size() < fqnThreshold){
+//                    continue;
+//                }
                 JSONObject totalFrequency =(JSONObject) jsonOld.get(":global:");
                 IndexEntry indexEntry = TrainUtil.getSingletonTrainUtilInst().calculateOccuranceLikelihood(fqnObject,eachfqn,totalFrequency);
 

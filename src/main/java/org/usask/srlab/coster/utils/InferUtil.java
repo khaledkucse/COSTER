@@ -90,6 +90,10 @@ public class InferUtil {
 
     }
 
+    public static List<APIElement> collectTestAPISFromDATASET(String datasetPath){
+        return FileUtil.getSingleTonFileUtilInst().readTestCase(new File(datasetPath));
+    }
+
 
     public static List<OLDEntry> collectCandidateList(String context, String modelPath){
         List<OLDEntry> candidateList = new ArrayList<>();

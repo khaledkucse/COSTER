@@ -10,9 +10,11 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 
 public class DictonaryUtil {
+
     public static ArrayList<String> getFileStringArray(String fp) {
         ArrayList<String> lstResults = new ArrayList<String>();
         try {
@@ -88,6 +90,14 @@ public class DictonaryUtil {
             // ex.printStackTrace();
         }
         return strResult;
+
+    }
+
+    public static String getKey(HashMap<String, String> dictonary, String value){
+        for (Map.Entry<String,String> entries : dictonary.entrySet())
+            if (entries.getValue().equals(value))
+                return entries.getKey();
+        return null;
 
     }
 }

@@ -13,7 +13,9 @@ import org.eclipse.jdt.core.dom.*;
 import org.usask.srlab.coster.config.Config;
 import org.usask.srlab.coster.model.APIElement;
 import org.usask.srlab.coster.model.CompileUnit;
+import org.usask.srlab.coster.train.Train;
 import org.usask.srlab.coster.utils.ParseUtil;
+import org.usask.srlab.coster.utils.TrainUtil;
 
 
 public class CompilableCodeExtraction {
@@ -116,6 +118,8 @@ public class CompilableCodeExtraction {
         CompilationUnit cu = compileUnit.getCompilationUnit();
         List<APIElement> apiElements = new ArrayList<>();
 
+        TrainUtil.getSingletonTrainUtilInst().dictonaryCheckup();
+
         cu.accept(new ASTVisitor() {
 
             //Visit all method body
@@ -137,6 +141,10 @@ public class CompilableCodeExtraction {
                                 String apiElement = varName.getIdentifier();
                                 int linenumber = cu.getLineNumber(varName.getStartPosition());
                                 String actualFQN = ParseUtil.reformatFQN(variableBinding.getType().getQualifiedName());
+                                actualFQN = TrainUtil.getSingletonTrainUtilInst().dictonaryMapping(actualFQN);
+                                if(actualFQN == null)
+                                    return true;
+
                                 APIElement fieldDecleration = new APIElement(apiElement,compileUnit.getFilePath(),linenumber,actualFQN);
 
                                 getFieldContext(fieldDecleration,block,varDecNode.toString());
@@ -162,6 +170,10 @@ public class CompilableCodeExtraction {
                                     if (!identifiers.containsKey(apiElement)){
                                         int linenumber = cu.getLineNumber(varName.getStartPosition());
                                         String actualFQN = ParseUtil.reformatFQN(variableBinding.getQualifiedName());
+                                        actualFQN = TrainUtil.getSingletonTrainUtilInst().dictonaryMapping(actualFQN);
+                                        if(actualFQN == null)
+                                            return true;
+
                                         APIElement fieldImplementation = new APIElement(apiElement,compileUnit.getFilePath(),linenumber,actualFQN);
 
                                         getFieldContext(fieldImplementation,block,assignmentNode.toString());
@@ -190,6 +202,10 @@ public class CompilableCodeExtraction {
                                     String apiExpression = expression.toString()+"."+invocationnode.getName().getIdentifier();
                                     int linenumber = cu.getLineNumber(invocationnode.getStartPosition());
                                     String actualFQN = ParseUtil.reformatFQN(typeBinding.getQualifiedName());
+                                    actualFQN = TrainUtil.getSingletonTrainUtilInst().dictonaryMapping(actualFQN);
+                                    if(actualFQN == null)
+                                        return true;
+
                                     APIElement methodInvocation = new APIElement(apiElement,compileUnit.getFilePath(),linenumber,actualFQN);
                                     getMethodContext(methodInvocation,block,apiExpression,expression.toString());
                                     if(methodInvocation.getContext().size() > 5)

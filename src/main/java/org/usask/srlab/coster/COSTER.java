@@ -127,7 +127,6 @@ public class COSTER {
         }
         welcomeMessage(properties);
         COSTER.init();
-        TrainUtil.getSingletonTrainUtilInst().dictonaryCheckup();
 
 
         options = new Options();
@@ -485,6 +484,11 @@ public class COSTER {
 //                                print("No path for intermidiate dataset for training is provided.");
 //                                print("Selecting the deafult path for stroing intermidiate dataset for training: " + datasetPath);
 //                            }
+                            if (line.hasOption("k")) {
+                                int temp = Integer.parseInt(line.getOptionValue("k"));
+                                if(temp == 0)
+                                    COSTER.setIsExtraction(false);
+                            }
 
                             ExtrinsicInference.evaluation();
                         }

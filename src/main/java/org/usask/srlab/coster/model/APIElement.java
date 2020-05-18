@@ -29,6 +29,16 @@ public class APIElement {
         globalContext = new ArrayList<>();
     }
 
+    public APIElement(String name, String fileName, int lineNumber, List<String> context, List<String> localContext, List<String> globalContext, String actualFQN) {
+        this.name = name;
+        this.fileName = fileName;
+        this.lineNumber = lineNumber;
+        this.context = context;
+        this.localContext = localContext;
+        this.globalContext = globalContext;
+        this.actualFQN = actualFQN;
+    }
+
     public String getName() {
         return name;
     }

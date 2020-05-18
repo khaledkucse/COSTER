@@ -148,7 +148,7 @@ public class ParseUtil {
 
 
     public static ArrayList<String> collectSOSnippets(File file) {
-        logger.info("Collecting Stack Overflow Code Snippets");
+//        logger.info("Collecting Stack Overflow Code Snippets");
         ArrayList<String> files = new ArrayList<>();
         if (file.isDirectory()){
             for (File sub : Objects.requireNonNull(file.listFiles()))

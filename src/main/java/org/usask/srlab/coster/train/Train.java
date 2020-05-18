@@ -95,6 +95,7 @@ public class Train {
                     FileUtils.deleteDirectory(eachProjectPath.replace(".zip",""));
                 } catch (Exception e) {
                     print("Error Occurred while unzipping the project file "+eachProjectPath+". See the detail in the log file");
+                    e.printStackTrace();
                     logger.error(e.getMessage());
                     for(StackTraceElement eachStacktrace:e.getStackTrace())
                         logger.error(eachStacktrace.toString());

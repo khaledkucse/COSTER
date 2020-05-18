@@ -52,13 +52,17 @@ public class Config {
                                                     "strictfp","null","true","false","=","<","<=",">",">=","=="};
 
 
-    private static final String[] SO_PACKAGE_NAME ={"org.apache.commons",
-                                                "com.google.guava",
+    private static final String[] SO_PACKAGE_NAME ={"org.apache.commons", "com.google.guava",
                                                 "com.google.code.gson",
                                                 "org.springframework.boot",
                                                 "org.apache.httpcomponent",
-                                                "java"};
+                                                "java",
+                                                "boolean", "byte", "char", "short", "int", "long", "float", "double"};
+
+    private static final String[] ALLOWED_INITIAL ={"org", "com","java","javax","boolean", "byte", "char", "short", "int", "long", "float", "double", "log4j", "junit"};
+
     private static final String[] SO_PACKAGE_COMPONENT = {"log4j","junit"};
+
     public static final String SO_IMPORT_STATEMENT = "import org.apache.commons.*;\n" +
                                                     "import org.apache.http.client.*;\n" +
                                                     "import com.google.*;\n" +
@@ -87,6 +91,17 @@ public class Config {
         for(String each_package: SO_PACKAGE_COMPONENT)
             if(packagename.trim().contains(each_package))
                 return true;
+
+        return false;
+    }
+
+    public static boolean isInitialAllowed(String token)
+    {
+        for(String each_keyword:ALLOWED_INITIAL)
+            if (token.trim().contains(each_keyword)){
+                return true;
+            }
+
 
         return false;
     }
