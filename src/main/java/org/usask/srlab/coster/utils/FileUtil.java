@@ -5,6 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
+
 import javafx.util.Pair;
 
 import org.apache.commons.csv.CSVFormat;
@@ -231,4 +233,33 @@ public class FileUtil {
         }
         return filecontent;
     }
+
+	public synchronized HashMap<String, String> getFilesContentInDirectory(String fp) {
+		ArrayList<File> allFiles = getFiles(new File(fp));
+		HashMap<String, String> contents = new HashMap<>();
+		for(File eachFile:allFiles)
+			contents.putAll(getDictonaryStringMap(eachFile.getAbsolutePath()));
+		return contents;
+    }
+
+	private synchronized HashMap<String,String> getDictonaryStringMap(String fp) {
+		HashMap<String, String> lstResults = new HashMap<>();
+		try {
+			try (BufferedReader br = new BufferedReader(new FileReader(fp))) {
+				String line;
+				while ((line = br.readLine()) != null) {
+					if(!line.trim().isEmpty()) {
+						String[] tokens = line.trim().split("\\.");
+						String lstToken = tokens[tokens.length-1];
+						lstResults.put(line.trim(),lstToken);
+					}
+				}
+			}
+		} catch (Exception ex) {
+			// ex.printStackTrace();
+		}
+		return lstResults;
+
+	}
+
 }

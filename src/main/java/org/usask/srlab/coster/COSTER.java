@@ -11,6 +11,7 @@ import org.usask.srlab.coster.infer.ImportStmtComplete;
 import org.usask.srlab.coster.infer.IntrinsticInference;
 import org.usask.srlab.coster.train.Train;
 import org.usask.srlab.coster.train.RetrainOLD;
+import org.usask.srlab.coster.utils.TrainUtil;
 
 import java.util.Properties;
 
@@ -18,7 +19,7 @@ public class COSTER {
     private static final Logger logger = LogManager.getLogger(COSTER.class.getName()); // logger variable for loggin in the file
     private static void print(Object s){System.out.println(s.toString());}
     private static String jarRepoPath, repositoryPath,datasetPath,modelPath, contextSimilarity, nameSimilarity;
-    private static int fqnThreshold, topk;
+    private static int fqnThreshold, reccs;
     private static boolean isExtraction;
 
 
@@ -94,12 +95,12 @@ public class COSTER {
         COSTER.fqnThreshold = fqnThreshold;
     }
 
-    public static int getTopk() {
-        return topk;
+    public static int getReccs() {
+        return reccs;
     }
 
-    public static void setTopk(int topk) {
-        COSTER.topk = topk;
+    public static void setReccs(int reccs) {
+        COSTER.reccs = reccs;
     }
 
     private static void init(){
@@ -107,7 +108,7 @@ public class COSTER {
         repositoryPath = Config.GITHUB_SUBJECT_SYSTEM_PATH;
         datasetPath = Config.GITHUB_DATSET_PATH;
         modelPath = Config.MODEL_PATH;
-        topk = Config.DEFAULT_TOP;
+        reccs = Config.DEFAULT_TOP;
         fqnThreshold = Config.FQN_THRESHOLD;
         isExtraction = true;
         contextSimilarity = "cosine";
@@ -126,6 +127,8 @@ public class COSTER {
         }
         welcomeMessage(properties);
         COSTER.init();
+        TrainUtil.getSingletonTrainUtilInst().dictonaryCheckup();
+
 
         options = new Options();
 
@@ -347,10 +350,10 @@ public class COSTER {
                         COSTER.setJarRepoPath(Config.SO_JAR_PATH);
                         try {
                             if (line.hasOption("t"))
-                                COSTER.setTopk(Integer.parseInt(line.getOptionValue("t")));
+                                COSTER.setReccs(Integer.parseInt(line.getOptionValue("t")));
 //                            else{
 //                                print("No value as Top-K is selected.");
-//                                print("Selecting the deafult number of reccomendation: " + topk);
+//                                print("Selecting the deafult number of reccomendation: " + reccs);
 //                            }
                             if (line.hasOption("c")) {
                                 String tempContext = line.getOptionValue("c");
@@ -401,10 +404,10 @@ public class COSTER {
                         String evalType = line.getOptionValue("e");
                         try{
                             if (line.hasOption("t"))
-                                COSTER.setTopk(Integer.parseInt(line.getOptionValue("t")));
+                                COSTER.setReccs(Integer.parseInt(line.getOptionValue("t")));
 //                            else{
 //                                print("No value as Top-K is selected.");
-//                                print("Selecting the deafult number of reccomendation: " + topk);
+//                                print("Selecting the deafult number of reccomendation: " + reccs);
 //                            }
                             if (line.hasOption("m"))
                                 COSTER.setModelPath(line.getOptionValue("m"));
@@ -498,10 +501,10 @@ public class COSTER {
                         COSTER.setJarRepoPath(Config.SO_JAR_PATH);
                         try {
                             if (line.hasOption("t"))
-                                COSTER.setTopk(Integer.parseInt(line.getOptionValue("t")));
+                                COSTER.setReccs(Integer.parseInt(line.getOptionValue("t")));
 //                            else{
 //                                print("No value as Top-K is selected.");
-//                                print("Selecting the deafult number of reccomendation: " + topk);
+//                                print("Selecting the deafult number of reccomendation: " + reccs);
 //                            }
                             if (line.hasOption("c")) {
                                 String tempContext = line.getOptionValue("c");

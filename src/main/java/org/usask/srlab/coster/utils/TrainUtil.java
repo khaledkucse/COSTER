@@ -6,6 +6,7 @@ import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
@@ -20,6 +21,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 
+import org.usask.srlab.coster.config.Config;
 import org.usask.srlab.coster.model.IndexEntry;
 import org.usask.srlab.coster.model.OLDEntry;
 
@@ -135,6 +137,11 @@ public class TrainUtil {
         }
         return new IndexEntry(eachFQNEntries,maxScore);
     }
+    
+    public synchronized HashMap<String, String> dictonaryCheckup(){
+
+        return FileUtil.getSingleTonFileUtilInst().getFilesContentInDirectory(Config.SO_DICTONARY_PATH);
+    }
 
     public synchronized JSONObject indexData(JSONObject jsonOld, String modelPath, int fqnThreshold){
         logger.info("Calculating the occurrence likelihood score and indexing the data");
@@ -206,6 +213,8 @@ public class TrainUtil {
         config.setRAMBufferSizeMB(2048);
         return new IndexWriter(dir, config);
     }
+
+
     private synchronized Document createDocument(String id, String context, String fqn, String score)
     {
         Document document = new Document();
@@ -221,4 +230,5 @@ public class TrainUtil {
             return 1.00;
         return xi/max;
     }
+
 }

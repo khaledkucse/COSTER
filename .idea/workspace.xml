@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="830074f3-d605-41ba-a4e9-a67a9e873454" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/logs/coster.logs" beforeDir="false" afterPath="$PROJECT_DIR$/logs/coster.logs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ImportStmtComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ImportStmtComplete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ExtrinsicInference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ExtrinsicInference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/IntrinsticInference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/IntrinsticInference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/FileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/TrainUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/TrainUtil.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="COSTER.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="COSTER.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="533" column="56" lean-forward="true" selection-start-line="533" selection-start-column="56" selection-end-line="533" selection-end-column="56" />
+            <state relative-caret-position="-36">
+              <caret line="110" column="35" lean-forward="true" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
               <folding>
                 <element signature="e#1289#1290#0" expanded="true" />
                 <element signature="e#1324#1325#0" expanded="true" />
@@ -62,38 +67,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImportStmtComplete.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ImportStmtComplete.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="24" column="86" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntrinsticInference.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/IntrinsticInference.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="61" column="95" selection-start-line="61" selection-start-column="95" selection-end-line="61" selection-end-column="95" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileInference.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="50" column="147" selection-start-line="50" selection-start-column="147" selection-end-line="50" selection-end-column="147" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RetrainOLD.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/RetrainOLD.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
               <caret line="34" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DictonaryUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/DictonaryUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-612">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrainUtil.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/TrainUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="143" column="15" selection-start-line="143" selection-start-column="15" selection-end-line="143" selection-end-column="15" />
+              <folding>
+                <element signature="method#createOrUpdateOLDEntry#0;class#TrainUtil#0" />
+                <element signature="method#calculateOccuranceLikelihood#0;class#TrainUtil#0" />
+                <element signature="method#indexData#0;class#TrainUtil#0" />
+                <element signature="method#createWriter#0;class#TrainUtil#0" />
+                <element signature="method#createDocument#0;class#TrainUtil#0" />
+                <element signature="method#normalize#0;class#TrainUtil#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/FileUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="252" column="67" lean-forward="true" selection-start-line="252" selection-start-column="67" selection-end-line="252" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -187,6 +206,8 @@
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/IntrinsticInference.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ImportStmtComplete.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/FileUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/TrainUtil.java" />
       </list>
     </option>
   </component>
@@ -243,6 +264,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="coster" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="COSTER" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="coster" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -350,12 +380,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589741735423</updated>
-      <workItem from="1589741736761" duration="13535000" />
+      <workItem from="1589741736761" duration="16659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13535000" />
+    <option name="totallyTimeSpent" value="16659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="34" width="1868" height="1046" extended-state="6" />
@@ -517,23 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/FileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-353">
-          <caret line="124" column="13" lean-forward="true" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/DictonaryUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/EvaluationUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -581,10 +594,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/RetrainOLD.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ImportStmtComplete.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="233">
+          <caret line="24" column="86" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="50" column="23" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/IntrinsticInference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="61" column="96" selection-start-line="61" selection-start-column="96" selection-end-line="61" selection-end-column="96" />
         </state>
       </provider>
     </entry>
@@ -598,31 +625,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/RetrainOLD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="50" column="147" selection-start-line="50" selection-start-column="147" selection-end-line="50" selection-end-column="147" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/IntrinsticInference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="61" column="95" selection-start-line="61" selection-start-column="95" selection-end-line="61" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ImportStmtComplete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="24" column="86" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
+        <state relative-caret-position="198">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="533" column="56" lean-forward="true" selection-start-line="533" selection-start-column="56" selection-end-line="533" selection-end-column="56" />
+        <state relative-caret-position="-36">
+          <caret line="110" column="35" lean-forward="true" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
           <folding>
             <element signature="e#1289#1290#0" expanded="true" />
             <element signature="e#1324#1325#0" expanded="true" />
@@ -660,6 +673,41 @@
             <element signature="e#2681#2682#0" expanded="true" />
             <element signature="e#2725#2726#0" expanded="true" />
             <element signature="e#2759#2760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/DictonaryUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="252" column="67" lean-forward="true" selection-start-line="252" selection-start-column="67" selection-end-line="252" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/TrainUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="143" column="15" selection-start-line="143" selection-start-column="15" selection-end-line="143" selection-end-column="15" />
+          <folding>
+            <element signature="method#createOrUpdateOLDEntry#0;class#TrainUtil#0" />
+            <element signature="method#calculateOccuranceLikelihood#0;class#TrainUtil#0" />
+            <element signature="method#indexData#0;class#TrainUtil#0" />
+            <element signature="method#createWriter#0;class#TrainUtil#0" />
+            <element signature="method#createDocument#0;class#TrainUtil#0" />
+            <element signature="method#normalize#0;class#TrainUtil#0" />
           </folding>
         </state>
       </provider>

@@ -59,7 +59,7 @@ public class IntrinsticInference {
             }
             long inferenceTime = System.currentTimeMillis()-starttime;
             totalInferenceTime += inferenceTime;
-            recommendations = InferUtil.sortByComparator(recommendations,false,COSTER.getTopk());
+            recommendations = InferUtil.sortByComparator(recommendations,false,COSTER.getReccs());
             TestResult eachTestResult = new TestResult(eachCase,recommendations, inferenceTime);
             testResults.add(eachTestResult);
             count++;

@@ -48,7 +48,7 @@ public class FileInference {
         print("Inferring...");
         logger.info("Inferring...");
         for (APIElement eachCase : testCases) {
-            testResults.add(inferEachCase(COSTER.getModelPath(), eachCase,COSTER.getContextSimilarity(),COSTER.getNameSimilarity(),COSTER.getTopk()));
+            testResults.add(inferEachCase(COSTER.getModelPath(), eachCase,COSTER.getContextSimilarity(),COSTER.getNameSimilarity(),COSTER.getReccs()));
 
             count++;
             if (count % 100 == 0) {
