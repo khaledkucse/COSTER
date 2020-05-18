@@ -7,26 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="830074f3-d605-41ba-a4e9-a67a9e873454" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/model/FileTestResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/coster.logs" beforeDir="false" afterPath="$PROJECT_DIR$/logs/coster.logs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ExtrinsicInference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ExtrinsicInference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/FileInference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/IntrinsticInference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/IntrinsticInference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/model/ExtrinsicTestResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/model/TestResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/EvaluationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/EvaluationUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/ExtrinsicEvaluationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/FileEvaluationUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/InferUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/InferUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/COSTER.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/COSTER.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/infer/ExtrinsicInference.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/infer/ExtrinsicInference.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/infer/FileInference.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/infer/FileInference.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/infer/IntrinsticInference.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/infer/IntrinsticInference.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/model/ExtrinsicTestResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/model/TestResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/model/TestResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/utils/EvaluationUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/utils/EvaluationUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/utils/ExtrinsicEvaluationUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/utils/InferUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/utils/InferUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/COSTER.jar" beforeDir="false" afterPath="$PROJECT_DIR$/COSTER.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,7 +24,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="494" column="60" lean-forward="true" selection-start-line="494" selection-start-column="60" selection-end-line="494" selection-end-column="60" />
+              <caret line="494" column="60" selection-start-line="494" selection-start-column="60" selection-end-line="494" selection-end-column="60" />
               <folding>
                 <element signature="method#init#0;class#COSTER#0" />
               </folding>
@@ -50,7 +32,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExtrinsicInference.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExtrinsicInference.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ExtrinsicInference.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1026">
@@ -81,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/EvaluationUtil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+              <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Config.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="71" lean-forward="true" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+            <state relative-caret-position="108">
+              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -159,7 +141,6 @@
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/model/OLDEntryComparer.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/ExtrinsicEvaluationUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/TrainUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/model/ExtrinsicTestResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/model/TestResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java" />
@@ -167,6 +148,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/EvaluationUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/IntrinsticInference.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/ExtrinsicInference.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java" />
       </list>
     </option>
   </component>
@@ -247,6 +229,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="coster" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="COSTER" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="coster" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="coster" type="b2602c69:ProjectViewProjectNode" />
@@ -372,12 +363,12 @@
       <option name="presentableId" value="Default" />
       <updated>1589741735423</updated>
       <workItem from="1589741736761" duration="22925000" />
-      <workItem from="1589788992430" duration="30598000" />
+      <workItem from="1589788992430" duration="30730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53523000" />
+    <option name="totallyTimeSpent" value="53655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="34" width="1868" height="1046" extended-state="6" />
@@ -388,13 +379,13 @@
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32942554" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.3294702" />
+      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.3294702" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32942554" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32942554" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25331125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25331125" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32942554" />
       <window_info id="Learn" order="2" />
@@ -815,13 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="71" lean-forward="true" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/InferUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -846,7 +830,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/EvaluationUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -856,7 +840,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/COSTER.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="494" column="60" lean-forward="true" selection-start-line="494" selection-start-column="60" selection-end-line="494" selection-end-column="60" />
+          <caret line="494" column="60" selection-start-line="494" selection-start-column="60" selection-end-line="494" selection-end-column="60" />
           <folding>
             <element signature="method#init#0;class#COSTER#0" />
           </folding>
@@ -874,6 +858,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
           <caret line="73" column="48" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/config/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
         </state>
       </provider>
     </entry>
