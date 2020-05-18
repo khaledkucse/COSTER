@@ -36,12 +36,6 @@ public class Config {
     public static final int MAX_SO_CODE_LINE = 20;
     public static final int MAX_NO_OF_SO_CODE_SNIPPET = 500;
 
-    //Train test Related varaible
-    public static final int FQN_THRESHOLD = 50;
-    public static final double alpha  = 0.5;
-    public static final double beta  = 0.8;
-    public static final double gamma  = 0.75;
-    public static final int DEFAULT_TOP  = 1;
 
 
     private static final String [] JAVA_KEYWORDS = {"abstract","boolean","break","byte","case","catch","char","class","const","continue",
@@ -72,6 +66,13 @@ public class Config {
 
 
 
+
+    //Train test Related varaible
+    public static final int FQN_THRESHOLD = 50;
+    public static final double alpha  = 0.94;
+    public static final double beta  = 0.22;
+    public static final double gamma  = 0.17;
+    public static final int DEFAULT_TOP  = 1;
 
     public static boolean isJavaKeyword(String token)
     {

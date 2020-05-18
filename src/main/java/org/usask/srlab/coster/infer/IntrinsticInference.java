@@ -11,9 +11,11 @@ import org.apache.log4j.Logger;
 
 import org.usask.srlab.coster.COSTER;
 import org.usask.srlab.coster.model.APIElement;
+import org.usask.srlab.coster.model.ExtrinsicTestResult;
 import org.usask.srlab.coster.model.OLDEntry;
 import org.usask.srlab.coster.model.TestResult;
 import org.usask.srlab.coster.utils.EvaluationUtil;
+import org.usask.srlab.coster.utils.ExtrinsicEvaluationUtil;
 import org.usask.srlab.coster.utils.InferUtil;
 import org.usask.srlab.coster.utils.ParseUtil;
 
@@ -35,7 +37,7 @@ public class IntrinsticInference {
         print("Extracting test data from the Subject Systems...");
         logger.info("Extracting test data from the Subject Systems...");
         List<APIElement> testCases = InferUtil.collectDataset(projectPaths,jarPaths,COSTER.getDatasetPath());
-        List<TestResult> testResults = new ArrayList<>();
+        List<ExtrinsicTestResult> testResults = new ArrayList<>();
         int count = 0;
         long totalInferenceTime = 0;
         print("Inferring test data...");
@@ -49,18 +51,15 @@ public class IntrinsticInference {
             for(OLDEntry eachCandidate:candidateList){
                 String candidateContext = eachCandidate.getContext();
                 String candidateFQN = eachCandidate.getFqn();
-                double contextSimialrityScore = InferUtil.calculateContextSimilarity(queryContext,candidateContext,COSTER.getContextSimilarity());
+                double contextSimialrityScore = InferUtil.calculateContextSimilarity(queryContext,candidateContext, COSTER.getContextSimilarity());
                 double nameSimilarityScore = InferUtil.calculateNameSimilarity(queryAPIelement,candidateFQN, COSTER.getNameSimilarity());
                 double recommendationScore = InferUtil.calculateRecommendationScore(eachCandidate.getScore(),contextSimialrityScore,nameSimilarityScore);
-                if(recommendations.containsKey(candidateFQN) && recommendations.get(candidateFQN) < recommendationScore)
-                    recommendations.put(candidateFQN,recommendationScore);
-                else
-                    recommendations.put(candidateFQN,recommendationScore);
+                eachCandidate.setScore(recommendationScore);
             }
             long inferenceTime = System.currentTimeMillis()-starttime;
             totalInferenceTime += inferenceTime;
-            recommendations = InferUtil.sortByComparator(recommendations,false,COSTER.getReccs());
-            TestResult eachTestResult = new TestResult(eachCase,recommendations, inferenceTime);
+            candidateList = InferUtil.generateList(candidateList);
+            ExtrinsicTestResult eachTestResult = new ExtrinsicTestResult(eachCase,candidateList, inferenceTime);
             testResults.add(eachTestResult);
             count++;
             if(count%100 == 0){
@@ -77,7 +76,7 @@ public class IntrinsticInference {
 
         logger.info("Calculating performance mesures...");
 //        int totalTestCases = CompilableCodeExtraction.getTotalCase().get();
-        EvaluationUtil evaluationUtil = new EvaluationUtil(testResults);
+        ExtrinsicEvaluationUtil evaluationUtil = new ExtrinsicEvaluationUtil(testResults);
         print("Precision: "+String.format("%.2f",evaluationUtil.getPrecision()));
         print("Recall: "+String.format("%.2f",evaluationUtil.getRecall()));
         print("FScore: "+String.format("%.2f",evaluationUtil.getFscore()));

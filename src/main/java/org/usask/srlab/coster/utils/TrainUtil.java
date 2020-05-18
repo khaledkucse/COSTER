@@ -171,9 +171,9 @@ public class TrainUtil {
 
                 JSONObject fqnObject =(JSONObject) jsonOld.get(eachfqn);
                 JSONArray contextArray = (JSONArray) fqnObject.get("context_list");
-//                if(contextArray.size() < fqnThreshold){
-//                    continue;
-//                }
+                if(contextArray.size() < fqnThreshold){
+                    continue;
+                }
                 JSONObject totalFrequency =(JSONObject) jsonOld.get(":global:");
                 IndexEntry indexEntry = TrainUtil.getSingletonTrainUtilInst().calculateOccuranceLikelihood(fqnObject,eachfqn,totalFrequency);
 

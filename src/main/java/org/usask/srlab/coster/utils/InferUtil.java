@@ -22,11 +22,13 @@ import org.apache.lucene.store.FSDirectory;
 import org.codehaus.plexus.util.FileUtils;
 
 
+import org.usask.srlab.coster.COSTER;
 import org.usask.srlab.coster.config.Config;
 import org.usask.srlab.coster.extraction.CompilableCodeExtraction;
 import org.usask.srlab.coster.extraction.SOCodeExtraction;
 import org.usask.srlab.coster.model.APIElement;
 import org.usask.srlab.coster.model.OLDEntry;
+import org.usask.srlab.coster.model.OLDEntryComparer;
 
 public class InferUtil {
     private static final Logger logger = LogManager.getLogger(InferUtil.class.getName()); // logger variable for loggin in the file
@@ -94,16 +96,23 @@ public class InferUtil {
         return FileUtil.getSingleTonFileUtilInst().readTestCase(new File(datasetPath));
     }
 
+    public static List<OLDEntry> generateList(List<OLDEntry> candidates){
+        candidates.sort(new OLDEntryComparer());
+        Collections.reverse(candidates);
+        return candidates.subList(0,COSTER.getReccs());
+    }
 
     public static List<OLDEntry> collectCandidateList(String context, String modelPath){
         List<OLDEntry> candidateList = new ArrayList<>();
         try {
             IndexSearcher searcher = InferUtil.createSearcher(modelPath);
             TopDocs candidates = InferUtil.searchByContext(context,searcher);
-
+            double topScore = 0;
             for (ScoreDoc eachCandidate : candidates.scoreDocs) {
+                if(topScore == 0)
+                    topScore = eachCandidate.score;
                 Document eachCandDoc = searcher.doc(eachCandidate.doc);
-                OLDEntry eachCandidateInfo = new OLDEntry(eachCandDoc.get("id"),eachCandDoc.get("context"),eachCandDoc.get("fqn"),Double.parseDouble(eachCandDoc.get("score")));
+                OLDEntry eachCandidateInfo = new OLDEntry(eachCandDoc.get("id"),eachCandDoc.get("context"),eachCandDoc.get("fqn"),(eachCandidate.score/topScore));
                 candidateList.add(eachCandidateInfo);
             }
 

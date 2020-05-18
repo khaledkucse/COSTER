@@ -14,9 +14,11 @@ import org.apache.log4j.Logger;
 
 import org.usask.srlab.coster.COSTER;
 import org.usask.srlab.coster.model.APIElement;
+import org.usask.srlab.coster.model.ExtrinsicTestResult;
 import org.usask.srlab.coster.model.OLDEntry;
 import org.usask.srlab.coster.model.TestResult;
 import org.usask.srlab.coster.utils.EvaluationUtil;
+import org.usask.srlab.coster.utils.ExtrinsicEvaluationUtil;
 import org.usask.srlab.coster.utils.InferUtil;
 import org.usask.srlab.coster.utils.ParseUtil;
 
@@ -49,7 +51,7 @@ public static void evaluation(){
         else{
             testCases = InferUtil.collectTestAPISFromDATASET(COSTER.getDatasetPath());
         }
-        List<TestResult> testResults = new ArrayList<>();
+        List<ExtrinsicTestResult> testResults = new ArrayList<>();
         int count = 0;
         long totalInferenceTime = 0;
         print("Inferring test data...");
@@ -59,29 +61,19 @@ public static void evaluation(){
             String queryContext = StringUtils.join(eachCase.getContext()," ").replaceAll(",","");
             String queryAPIelement = eachCase.getName();
             List<OLDEntry> candidateList = InferUtil.collectCandidateList(queryContext, COSTER.getModelPath());
-            print(eachCase.getContext());
-            print(eachCase.getActualFQN());
-            print(candidateList.get(0).getFqn());
-            print(candidateList.get(0).getScore());
-            Map<String, Double> recommendations = new HashMap<>();
             for(OLDEntry eachCandidate:candidateList){
                 String candidateContext = eachCandidate.getContext();
                 String candidateFQN = eachCandidate.getFqn();
-                double recommendationScore = 0;
-//                double contextSimialrityScore = InferUtil.calculateContextSimilarity(queryContext,candidateContext, COSTER.getContextSimilarity());
-//                double nameSimilarityScore = InferUtil.calculateNameSimilarity(queryAPIelement,candidateFQN, COSTER.getNameSimilarity());
-//                double recommendationScore = InferUtil.calculateRecommendationScore(eachCandidate.getScore(),contextSimialrityScore,nameSimilarityScore);
-//                if(recommendations.containsKey(candidateFQN) && recommendations.get(candidateFQN) < recommendationScore)
-//                    recommendations.put(candidateFQN,recommendationScore);
-//                else
-                recommendations.put(candidateFQN,recommendationScore);
+                double contextSimialrityScore = InferUtil.calculateContextSimilarity(queryContext,candidateContext, COSTER.getContextSimilarity());
+                double nameSimilarityScore = InferUtil.calculateNameSimilarity(queryAPIelement,candidateFQN, COSTER.getNameSimilarity());
+                double recommendationScore = InferUtil.calculateRecommendationScore(eachCandidate.getScore(),contextSimialrityScore,nameSimilarityScore);
+                eachCandidate.setScore(recommendationScore);
             }
             long inferenceTime = System.currentTimeMillis()-starttime;
             totalInferenceTime += inferenceTime;
-            recommendations = InferUtil.sortByComparator(recommendations,false,COSTER.getReccs());
-            TestResult eachTestResult = new TestResult(eachCase,recommendations, inferenceTime);
+            candidateList = InferUtil.generateList(candidateList);
+            ExtrinsicTestResult eachTestResult = new ExtrinsicTestResult(eachCase,candidateList, inferenceTime);
             testResults.add(eachTestResult);
-
             count++;
             if(count%100 == 0){
                 logger.info("Test Data Inferred: "+count+"/"+testCases.size()+" ("+df.format((count*100/testCases.size()))+"%)");
@@ -97,7 +89,7 @@ public static void evaluation(){
 
         logger.info("Calculating performance mesures...");
 //        int totalCases = CompilableCodeExtraction.getTotalCase().get();
-        EvaluationUtil evaluationUtil = new EvaluationUtil(testResults);
+        ExtrinsicEvaluationUtil evaluationUtil = new ExtrinsicEvaluationUtil(testResults);
         print("Precision: "+String.format("%.2f",evaluationUtil.getPrecision()));
         print("Recall: "+String.format("%.2f",evaluationUtil.getRecall()));
         print("FScore: "+String.format("%.2f",evaluationUtil.getFscore()));

@@ -18,6 +18,7 @@ public class EvaluationUtil {
         long fp = 0;
         for (TestResult result : results) {
             String actualFQN = result.getApiElement().getActualFQN();
+
             Set<String> predictedFQNs = result.getRecommendations().keySet();
             if(contains(predictedFQNs,actualFQN))
                 tp++;
