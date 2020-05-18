@@ -1,14 +1,12 @@
 package org.usask.srlab.coster.utils;
 
+import org.usask.srlab.coster.model.TestResult;
+import org.usask.srlab.coster.model.OLDEntry;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
-import org.usask.srlab.coster.model.TestResult;
-
 public class EvaluationUtil {
-
     double precision;
     double recall;
     double fscore;
@@ -19,8 +17,9 @@ public class EvaluationUtil {
         for (TestResult result : results) {
             String actualFQN = result.getApiElement().getActualFQN();
 
-            Set<String> predictedFQNs = result.getRecommendations().keySet();
-            if(contains(predictedFQNs,actualFQN))
+//            Set<String> predictedFQNs = result.getRecommendations().keySet();
+
+            if(isHave(result.getRecommendations(),actualFQN))
                 tp++;
             else
                 fp++;
@@ -54,6 +53,12 @@ public class EvaluationUtil {
     private static boolean contains(Set<String> resutls, String eachCase) {
         for(String eachResult:resutls)
             if (eachResult.contains(eachCase) || eachCase.contains(eachResult))
+                return true;
+        return false;
+    }
+    private static boolean isHave(List<OLDEntry> resutls, String eachCase) {
+        for(OLDEntry eachResult:resutls)
+            if (eachResult.getFqn().contains(eachCase) || eachCase.contains(eachResult.getFqn()))
                 return true;
         return false;
     }

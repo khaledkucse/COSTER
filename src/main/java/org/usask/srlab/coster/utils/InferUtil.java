@@ -33,7 +33,7 @@ import org.usask.srlab.coster.model.OLDEntryComparer;
 public class InferUtil {
     private static final Logger logger = LogManager.getLogger(InferUtil.class.getName()); // logger variable for loggin in the file
     private static final DecimalFormat df = new DecimalFormat(); // Decimal formet variable for formating decimal into 2 digits
-
+    private static List<OLDEntry> candidates = new ArrayList<>();
     private static void print(Object s){System.out.println(s.toString());}
 
     public static List<APIElement> collectDataset(String[] projectPaths, String[] jarPaths, String datasetPath){
@@ -96,7 +96,7 @@ public class InferUtil {
         return FileUtil.getSingleTonFileUtilInst().readTestCase(new File(datasetPath));
     }
 
-    public static List<OLDEntry> generateList(List<OLDEntry> candidates){
+    public static List<OLDEntry> generateList(){
         candidates.sort(new OLDEntryComparer());
         Collections.reverse(candidates);
         return candidates.subList(0,COSTER.getReccs());
@@ -125,6 +125,26 @@ public class InferUtil {
         return candidateList;
     }
 
+    public static boolean isLibraryExists(String library, String modelPath){
+        try {
+            IndexSearcher searcher = InferUtil.createSearcher(modelPath);
+            TopDocs candidates = InferUtil.searchByLibrary(library,searcher);
+            for (ScoreDoc eachCandidate : candidates.scoreDocs) {
+                Document eachCandDoc = searcher.doc(eachCandidate.doc);
+                String searchRslt = eachCandDoc.get("fqn");
+                if(searchRslt.equals(library))
+                    return true;
+            }
+
+        }catch (Exception e) {
+            print("Error Occurred while searching index the project file . See the detail in the log file");
+            logger.error(e.getMessage());
+            for(StackTraceElement eachStacktrace:e.getStackTrace())
+                logger.error(eachStacktrace.toString());
+        }
+        return false;
+    }
+
     public static IndexSearcher createSearcher(String indexDir) throws IOException {
         Directory dir = FSDirectory.open(Paths.get(indexDir));
         IndexReader reader = DirectoryReader.open(dir);
@@ -138,6 +158,11 @@ public class InferUtil {
         QueryParser qp = new QueryParser("context", new WhitespaceAnalyzer());
         Query firstNameQuery = qp.parse(QueryParser.escape(context));
         return searcher.search(firstNameQuery, 1000);
+    }
+    private static TopDocs searchByLibrary(String library, IndexSearcher searcher) throws Exception {
+        QueryParser qp = new QueryParser("fqn", new WhitespaceAnalyzer());
+        Query firstNameQuery = qp.parse(QueryParser.escape(library));
+        return searcher.search(firstNameQuery, 5);
     }
 
     public static Map<String, Double> sortByComparator(Map<String, Double> unsortMap, final boolean order, int topK) {
@@ -247,5 +272,13 @@ public class InferUtil {
             return 0;
         else
             return (1-(hamDis/candidateFQN.length()));
+    }
+
+    public static List<OLDEntry> getCandidates() {
+        return candidates;
+    }
+
+    public static void setCandidates(List<OLDEntry> candidates) {
+        InferUtil.candidates = candidates;
     }
 }

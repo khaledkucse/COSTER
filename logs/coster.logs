@@ -160,3 +160,931 @@
 2020-05-18 12:48:51 INFO  ExtrinsicInference:97 - Recall: 0.66
 2020-05-18 12:48:51 INFO  ExtrinsicInference:98 - FScore: 0.66
 2020-05-18 12:48:51 INFO  ExtrinsicInference:100 - Extrinsic Evaluation is done!!!
+2020-05-18 15:21:44 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 15:21:44 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 15:21:44 INFO  ExtrinsicInference:54 - Inferring test data...
+2020-05-18 15:21:56 INFO  ExtrinsicInference:78 - Test Data Inferred: 100/4338 (2%)
+2020-05-18 15:22:05 INFO  ExtrinsicInference:78 - Test Data Inferred: 200/4338 (4%)
+2020-05-18 15:22:16 INFO  ExtrinsicInference:78 - Test Data Inferred: 300/4338 (6%)
+2020-05-18 15:22:26 INFO  ExtrinsicInference:78 - Test Data Inferred: 400/4338 (9%)
+2020-05-18 15:22:34 INFO  ExtrinsicInference:78 - Test Data Inferred: 500/4338 (11%)
+2020-05-18 15:22:43 INFO  ExtrinsicInference:78 - Test Data Inferred: 600/4338 (13%)
+2020-05-18 15:22:55 INFO  ExtrinsicInference:78 - Test Data Inferred: 700/4338 (16%)
+2020-05-18 15:23:07 INFO  ExtrinsicInference:78 - Test Data Inferred: 800/4338 (18%)
+2020-05-18 15:23:19 INFO  ExtrinsicInference:78 - Test Data Inferred: 900/4338 (20%)
+2020-05-18 15:23:30 INFO  ExtrinsicInference:78 - Test Data Inferred: 1000/4338 (23%)
+2020-05-18 15:23:38 INFO  ExtrinsicInference:78 - Test Data Inferred: 1100/4338 (25%)
+2020-05-18 15:23:48 INFO  ExtrinsicInference:78 - Test Data Inferred: 1200/4338 (27%)
+2020-05-18 15:23:57 INFO  ExtrinsicInference:78 - Test Data Inferred: 1300/4338 (29%)
+2020-05-18 15:24:06 INFO  ExtrinsicInference:78 - Test Data Inferred: 1400/4338 (32%)
+2020-05-18 15:24:16 INFO  ExtrinsicInference:78 - Test Data Inferred: 1500/4338 (34%)
+2020-05-18 15:24:31 INFO  ExtrinsicInference:78 - Test Data Inferred: 1600/4338 (36%)
+2020-05-18 15:24:43 INFO  ExtrinsicInference:78 - Test Data Inferred: 1700/4338 (39%)
+2020-05-18 15:24:53 INFO  ExtrinsicInference:78 - Test Data Inferred: 1800/4338 (41%)
+2020-05-18 15:25:04 INFO  ExtrinsicInference:78 - Test Data Inferred: 1900/4338 (43%)
+2020-05-18 15:25:18 INFO  ExtrinsicInference:78 - Test Data Inferred: 2000/4338 (46%)
+2020-05-18 15:25:26 INFO  ExtrinsicInference:78 - Test Data Inferred: 2100/4338 (48%)
+2020-05-18 15:25:36 INFO  ExtrinsicInference:78 - Test Data Inferred: 2200/4338 (50%)
+2020-05-18 15:25:47 INFO  ExtrinsicInference:78 - Test Data Inferred: 2300/4338 (53%)
+2020-05-18 15:25:56 INFO  ExtrinsicInference:78 - Test Data Inferred: 2400/4338 (55%)
+2020-05-18 15:26:05 INFO  ExtrinsicInference:78 - Test Data Inferred: 2500/4338 (57%)
+2020-05-18 15:26:13 INFO  ExtrinsicInference:78 - Test Data Inferred: 2600/4338 (59%)
+2020-05-18 15:26:23 INFO  ExtrinsicInference:78 - Test Data Inferred: 2700/4338 (62%)
+2020-05-18 15:26:33 INFO  ExtrinsicInference:78 - Test Data Inferred: 2800/4338 (64%)
+2020-05-18 15:26:43 INFO  ExtrinsicInference:78 - Test Data Inferred: 2900/4338 (66%)
+2020-05-18 15:26:54 INFO  ExtrinsicInference:78 - Test Data Inferred: 3000/4338 (69%)
+2020-05-18 15:27:03 INFO  ExtrinsicInference:78 - Test Data Inferred: 3100/4338 (71%)
+2020-05-18 15:27:12 INFO  ExtrinsicInference:78 - Test Data Inferred: 3200/4338 (73%)
+2020-05-18 15:27:21 INFO  ExtrinsicInference:78 - Test Data Inferred: 3300/4338 (76%)
+2020-05-18 15:27:30 INFO  ExtrinsicInference:78 - Test Data Inferred: 3400/4338 (78%)
+2020-05-18 15:27:38 INFO  ExtrinsicInference:78 - Test Data Inferred: 3500/4338 (80%)
+2020-05-18 15:27:46 INFO  ExtrinsicInference:78 - Test Data Inferred: 3600/4338 (82%)
+2020-05-18 15:27:55 INFO  ExtrinsicInference:78 - Test Data Inferred: 3700/4338 (85%)
+2020-05-18 15:28:04 INFO  ExtrinsicInference:78 - Test Data Inferred: 3800/4338 (87%)
+2020-05-18 15:28:11 INFO  ExtrinsicInference:78 - Test Data Inferred: 3900/4338 (89%)
+2020-05-18 15:28:18 INFO  ExtrinsicInference:78 - Test Data Inferred: 4000/4338 (92%)
+2020-05-18 15:28:27 INFO  ExtrinsicInference:78 - Test Data Inferred: 4100/4338 (94%)
+2020-05-18 15:28:36 INFO  ExtrinsicInference:78 - Test Data Inferred: 4200/4338 (96%)
+2020-05-18 15:28:43 INFO  ExtrinsicInference:78 - Test Data Inferred: 4300/4338 (99%)
+2020-05-18 15:28:48 INFO  ExtrinsicInference:83 - Test Data Inferred: 4338/4338 (100%)
+2020-05-18 15:28:48 INFO  ExtrinsicInference:87 - Average time for inference: 97.0milliseconds
+2020-05-18 15:28:48 INFO  ExtrinsicInference:89 - Calculating performance mesures...
+2020-05-18 15:28:48 INFO  ExtrinsicInference:95 - Precision: 0.66
+2020-05-18 15:28:48 INFO  ExtrinsicInference:96 - Recall: 0.66
+2020-05-18 15:28:48 INFO  ExtrinsicInference:97 - FScore: 0.66
+2020-05-18 15:28:48 INFO  ExtrinsicInference:99 - Extrinsic Evaluation is done!!!
+2020-05-18 15:29:44 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 15:29:44 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 15:29:44 INFO  ExtrinsicInference:54 - Inferring test data...
+2020-05-18 15:29:50 INFO  ExtrinsicInference:78 - Test Data Inferred: 100/4338 (2%)
+2020-05-18 15:29:54 INFO  ExtrinsicInference:78 - Test Data Inferred: 200/4338 (4%)
+2020-05-18 15:29:59 INFO  ExtrinsicInference:78 - Test Data Inferred: 300/4338 (6%)
+2020-05-18 15:30:03 INFO  ExtrinsicInference:78 - Test Data Inferred: 400/4338 (9%)
+2020-05-18 15:30:07 INFO  ExtrinsicInference:78 - Test Data Inferred: 500/4338 (11%)
+2020-05-18 15:30:12 INFO  ExtrinsicInference:78 - Test Data Inferred: 600/4338 (13%)
+2020-05-18 15:30:16 INFO  ExtrinsicInference:78 - Test Data Inferred: 700/4338 (16%)
+2020-05-18 15:30:20 INFO  ExtrinsicInference:78 - Test Data Inferred: 800/4338 (18%)
+2020-05-18 15:30:25 INFO  ExtrinsicInference:78 - Test Data Inferred: 900/4338 (20%)
+2020-05-18 15:30:29 INFO  ExtrinsicInference:78 - Test Data Inferred: 1000/4338 (23%)
+2020-05-18 15:30:32 INFO  ExtrinsicInference:78 - Test Data Inferred: 1100/4338 (25%)
+2020-05-18 15:30:37 INFO  ExtrinsicInference:78 - Test Data Inferred: 1200/4338 (27%)
+2020-05-18 15:30:41 INFO  ExtrinsicInference:78 - Test Data Inferred: 1300/4338 (29%)
+2020-05-18 15:30:45 INFO  ExtrinsicInference:78 - Test Data Inferred: 1400/4338 (32%)
+2020-05-18 15:30:49 INFO  ExtrinsicInference:78 - Test Data Inferred: 1500/4338 (34%)
+2020-05-18 15:30:54 INFO  ExtrinsicInference:78 - Test Data Inferred: 1600/4338 (36%)
+2020-05-18 15:30:58 INFO  ExtrinsicInference:78 - Test Data Inferred: 1700/4338 (39%)
+2020-05-18 15:31:04 INFO  ExtrinsicInference:78 - Test Data Inferred: 1800/4338 (41%)
+2020-05-18 15:31:09 INFO  ExtrinsicInference:78 - Test Data Inferred: 1900/4338 (43%)
+2020-05-18 15:31:14 INFO  ExtrinsicInference:78 - Test Data Inferred: 2000/4338 (46%)
+2020-05-18 15:31:18 INFO  ExtrinsicInference:78 - Test Data Inferred: 2100/4338 (48%)
+2020-05-18 15:31:22 INFO  ExtrinsicInference:78 - Test Data Inferred: 2200/4338 (50%)
+2020-05-18 15:31:26 INFO  ExtrinsicInference:78 - Test Data Inferred: 2300/4338 (53%)
+2020-05-18 15:31:29 INFO  ExtrinsicInference:78 - Test Data Inferred: 2400/4338 (55%)
+2020-05-18 15:31:33 INFO  ExtrinsicInference:78 - Test Data Inferred: 2500/4338 (57%)
+2020-05-18 15:31:37 INFO  ExtrinsicInference:78 - Test Data Inferred: 2600/4338 (59%)
+2020-05-18 15:31:41 INFO  ExtrinsicInference:78 - Test Data Inferred: 2700/4338 (62%)
+2020-05-18 15:31:46 INFO  ExtrinsicInference:78 - Test Data Inferred: 2800/4338 (64%)
+2020-05-18 15:31:50 INFO  ExtrinsicInference:78 - Test Data Inferred: 2900/4338 (66%)
+2020-05-18 15:31:55 INFO  ExtrinsicInference:78 - Test Data Inferred: 3000/4338 (69%)
+2020-05-18 15:31:58 INFO  ExtrinsicInference:78 - Test Data Inferred: 3100/4338 (71%)
+2020-05-18 15:32:02 INFO  ExtrinsicInference:78 - Test Data Inferred: 3200/4338 (73%)
+2020-05-18 15:32:06 INFO  ExtrinsicInference:78 - Test Data Inferred: 3300/4338 (76%)
+2020-05-18 15:32:10 INFO  ExtrinsicInference:78 - Test Data Inferred: 3400/4338 (78%)
+2020-05-18 15:32:14 INFO  ExtrinsicInference:78 - Test Data Inferred: 3500/4338 (80%)
+2020-05-18 15:32:19 INFO  ExtrinsicInference:78 - Test Data Inferred: 3600/4338 (82%)
+2020-05-18 15:32:23 INFO  ExtrinsicInference:78 - Test Data Inferred: 3700/4338 (85%)
+2020-05-18 15:32:27 INFO  ExtrinsicInference:78 - Test Data Inferred: 3800/4338 (87%)
+2020-05-18 15:32:30 INFO  ExtrinsicInference:78 - Test Data Inferred: 3900/4338 (89%)
+2020-05-18 15:32:34 INFO  ExtrinsicInference:78 - Test Data Inferred: 4000/4338 (92%)
+2020-05-18 15:32:38 INFO  ExtrinsicInference:78 - Test Data Inferred: 4100/4338 (94%)
+2020-05-18 15:32:41 INFO  ExtrinsicInference:78 - Test Data Inferred: 4200/4338 (96%)
+2020-05-18 15:32:45 INFO  ExtrinsicInference:78 - Test Data Inferred: 4300/4338 (99%)
+2020-05-18 15:32:47 INFO  ExtrinsicInference:83 - Test Data Inferred: 4338/4338 (100%)
+2020-05-18 15:32:47 INFO  ExtrinsicInference:87 - Average time for inference: 41.0milliseconds
+2020-05-18 15:32:47 INFO  ExtrinsicInference:89 - Calculating performance mesures...
+2020-05-18 15:32:47 INFO  ExtrinsicInference:95 - Precision: 0.68
+2020-05-18 15:32:47 INFO  ExtrinsicInference:96 - Recall: 0.68
+2020-05-18 15:32:47 INFO  ExtrinsicInference:97 - FScore: 0.68
+2020-05-18 15:32:47 INFO  ExtrinsicInference:99 - Extrinsic Evaluation is done!!!
+2020-05-18 15:36:19 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 15:36:19 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 15:36:20 INFO  ExtrinsicInference:54 - Inferring test data...
+2020-05-18 15:36:26 INFO  ExtrinsicInference:78 - Test Data Inferred: 100/4338 (2%)
+2020-05-18 15:36:30 INFO  ExtrinsicInference:78 - Test Data Inferred: 200/4338 (4%)
+2020-05-18 15:36:34 INFO  ExtrinsicInference:78 - Test Data Inferred: 300/4338 (6%)
+2020-05-18 15:36:38 INFO  ExtrinsicInference:78 - Test Data Inferred: 400/4338 (9%)
+2020-05-18 15:36:42 INFO  ExtrinsicInference:78 - Test Data Inferred: 500/4338 (11%)
+2020-05-18 15:36:46 INFO  ExtrinsicInference:78 - Test Data Inferred: 600/4338 (13%)
+2020-05-18 15:36:51 INFO  ExtrinsicInference:78 - Test Data Inferred: 700/4338 (16%)
+2020-05-18 15:36:55 INFO  ExtrinsicInference:78 - Test Data Inferred: 800/4338 (18%)
+2020-05-18 15:37:00 INFO  ExtrinsicInference:78 - Test Data Inferred: 900/4338 (20%)
+2020-05-18 15:37:04 INFO  ExtrinsicInference:78 - Test Data Inferred: 1000/4338 (23%)
+2020-05-18 15:37:07 INFO  ExtrinsicInference:78 - Test Data Inferred: 1100/4338 (25%)
+2020-05-18 15:37:12 INFO  ExtrinsicInference:78 - Test Data Inferred: 1200/4338 (27%)
+2020-05-18 15:37:16 INFO  ExtrinsicInference:78 - Test Data Inferred: 1300/4338 (29%)
+2020-05-18 15:37:20 INFO  ExtrinsicInference:78 - Test Data Inferred: 1400/4338 (32%)
+2020-05-18 15:37:24 INFO  ExtrinsicInference:78 - Test Data Inferred: 1500/4338 (34%)
+2020-05-18 15:37:29 INFO  ExtrinsicInference:78 - Test Data Inferred: 1600/4338 (36%)
+2020-05-18 15:37:33 INFO  ExtrinsicInference:78 - Test Data Inferred: 1700/4338 (39%)
+2020-05-18 15:37:37 INFO  ExtrinsicInference:78 - Test Data Inferred: 1800/4338 (41%)
+2020-05-18 15:37:41 INFO  ExtrinsicInference:78 - Test Data Inferred: 1900/4338 (43%)
+2020-05-18 15:37:46 INFO  ExtrinsicInference:78 - Test Data Inferred: 2000/4338 (46%)
+2020-05-18 15:37:49 INFO  ExtrinsicInference:78 - Test Data Inferred: 2100/4338 (48%)
+2020-05-18 15:37:53 INFO  ExtrinsicInference:78 - Test Data Inferred: 2200/4338 (50%)
+2020-05-18 15:37:57 INFO  ExtrinsicInference:78 - Test Data Inferred: 2300/4338 (53%)
+2020-05-18 15:38:01 INFO  ExtrinsicInference:78 - Test Data Inferred: 2400/4338 (55%)
+2020-05-18 15:38:05 INFO  ExtrinsicInference:78 - Test Data Inferred: 2500/4338 (57%)
+2020-05-18 15:38:10 INFO  ExtrinsicInference:78 - Test Data Inferred: 2600/4338 (59%)
+2020-05-18 15:38:14 INFO  ExtrinsicInference:78 - Test Data Inferred: 2700/4338 (62%)
+2020-05-18 15:38:18 INFO  ExtrinsicInference:78 - Test Data Inferred: 2800/4338 (64%)
+2020-05-18 15:38:22 INFO  ExtrinsicInference:78 - Test Data Inferred: 2900/4338 (66%)
+2020-05-18 15:38:26 INFO  ExtrinsicInference:78 - Test Data Inferred: 3000/4338 (69%)
+2020-05-18 15:38:30 INFO  ExtrinsicInference:78 - Test Data Inferred: 3100/4338 (71%)
+2020-05-18 15:38:34 INFO  ExtrinsicInference:78 - Test Data Inferred: 3200/4338 (73%)
+2020-05-18 15:38:38 INFO  ExtrinsicInference:78 - Test Data Inferred: 3300/4338 (76%)
+2020-05-18 15:38:43 INFO  ExtrinsicInference:78 - Test Data Inferred: 3400/4338 (78%)
+2020-05-18 15:38:47 INFO  ExtrinsicInference:78 - Test Data Inferred: 3500/4338 (80%)
+2020-05-18 15:38:51 INFO  ExtrinsicInference:78 - Test Data Inferred: 3600/4338 (82%)
+2020-05-18 15:38:55 INFO  ExtrinsicInference:78 - Test Data Inferred: 3700/4338 (85%)
+2020-05-18 15:38:58 INFO  ExtrinsicInference:78 - Test Data Inferred: 3800/4338 (87%)
+2020-05-18 15:39:02 INFO  ExtrinsicInference:78 - Test Data Inferred: 3900/4338 (89%)
+2020-05-18 15:39:06 INFO  ExtrinsicInference:78 - Test Data Inferred: 4000/4338 (92%)
+2020-05-18 15:39:09 INFO  ExtrinsicInference:78 - Test Data Inferred: 4100/4338 (94%)
+2020-05-18 15:39:13 INFO  ExtrinsicInference:78 - Test Data Inferred: 4200/4338 (96%)
+2020-05-18 15:39:17 INFO  ExtrinsicInference:78 - Test Data Inferred: 4300/4338 (99%)
+2020-05-18 15:39:19 INFO  ExtrinsicInference:83 - Test Data Inferred: 4338/4338 (100%)
+2020-05-18 15:39:19 INFO  ExtrinsicInference:87 - Average time for inference: 41.0milliseconds
+2020-05-18 15:39:19 INFO  ExtrinsicInference:89 - Calculating performance mesures...
+2020-05-18 15:39:19 INFO  ExtrinsicInference:95 - Precision: 0.81
+2020-05-18 15:39:19 INFO  ExtrinsicInference:96 - Recall: 0.81
+2020-05-18 15:39:19 INFO  ExtrinsicInference:97 - FScore: 0.81
+2020-05-18 15:39:19 INFO  ExtrinsicInference:99 - Extrinsic Evaluation is done!!!
+2020-05-18 15:40:52 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 15:40:52 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 15:40:52 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2020-05-18 15:40:52 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 15:40:52 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 15:40:52 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2020-05-18 15:40:52 INFO  ParseUtil:106 - Collecting GitHub Subject Systems/Projects
+2020-05-18 15:40:52 INFO  ParseUtil:117 - Total Number of Subject Systems: 1
+2020-05-18 15:40:52 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2020-05-18 15:40:52 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2020-05-18 15:40:52 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 15:40:52 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 13
+2020-05-18 15:40:52 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 15:40:52 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 15:40:53 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 13
+2020-05-18 15:40:53 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 15:41:16 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 15:41:16 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 15:41:16 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2020-05-18 15:41:16 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 15:41:16 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 15:41:16 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2020-05-18 15:41:16 INFO  ParseUtil:106 - Collecting GitHub Subject Systems/Projects
+2020-05-18 15:41:16 INFO  ParseUtil:117 - Total Number of Subject Systems: 1
+2020-05-18 15:41:16 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2020-05-18 15:41:16 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2020-05-18 15:41:16 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 15:41:16 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 13
+2020-05-18 15:41:16 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 15:41:16 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 15:41:17 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 13
+2020-05-18 15:41:17 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 15:41:25 INFO  CompilableCodeExtraction:55 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2020-05-18 15:41:25 INFO  InferUtil:68 - Subject Systems Parsed: 1/1 (100%)
+2020-05-18 15:41:25 INFO  IntrinsticInference:42 - Inferring test data...
+2020-05-18 15:41:32 INFO  IntrinsticInference:67 - Test Data Inferred: 100/218 (45%)
+2020-05-18 15:41:38 INFO  IntrinsticInference:67 - Test Data Inferred: 200/218 (91%)
+2020-05-18 15:41:39 INFO  IntrinsticInference:72 - Test Data Inferred: 218/218 (100%)
+2020-05-18 15:41:39 INFO  IntrinsticInference:78 - Calculating performance mesures...
+2020-05-18 15:41:39 INFO  IntrinsticInference:84 - Precision: 0.55
+2020-05-18 15:41:39 INFO  IntrinsticInference:85 - Recall: 0.55
+2020-05-18 15:41:39 INFO  IntrinsticInference:86 - FScore: 0.55
+2020-05-18 15:41:39 INFO  IntrinsticInference:88 - Intrinsic Evaluation is done!!!
+2020-05-18 15:43:27 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 15:43:27 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 15:43:27 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2020-05-18 15:43:27 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 15:43:27 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 15:43:27 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2020-05-18 15:43:27 INFO  ParseUtil:106 - Collecting GitHub Subject Systems/Projects
+2020-05-18 15:43:27 INFO  ParseUtil:117 - Total Number of Subject Systems: 1
+2020-05-18 15:43:27 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2020-05-18 15:43:27 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2020-05-18 15:43:27 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 15:43:27 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 13
+2020-05-18 15:43:27 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 15:43:27 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 15:43:28 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 13
+2020-05-18 15:43:28 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 15:43:35 INFO  CompilableCodeExtraction:55 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2020-05-18 15:43:35 INFO  InferUtil:68 - Subject Systems Parsed: 1/1 (100%)
+2020-05-18 15:43:35 INFO  IntrinsticInference:42 - Inferring test data...
+2020-05-18 15:43:47 INFO  IntrinsticInference:67 - Test Data Inferred: 100/218 (45%)
+2020-05-18 15:43:56 INFO  IntrinsticInference:67 - Test Data Inferred: 200/218 (91%)
+2020-05-18 15:43:59 INFO  IntrinsticInference:72 - Test Data Inferred: 218/218 (100%)
+2020-05-18 15:43:59 INFO  IntrinsticInference:78 - Calculating performance mesures...
+2020-05-18 15:43:59 INFO  IntrinsticInference:84 - Precision: 0.94
+2020-05-18 15:43:59 INFO  IntrinsticInference:85 - Recall: 0.94
+2020-05-18 15:43:59 INFO  IntrinsticInference:86 - FScore: 0.94
+2020-05-18 15:43:59 INFO  IntrinsticInference:88 - Intrinsic Evaluation is done!!!
+2020-05-18 15:46:02 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 15:46:02 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 15:46:02 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2020-05-18 15:46:02 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 15:46:02 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 15:46:02 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2020-05-18 15:46:02 INFO  ParseUtil:106 - Collecting GitHub Subject Systems/Projects
+2020-05-18 15:46:02 INFO  ParseUtil:117 - Total Number of Subject Systems: 6
+2020-05-18 15:46:02 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2020-05-18 15:46:02 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2020-05-18 15:46:02 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 15:46:02 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 13
+2020-05-18 15:46:02 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 15:46:02 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 15:46:03 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 13
+2020-05-18 15:46:03 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 15:46:11 INFO  CompilableCodeExtraction:55 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2020-05-18 15:46:11 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/benthE-OBDDPCV.zip
+2020-05-18 15:46:11 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 15:46:11 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 31
+2020-05-18 15:46:11 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 15:46:11 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 15:46:11 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 31
+2020-05-18 15:46:11 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 15:46:25 INFO  CompilableCodeExtraction:55 - 31 compilation units out of 31 are parsed. Percentage of completion: 100%
+2020-05-18 15:46:25 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/BioGene-wookieConnection.zip
+2020-05-18 15:46:25 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 15:46:25 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 13
+2020-05-18 15:46:25 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 15:46:25 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 15:46:25 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 13
+2020-05-18 15:46:25 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 15:46:40 INFO  CompilableCodeExtraction:55 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2020-05-18 15:46:40 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/bcchapman-querydslblog.zip
+2020-05-18 15:46:40 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 15:46:40 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 14
+2020-05-18 15:46:40 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 15:46:40 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 15:46:40 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 14
+2020-05-18 15:46:40 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 15:46:42 INFO  CompilableCodeExtraction:55 - 14 compilation units out of 14 are parsed. Percentage of completion: 100%
+2020-05-18 15:46:42 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/bhatti-RxJava8.zip
+2020-05-18 15:46:42 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 15:46:42 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 34
+2020-05-18 15:46:42 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 15:46:42 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 15:46:42 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 34
+2020-05-18 15:46:42 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 15:47:00 INFO  CompilableCodeExtraction:55 - 34 compilation units out of 34 are parsed. Percentage of completion: 100%
+2020-05-18 15:47:00 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/Belgarion-Sputnik.zip
+2020-05-18 15:47:00 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 15:47:00 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 25
+2020-05-18 15:47:00 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 15:47:00 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 15:47:00 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 25
+2020-05-18 15:47:00 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 15:47:11 INFO  CompilableCodeExtraction:55 - 25 compilation units out of 25 are parsed. Percentage of completion: 100%
+2020-05-18 15:47:11 INFO  InferUtil:68 - Subject Systems Parsed: 6/6 (100%)
+2020-05-18 15:47:11 INFO  IntrinsticInference:42 - Inferring test data...
+2020-05-18 15:47:22 INFO  IntrinsticInference:67 - Test Data Inferred: 100/1692 (5%)
+2020-05-18 15:47:32 INFO  IntrinsticInference:67 - Test Data Inferred: 200/1692 (11%)
+2020-05-18 15:47:43 INFO  IntrinsticInference:67 - Test Data Inferred: 300/1692 (17%)
+2020-05-18 15:47:53 INFO  IntrinsticInference:67 - Test Data Inferred: 400/1692 (23%)
+2020-05-18 15:48:06 INFO  IntrinsticInference:67 - Test Data Inferred: 500/1692 (29%)
+2020-05-18 15:48:20 INFO  IntrinsticInference:67 - Test Data Inferred: 600/1692 (35%)
+2020-05-18 15:48:31 INFO  IntrinsticInference:67 - Test Data Inferred: 700/1692 (41%)
+2020-05-18 15:48:39 INFO  IntrinsticInference:67 - Test Data Inferred: 800/1692 (47%)
+2020-05-18 15:48:47 INFO  IntrinsticInference:67 - Test Data Inferred: 900/1692 (53%)
+2020-05-18 15:48:54 INFO  IntrinsticInference:67 - Test Data Inferred: 1000/1692 (59%)
+2020-05-18 15:49:03 INFO  IntrinsticInference:67 - Test Data Inferred: 1100/1692 (65%)
+2020-05-18 15:49:14 INFO  IntrinsticInference:67 - Test Data Inferred: 1200/1692 (70%)
+2020-05-18 15:49:22 INFO  IntrinsticInference:67 - Test Data Inferred: 1300/1692 (76%)
+2020-05-18 15:49:29 INFO  IntrinsticInference:67 - Test Data Inferred: 1400/1692 (82%)
+2020-05-18 15:49:36 INFO  IntrinsticInference:67 - Test Data Inferred: 1500/1692 (88%)
+2020-05-18 15:49:45 INFO  IntrinsticInference:67 - Test Data Inferred: 1600/1692 (94%)
+2020-05-18 15:49:53 INFO  IntrinsticInference:72 - Test Data Inferred: 1692/1692 (100%)
+2020-05-18 15:49:53 INFO  IntrinsticInference:78 - Calculating performance mesures...
+2020-05-18 15:49:53 INFO  IntrinsticInference:84 - Precision: 0.55
+2020-05-18 15:49:53 INFO  IntrinsticInference:85 - Recall: 0.55
+2020-05-18 15:49:53 INFO  IntrinsticInference:86 - FScore: 0.55
+2020-05-18 15:49:53 INFO  IntrinsticInference:88 - Intrinsic Evaluation is done!!!
+2020-05-18 15:53:59 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 15:53:59 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 15:53:59 INFO  ExtrinsicInference:54 - Inferring test data...
+2020-05-18 15:55:21 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 15:55:21 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 15:55:21 INFO  ExtrinsicInference:33 - Collecting Jar Files...
+2020-05-18 15:55:21 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 15:55:21 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 15:55:21 INFO  ExtrinsicInference:36 - Collecting StackOverflow code snippets...
+2020-05-18 15:55:21 INFO  ExtrinsicInference:40 - Total Number of StackOverflow Code Snippet: 0
+2020-05-18 15:55:21 INFO  ExtrinsicInference:43 - Extracting test data from the StackOverflow code snippets...
+2020-05-18 15:55:21 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 15:55:21 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 15:55:21 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 0
+2020-05-18 15:55:21 INFO  SOCodeExtraction:31 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 15:55:21 ERROR InferUtil:85 - / by zero
+2020-05-18 15:55:21 ERROR InferUtil:87 - org.usask.srlab.coster.extraction.SOCodeExtraction.extractFromSOPOST(SOCodeExtraction.java:44)
+2020-05-18 15:55:21 ERROR InferUtil:87 - org.usask.srlab.coster.utils.InferUtil.collectSODataset(InferUtil.java:78)
+2020-05-18 15:55:21 ERROR InferUtil:87 - org.usask.srlab.coster.infer.ExtrinsicInference.evaluation(ExtrinsicInference.java:44)
+2020-05-18 15:55:21 ERROR InferUtil:87 - org.usask.srlab.coster.COSTER.main(COSTER.java:495)
+2020-05-18 15:55:21 INFO  ExtrinsicInference:54 - Inferring test data...
+2020-05-18 15:56:50 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 15:56:50 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 15:56:50 INFO  ExtrinsicInference:37 - Collecting Jar Files...
+2020-05-18 15:56:50 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 15:56:50 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 15:56:50 INFO  ExtrinsicInference:40 - Collecting StackOverflow code snippets...
+2020-05-18 15:56:50 INFO  ExtrinsicInference:44 - Total Number of StackOverflow Code Snippet: 0
+2020-05-18 15:56:50 INFO  ExtrinsicInference:47 - Extracting test data from the StackOverflow code snippets...
+2020-05-18 15:56:51 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 15:56:51 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 15:56:51 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 0
+2020-05-18 15:56:51 INFO  SOCodeExtraction:31 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 15:56:51 ERROR InferUtil:85 - / by zero
+2020-05-18 15:56:51 ERROR InferUtil:87 - org.usask.srlab.coster.extraction.SOCodeExtraction.extractFromSOPOST(SOCodeExtraction.java:44)
+2020-05-18 15:56:51 ERROR InferUtil:87 - org.usask.srlab.coster.utils.InferUtil.collectSODataset(InferUtil.java:78)
+2020-05-18 15:56:51 ERROR InferUtil:87 - org.usask.srlab.coster.infer.ExtrinsicInference.evaluation(ExtrinsicInference.java:48)
+2020-05-18 15:56:51 ERROR InferUtil:87 - org.usask.srlab.coster.COSTER.main(COSTER.java:495)
+2020-05-18 15:56:51 INFO  ExtrinsicInference:58 - Inferring test data...
+2020-05-18 15:57:46 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 15:57:46 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 15:57:46 INFO  ExtrinsicInference:33 - Collecting Jar Files...
+2020-05-18 15:57:46 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 15:57:46 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 15:57:46 INFO  ExtrinsicInference:37 - Collecting StackOverflow code snippets...
+2020-05-18 15:57:46 INFO  ExtrinsicInference:41 - Total Number of StackOverflow Code Snippet: 0
+2020-05-18 15:57:46 INFO  ExtrinsicInference:44 - Extracting test data from the StackOverflow code snippets...
+2020-05-18 15:57:46 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 15:57:46 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 15:57:47 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 0
+2020-05-18 15:57:47 INFO  SOCodeExtraction:31 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 15:57:47 ERROR InferUtil:85 - / by zero
+2020-05-18 15:57:47 ERROR InferUtil:87 - org.usask.srlab.coster.extraction.SOCodeExtraction.extractFromSOPOST(SOCodeExtraction.java:44)
+2020-05-18 15:57:47 ERROR InferUtil:87 - org.usask.srlab.coster.utils.InferUtil.collectSODataset(InferUtil.java:78)
+2020-05-18 15:57:47 ERROR InferUtil:87 - org.usask.srlab.coster.infer.ExtrinsicInference.evaluation(ExtrinsicInference.java:45)
+2020-05-18 15:57:47 ERROR InferUtil:87 - org.usask.srlab.coster.COSTER.main(COSTER.java:495)
+2020-05-18 15:57:47 INFO  ExtrinsicInference:55 - Inferring test data...
+2020-05-18 15:58:08 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 15:58:08 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 15:58:09 INFO  ExtrinsicInference:33 - Collecting Jar Files...
+2020-05-18 15:58:09 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 15:58:09 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 15:58:09 INFO  ExtrinsicInference:36 - Collecting StackOverflow code snippets...
+2020-05-18 15:58:09 INFO  ExtrinsicInference:41 - Total Number of StackOverflow Code Snippet: 0
+2020-05-18 15:58:09 INFO  ExtrinsicInference:44 - Extracting test data from the StackOverflow code snippets...
+2020-05-18 15:58:09 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 15:58:09 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 15:58:09 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 0
+2020-05-18 15:58:09 INFO  SOCodeExtraction:31 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 15:58:09 ERROR InferUtil:85 - / by zero
+2020-05-18 15:58:09 ERROR InferUtil:87 - org.usask.srlab.coster.extraction.SOCodeExtraction.extractFromSOPOST(SOCodeExtraction.java:44)
+2020-05-18 15:58:09 ERROR InferUtil:87 - org.usask.srlab.coster.utils.InferUtil.collectSODataset(InferUtil.java:78)
+2020-05-18 15:58:09 ERROR InferUtil:87 - org.usask.srlab.coster.infer.ExtrinsicInference.evaluation(ExtrinsicInference.java:45)
+2020-05-18 15:58:09 ERROR InferUtil:87 - org.usask.srlab.coster.COSTER.main(COSTER.java:495)
+2020-05-18 15:58:09 INFO  ExtrinsicInference:55 - Inferring test data...
+2020-05-18 15:58:26 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 15:58:26 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 15:58:26 INFO  ExtrinsicInference:33 - Collecting Jar Files...
+2020-05-18 15:58:26 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 15:58:26 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 15:58:26 INFO  ExtrinsicInference:36 - Collecting StackOverflow code snippets...
+2020-05-18 15:58:26 INFO  ExtrinsicInference:41 - Total Number of StackOverflow Code Snippet: 0
+2020-05-18 15:58:26 INFO  ExtrinsicInference:44 - Extracting test data from the StackOverflow code snippets...
+2020-05-18 15:58:26 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 15:58:26 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 15:58:26 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 0
+2020-05-18 15:58:26 INFO  SOCodeExtraction:31 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 15:58:26 ERROR InferUtil:85 - / by zero
+2020-05-18 15:58:26 ERROR InferUtil:87 - org.usask.srlab.coster.extraction.SOCodeExtraction.extractFromSOPOST(SOCodeExtraction.java:44)
+2020-05-18 15:58:26 ERROR InferUtil:87 - org.usask.srlab.coster.utils.InferUtil.collectSODataset(InferUtil.java:78)
+2020-05-18 15:58:26 ERROR InferUtil:87 - org.usask.srlab.coster.infer.ExtrinsicInference.evaluation(ExtrinsicInference.java:45)
+2020-05-18 15:58:26 ERROR InferUtil:87 - org.usask.srlab.coster.COSTER.main(COSTER.java:495)
+2020-05-18 15:58:26 INFO  ExtrinsicInference:55 - Inferring test data...
+2020-05-18 15:59:02 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 15:59:02 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 15:59:02 INFO  ExtrinsicInference:33 - Collecting Jar Files...
+2020-05-18 15:59:02 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 15:59:02 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 15:59:02 INFO  ExtrinsicInference:36 - Collecting StackOverflow code snippets...
+2020-05-18 15:59:03 INFO  ExtrinsicInference:40 - Total Number of StackOverflow Code Snippet: 501
+2020-05-18 15:59:03 INFO  ExtrinsicInference:43 - Extracting test data from the StackOverflow code snippets...
+2020-05-18 15:59:03 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 15:59:03 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 15:59:04 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 501
+2020-05-18 15:59:04 INFO  SOCodeExtraction:31 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 15:59:52 INFO  SOCodeExtraction:40 - 100 compilation units out of 501 are parsed. Percentage of completion: 19%
+2020-05-18 16:00:42 INFO  SOCodeExtraction:40 - 200 compilation units out of 501 are parsed. Percentage of completion: 39%
+2020-05-18 16:01:34 INFO  SOCodeExtraction:40 - 300 compilation units out of 501 are parsed. Percentage of completion: 59%
+2020-05-18 16:02:20 INFO  SOCodeExtraction:40 - 400 compilation units out of 501 are parsed. Percentage of completion: 79%
+2020-05-18 16:03:08 INFO  SOCodeExtraction:40 - 500 compilation units out of 501 are parsed. Percentage of completion: 99%
+2020-05-18 16:03:08 INFO  SOCodeExtraction:44 - 501 compilation units out of 501 are parsed. Percentage of completion: 100%
+2020-05-18 16:03:08 INFO  ExtrinsicInference:54 - Inferring test data...
+2020-05-18 16:03:20 INFO  ExtrinsicInference:78 - Test Data Inferred: 100/4338 (2%)
+2020-05-18 16:03:29 INFO  ExtrinsicInference:78 - Test Data Inferred: 200/4338 (4%)
+2020-05-18 16:03:41 INFO  ExtrinsicInference:78 - Test Data Inferred: 300/4338 (6%)
+2020-05-18 16:03:51 INFO  ExtrinsicInference:78 - Test Data Inferred: 400/4338 (9%)
+2020-05-18 16:03:59 INFO  ExtrinsicInference:78 - Test Data Inferred: 500/4338 (11%)
+2020-05-18 16:04:09 INFO  ExtrinsicInference:78 - Test Data Inferred: 600/4338 (13%)
+2020-05-18 16:04:21 INFO  ExtrinsicInference:78 - Test Data Inferred: 700/4338 (16%)
+2020-05-18 16:04:34 INFO  ExtrinsicInference:78 - Test Data Inferred: 800/4338 (18%)
+2020-05-18 16:04:45 INFO  ExtrinsicInference:78 - Test Data Inferred: 900/4338 (20%)
+2020-05-18 16:04:57 INFO  ExtrinsicInference:78 - Test Data Inferred: 1000/4338 (23%)
+2020-05-18 16:05:06 INFO  ExtrinsicInference:78 - Test Data Inferred: 1100/4338 (25%)
+2020-05-18 16:05:16 INFO  ExtrinsicInference:78 - Test Data Inferred: 1200/4338 (27%)
+2020-05-18 16:05:25 INFO  ExtrinsicInference:78 - Test Data Inferred: 1300/4338 (29%)
+2020-05-18 16:05:35 INFO  ExtrinsicInference:78 - Test Data Inferred: 1400/4338 (32%)
+2020-05-18 16:05:45 INFO  ExtrinsicInference:78 - Test Data Inferred: 1500/4338 (34%)
+2020-05-18 16:06:01 INFO  ExtrinsicInference:78 - Test Data Inferred: 1600/4338 (36%)
+2020-05-18 16:06:11 INFO  ExtrinsicInference:78 - Test Data Inferred: 1700/4338 (39%)
+2020-05-18 16:06:21 INFO  ExtrinsicInference:78 - Test Data Inferred: 1800/4338 (41%)
+2020-05-18 16:06:32 INFO  ExtrinsicInference:78 - Test Data Inferred: 1900/4338 (43%)
+2020-05-18 16:06:46 INFO  ExtrinsicInference:78 - Test Data Inferred: 2000/4338 (46%)
+2020-05-18 16:06:54 INFO  ExtrinsicInference:78 - Test Data Inferred: 2100/4338 (48%)
+2020-05-18 16:07:03 INFO  ExtrinsicInference:78 - Test Data Inferred: 2200/4338 (50%)
+2020-05-18 16:07:15 INFO  ExtrinsicInference:78 - Test Data Inferred: 2300/4338 (53%)
+2020-05-18 16:07:25 INFO  ExtrinsicInference:78 - Test Data Inferred: 2400/4338 (55%)
+2020-05-18 16:07:35 INFO  ExtrinsicInference:78 - Test Data Inferred: 2500/4338 (57%)
+2020-05-18 16:07:43 INFO  ExtrinsicInference:78 - Test Data Inferred: 2600/4338 (59%)
+2020-05-18 16:07:53 INFO  ExtrinsicInference:78 - Test Data Inferred: 2700/4338 (62%)
+2020-05-18 16:08:06 INFO  ExtrinsicInference:78 - Test Data Inferred: 2800/4338 (64%)
+2020-05-18 16:08:17 INFO  ExtrinsicInference:78 - Test Data Inferred: 2900/4338 (66%)
+2020-05-18 16:08:30 INFO  ExtrinsicInference:78 - Test Data Inferred: 3000/4338 (69%)
+2020-05-18 16:08:39 INFO  ExtrinsicInference:78 - Test Data Inferred: 3100/4338 (71%)
+2020-05-18 16:08:49 INFO  ExtrinsicInference:78 - Test Data Inferred: 3200/4338 (73%)
+2020-05-18 16:08:59 INFO  ExtrinsicInference:78 - Test Data Inferred: 3300/4338 (76%)
+2020-05-18 16:09:10 INFO  ExtrinsicInference:78 - Test Data Inferred: 3400/4338 (78%)
+2020-05-18 16:09:19 INFO  ExtrinsicInference:78 - Test Data Inferred: 3500/4338 (80%)
+2020-05-18 16:09:30 INFO  ExtrinsicInference:78 - Test Data Inferred: 3600/4338 (82%)
+2020-05-18 16:09:39 INFO  ExtrinsicInference:78 - Test Data Inferred: 3700/4338 (85%)
+2020-05-18 16:09:49 INFO  ExtrinsicInference:78 - Test Data Inferred: 3800/4338 (87%)
+2020-05-18 16:09:57 INFO  ExtrinsicInference:78 - Test Data Inferred: 3900/4338 (89%)
+2020-05-18 16:10:06 INFO  ExtrinsicInference:78 - Test Data Inferred: 4000/4338 (92%)
+2020-05-18 16:10:15 INFO  ExtrinsicInference:78 - Test Data Inferred: 4100/4338 (94%)
+2020-05-18 16:10:25 INFO  ExtrinsicInference:78 - Test Data Inferred: 4200/4338 (96%)
+2020-05-18 16:10:33 INFO  ExtrinsicInference:78 - Test Data Inferred: 4300/4338 (99%)
+2020-05-18 16:10:38 INFO  ExtrinsicInference:83 - Test Data Inferred: 4338/4338 (100%)
+2020-05-18 16:10:38 INFO  ExtrinsicInference:87 - Average time for inference: 103.0milliseconds
+2020-05-18 16:10:38 INFO  ExtrinsicInference:89 - Calculating performance mesures...
+2020-05-18 16:10:38 INFO  ExtrinsicInference:95 - Precision: 0.81
+2020-05-18 16:10:38 INFO  ExtrinsicInference:96 - Recall: 0.81
+2020-05-18 16:10:38 INFO  ExtrinsicInference:97 - FScore: 0.81
+2020-05-18 16:10:38 INFO  ExtrinsicInference:99 - Extrinsic Evaluation is done!!!
+2020-05-18 16:21:41 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 16:21:41 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 16:21:41 INFO  ExtrinsicInference:33 - Collecting Jar Files...
+2020-05-18 16:21:41 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 16:21:41 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 16:21:41 INFO  ExtrinsicInference:36 - Collecting StackOverflow code snippets...
+2020-05-18 16:21:43 INFO  ExtrinsicInference:40 - Total Number of StackOverflow Code Snippet: 501
+2020-05-18 16:21:43 INFO  ExtrinsicInference:43 - Extracting test data from the StackOverflow code snippets...
+2020-05-18 16:21:43 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:21:43 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:21:44 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 501
+2020-05-18 16:21:44 INFO  SOCodeExtraction:31 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:22:02 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 16:22:02 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 16:22:02 INFO  ExtrinsicInference:33 - Collecting Jar Files...
+2020-05-18 16:22:02 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 16:22:02 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 16:22:02 INFO  ExtrinsicInference:36 - Collecting StackOverflow code snippets...
+2020-05-18 16:22:04 INFO  ExtrinsicInference:40 - Total Number of StackOverflow Code Snippet: 501
+2020-05-18 16:22:04 INFO  ExtrinsicInference:43 - Extracting test data from the StackOverflow code snippets...
+2020-05-18 16:22:04 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:22:04 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:22:06 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 501
+2020-05-18 16:22:06 INFO  SOCodeExtraction:31 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:22:51 INFO  SOCodeExtraction:40 - 100 compilation units out of 501 are parsed. Percentage of completion: 19%
+2020-05-18 16:23:37 INFO  SOCodeExtraction:40 - 200 compilation units out of 501 are parsed. Percentage of completion: 39%
+2020-05-18 16:24:29 INFO  SOCodeExtraction:40 - 300 compilation units out of 501 are parsed. Percentage of completion: 59%
+2020-05-18 16:25:15 INFO  SOCodeExtraction:40 - 400 compilation units out of 501 are parsed. Percentage of completion: 79%
+2020-05-18 16:26:01 INFO  SOCodeExtraction:40 - 500 compilation units out of 501 are parsed. Percentage of completion: 99%
+2020-05-18 16:26:01 INFO  SOCodeExtraction:44 - 501 compilation units out of 501 are parsed. Percentage of completion: 100%
+2020-05-18 16:26:01 INFO  ExtrinsicInference:53 - Inferring test data...
+2020-05-18 16:26:12 INFO  ExtrinsicInference:80 - Test Data Inferred: 100/4338 (2%)
+2020-05-18 16:26:23 INFO  ExtrinsicInference:80 - Test Data Inferred: 200/4338 (4%)
+2020-05-18 16:26:34 INFO  ExtrinsicInference:80 - Test Data Inferred: 300/4338 (6%)
+2020-05-18 16:26:44 INFO  ExtrinsicInference:80 - Test Data Inferred: 400/4338 (9%)
+2020-05-18 16:26:54 INFO  ExtrinsicInference:80 - Test Data Inferred: 500/4338 (11%)
+2020-05-18 16:27:07 INFO  ExtrinsicInference:80 - Test Data Inferred: 600/4338 (13%)
+2020-05-18 16:27:18 INFO  ExtrinsicInference:80 - Test Data Inferred: 700/4338 (16%)
+2020-05-18 16:27:31 INFO  ExtrinsicInference:80 - Test Data Inferred: 800/4338 (18%)
+2020-05-18 16:27:44 INFO  ExtrinsicInference:80 - Test Data Inferred: 900/4338 (20%)
+2020-05-18 16:27:53 INFO  ExtrinsicInference:80 - Test Data Inferred: 1000/4338 (23%)
+2020-05-18 16:28:03 INFO  ExtrinsicInference:80 - Test Data Inferred: 1100/4338 (25%)
+2020-05-18 16:28:12 INFO  ExtrinsicInference:80 - Test Data Inferred: 1200/4338 (27%)
+2020-05-18 16:28:22 INFO  ExtrinsicInference:80 - Test Data Inferred: 1300/4338 (29%)
+2020-05-18 16:28:32 INFO  ExtrinsicInference:80 - Test Data Inferred: 1400/4338 (32%)
+2020-05-18 16:28:48 INFO  ExtrinsicInference:80 - Test Data Inferred: 1500/4338 (34%)
+2020-05-18 16:28:59 INFO  ExtrinsicInference:80 - Test Data Inferred: 1600/4338 (36%)
+2020-05-18 16:29:10 INFO  ExtrinsicInference:80 - Test Data Inferred: 1700/4338 (39%)
+2020-05-18 16:29:22 INFO  ExtrinsicInference:80 - Test Data Inferred: 1800/4338 (41%)
+2020-05-18 16:29:30 INFO  ExtrinsicInference:80 - Test Data Inferred: 1900/4338 (43%)
+2020-05-18 16:29:41 INFO  ExtrinsicInference:80 - Test Data Inferred: 2000/4338 (46%)
+2020-05-18 16:29:53 INFO  ExtrinsicInference:80 - Test Data Inferred: 2100/4338 (48%)
+2020-05-18 16:30:02 INFO  ExtrinsicInference:80 - Test Data Inferred: 2200/4338 (50%)
+2020-05-18 16:30:13 INFO  ExtrinsicInference:80 - Test Data Inferred: 2300/4338 (53%)
+2020-05-18 16:30:21 INFO  ExtrinsicInference:80 - Test Data Inferred: 2400/4338 (55%)
+2020-05-18 16:30:31 INFO  ExtrinsicInference:80 - Test Data Inferred: 2500/4338 (57%)
+2020-05-18 16:30:44 INFO  ExtrinsicInference:80 - Test Data Inferred: 2600/4338 (59%)
+2020-05-18 16:30:53 INFO  ExtrinsicInference:80 - Test Data Inferred: 2700/4338 (62%)
+2020-05-18 16:31:05 INFO  ExtrinsicInference:80 - Test Data Inferred: 2800/4338 (64%)
+2020-05-18 16:31:13 INFO  ExtrinsicInference:80 - Test Data Inferred: 2900/4338 (66%)
+2020-05-18 16:31:25 INFO  ExtrinsicInference:80 - Test Data Inferred: 3000/4338 (69%)
+2020-05-18 16:31:39 INFO  ExtrinsicInference:80 - Test Data Inferred: 3100/4338 (71%)
+2020-05-18 16:31:48 INFO  ExtrinsicInference:80 - Test Data Inferred: 3200/4338 (73%)
+2020-05-18 16:31:57 INFO  ExtrinsicInference:80 - Test Data Inferred: 3300/4338 (76%)
+2020-05-18 16:32:06 INFO  ExtrinsicInference:80 - Test Data Inferred: 3400/4338 (78%)
+2020-05-18 16:32:15 INFO  ExtrinsicInference:80 - Test Data Inferred: 3500/4338 (80%)
+2020-05-18 16:32:23 INFO  ExtrinsicInference:80 - Test Data Inferred: 3600/4338 (82%)
+2020-05-18 16:32:32 INFO  ExtrinsicInference:80 - Test Data Inferred: 3700/4338 (85%)
+2020-05-18 16:32:32 INFO  ExtrinsicInference:80 - Test Data Inferred: 3700/4338 (85%)
+2020-05-18 16:32:39 INFO  ExtrinsicInference:85 - Test Data Inferred: 3775/4338 (87%)
+2020-05-18 16:32:39 INFO  ExtrinsicInference:89 - Average time for inference: 90.0milliseconds
+2020-05-18 16:32:39 INFO  ExtrinsicInference:91 - Calculating performance mesures...
+2020-05-18 16:32:39 INFO  ExtrinsicInference:97 - Precision: 0.92
+2020-05-18 16:32:39 INFO  ExtrinsicInference:98 - Recall: 0.92
+2020-05-18 16:32:39 INFO  ExtrinsicInference:99 - FScore: 0.92
+2020-05-18 16:32:39 INFO  ExtrinsicInference:101 - Extrinsic Evaluation is done!!!
+2020-05-18 16:35:33 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 16:35:33 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 16:35:33 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2020-05-18 16:35:33 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 16:35:33 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 16:35:33 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2020-05-18 16:35:33 INFO  ParseUtil:106 - Collecting GitHub Subject Systems/Projects
+2020-05-18 16:35:33 INFO  ParseUtil:117 - Total Number of Subject Systems: 6
+2020-05-18 16:35:33 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2020-05-18 16:35:33 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2020-05-18 16:35:33 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:35:33 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 13
+2020-05-18 16:35:33 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:35:33 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:35:34 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 13
+2020-05-18 16:35:34 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:35:42 INFO  CompilableCodeExtraction:55 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2020-05-18 16:35:42 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/benthE-OBDDPCV.zip
+2020-05-18 16:35:42 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:35:42 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 31
+2020-05-18 16:35:42 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:35:42 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:35:42 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 31
+2020-05-18 16:35:42 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:35:55 INFO  CompilableCodeExtraction:55 - 31 compilation units out of 31 are parsed. Percentage of completion: 100%
+2020-05-18 16:35:55 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/BioGene-wookieConnection.zip
+2020-05-18 16:35:55 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:35:55 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 13
+2020-05-18 16:35:55 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:35:55 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:35:56 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 13
+2020-05-18 16:35:56 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:36:09 INFO  CompilableCodeExtraction:55 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2020-05-18 16:36:09 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/bcchapman-querydslblog.zip
+2020-05-18 16:36:09 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:36:09 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 14
+2020-05-18 16:36:09 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:36:09 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:36:09 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 14
+2020-05-18 16:36:09 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:36:11 INFO  CompilableCodeExtraction:55 - 14 compilation units out of 14 are parsed. Percentage of completion: 100%
+2020-05-18 16:36:11 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/bhatti-RxJava8.zip
+2020-05-18 16:36:12 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:36:12 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 34
+2020-05-18 16:36:12 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:36:12 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:36:12 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 34
+2020-05-18 16:36:12 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:37:39 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 16:37:39 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 16:37:39 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2020-05-18 16:37:39 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 16:37:39 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 16:37:39 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2020-05-18 16:37:39 INFO  ParseUtil:106 - Collecting GitHub Subject Systems/Projects
+2020-05-18 16:37:39 INFO  ParseUtil:117 - Total Number of Subject Systems: 6
+2020-05-18 16:37:39 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2020-05-18 16:37:39 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2020-05-18 16:37:40 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:37:40 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 13
+2020-05-18 16:37:40 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:37:40 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:37:41 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 13
+2020-05-18 16:37:41 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:38:01 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 16:38:01 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 16:38:01 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2020-05-18 16:38:01 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 16:38:01 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 16:38:01 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2020-05-18 16:38:01 INFO  ParseUtil:106 - Collecting GitHub Subject Systems/Projects
+2020-05-18 16:38:01 INFO  ParseUtil:117 - Total Number of Subject Systems: 6
+2020-05-18 16:38:01 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2020-05-18 16:38:01 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2020-05-18 16:38:01 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:38:01 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 13
+2020-05-18 16:38:01 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:38:02 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:38:02 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 13
+2020-05-18 16:38:02 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:38:10 INFO  CompilableCodeExtraction:55 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2020-05-18 16:38:10 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/benthE-OBDDPCV.zip
+2020-05-18 16:38:10 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:38:10 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 31
+2020-05-18 16:38:10 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:38:10 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:38:10 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 31
+2020-05-18 16:38:10 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:38:24 INFO  CompilableCodeExtraction:55 - 31 compilation units out of 31 are parsed. Percentage of completion: 100%
+2020-05-18 16:38:24 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/BioGene-wookieConnection.zip
+2020-05-18 16:38:24 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:38:24 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 13
+2020-05-18 16:38:24 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:38:24 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:38:24 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 13
+2020-05-18 16:38:24 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:38:38 INFO  CompilableCodeExtraction:55 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2020-05-18 16:38:38 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/bcchapman-querydslblog.zip
+2020-05-18 16:38:38 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:38:38 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 14
+2020-05-18 16:38:38 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:38:38 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:38:38 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 14
+2020-05-18 16:38:38 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:38:41 INFO  CompilableCodeExtraction:55 - 14 compilation units out of 14 are parsed. Percentage of completion: 100%
+2020-05-18 16:38:41 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/bhatti-RxJava8.zip
+2020-05-18 16:38:41 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:38:41 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 34
+2020-05-18 16:38:41 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:38:41 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:38:41 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 34
+2020-05-18 16:38:41 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:38:58 INFO  CompilableCodeExtraction:55 - 34 compilation units out of 34 are parsed. Percentage of completion: 100%
+2020-05-18 16:38:58 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/Belgarion-Sputnik.zip
+2020-05-18 16:38:58 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:38:58 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 25
+2020-05-18 16:38:58 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:38:58 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:38:58 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 25
+2020-05-18 16:38:58 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:39:09 INFO  CompilableCodeExtraction:55 - 25 compilation units out of 25 are parsed. Percentage of completion: 100%
+2020-05-18 16:39:09 INFO  InferUtil:68 - Subject Systems Parsed: 6/6 (100%)
+2020-05-18 16:39:09 INFO  IntrinsticInference:42 - Inferring test data...
+2020-05-18 16:39:20 INFO  IntrinsticInference:68 - Test Data Inferred: 100/1692 (5%)
+2020-05-18 16:39:31 INFO  IntrinsticInference:68 - Test Data Inferred: 200/1692 (11%)
+2020-05-18 16:39:42 INFO  IntrinsticInference:68 - Test Data Inferred: 300/1692 (17%)
+2020-05-18 16:39:51 INFO  IntrinsticInference:68 - Test Data Inferred: 400/1692 (23%)
+2020-05-18 16:40:04 INFO  IntrinsticInference:68 - Test Data Inferred: 500/1692 (29%)
+2020-05-18 16:40:17 INFO  IntrinsticInference:68 - Test Data Inferred: 600/1692 (35%)
+2020-05-18 16:40:27 INFO  IntrinsticInference:68 - Test Data Inferred: 700/1692 (41%)
+2020-05-18 16:40:35 INFO  IntrinsticInference:68 - Test Data Inferred: 800/1692 (47%)
+2020-05-18 16:40:43 INFO  IntrinsticInference:68 - Test Data Inferred: 900/1692 (53%)
+2020-05-18 16:40:51 INFO  IntrinsticInference:68 - Test Data Inferred: 1000/1692 (59%)
+2020-05-18 16:41:02 INFO  IntrinsticInference:68 - Test Data Inferred: 1100/1692 (65%)
+2020-05-18 16:41:09 INFO  IntrinsticInference:68 - Test Data Inferred: 1200/1692 (70%)
+2020-05-18 16:41:17 INFO  IntrinsticInference:68 - Test Data Inferred: 1300/1692 (76%)
+2020-05-18 16:41:17 INFO  IntrinsticInference:68 - Test Data Inferred: 1300/1692 (76%)
+2020-05-18 16:41:17 INFO  IntrinsticInference:68 - Test Data Inferred: 1300/1692 (76%)
+2020-05-18 16:41:17 INFO  IntrinsticInference:68 - Test Data Inferred: 1300/1692 (76%)
+2020-05-18 16:41:17 INFO  IntrinsticInference:68 - Test Data Inferred: 1300/1692 (76%)
+2020-05-18 16:41:17 INFO  IntrinsticInference:68 - Test Data Inferred: 1300/1692 (76%)
+2020-05-18 16:41:17 INFO  IntrinsticInference:68 - Test Data Inferred: 1300/1692 (76%)
+2020-05-18 16:41:17 INFO  IntrinsticInference:68 - Test Data Inferred: 1300/1692 (76%)
+2020-05-18 16:41:17 INFO  IntrinsticInference:68 - Test Data Inferred: 1300/1692 (76%)
+2020-05-18 16:41:17 INFO  IntrinsticInference:68 - Test Data Inferred: 1300/1692 (76%)
+2020-05-18 16:41:17 INFO  IntrinsticInference:68 - Test Data Inferred: 1300/1692 (76%)
+2020-05-18 16:41:26 INFO  IntrinsticInference:68 - Test Data Inferred: 1400/1692 (82%)
+2020-05-18 16:41:35 INFO  IntrinsticInference:68 - Test Data Inferred: 1500/1692 (88%)
+2020-05-18 16:41:40 INFO  IntrinsticInference:73 - Test Data Inferred: 1551/1692 (91%)
+2020-05-18 16:41:40 INFO  IntrinsticInference:79 - Calculating performance mesures...
+2020-05-18 16:41:40 INFO  IntrinsticInference:85 - Precision: 0.60
+2020-05-18 16:41:40 INFO  IntrinsticInference:86 - Recall: 0.60
+2020-05-18 16:41:40 INFO  IntrinsticInference:87 - FScore: 0.60
+2020-05-18 16:41:40 INFO  IntrinsticInference:89 - Intrinsic Evaluation is done!!!
+2020-05-18 16:51:27 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 16:51:27 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 16:51:27 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2020-05-18 16:51:27 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 16:51:27 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 16:51:27 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2020-05-18 16:51:27 INFO  ParseUtil:106 - Collecting GitHub Subject Systems/Projects
+2020-05-18 16:51:27 INFO  ParseUtil:117 - Total Number of Subject Systems: 1
+2020-05-18 16:51:27 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2020-05-18 16:51:27 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2020-05-18 16:51:27 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:51:27 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 13
+2020-05-18 16:51:27 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:51:28 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:51:28 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 13
+2020-05-18 16:51:28 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:51:36 INFO  CompilableCodeExtraction:55 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2020-05-18 16:51:36 INFO  InferUtil:68 - Subject Systems Parsed: 1/1 (100%)
+2020-05-18 16:51:36 INFO  IntrinsticInference:42 - Inferring test data...
+2020-05-18 16:51:48 INFO  IntrinsticInference:68 - Test Data Inferred: 100/218 (45%)
+2020-05-18 16:51:58 INFO  IntrinsticInference:68 - Test Data Inferred: 200/218 (91%)
+2020-05-18 16:52:00 INFO  IntrinsticInference:73 - Test Data Inferred: 215/218 (98%)
+2020-05-18 16:52:00 INFO  IntrinsticInference:79 - Calculating performance mesures...
+2020-05-18 16:52:00 INFO  IntrinsticInference:85 - Precision: 0.95
+2020-05-18 16:52:00 INFO  IntrinsticInference:86 - Recall: 0.95
+2020-05-18 16:52:00 INFO  IntrinsticInference:87 - FScore: 0.95
+2020-05-18 16:52:00 INFO  IntrinsticInference:89 - Intrinsic Evaluation is done!!!
+2020-05-18 16:52:41 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 16:52:41 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 16:52:41 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2020-05-18 16:52:41 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 16:52:41 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 16:52:41 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2020-05-18 16:52:41 INFO  ParseUtil:106 - Collecting GitHub Subject Systems/Projects
+2020-05-18 16:52:41 INFO  ParseUtil:117 - Total Number of Subject Systems: 1
+2020-05-18 16:52:41 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2020-05-18 16:52:41 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2020-05-18 16:52:41 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:52:41 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 13
+2020-05-18 16:52:41 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:52:41 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:52:42 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 13
+2020-05-18 16:52:42 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:52:49 INFO  CompilableCodeExtraction:55 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2020-05-18 16:52:49 INFO  InferUtil:68 - Subject Systems Parsed: 1/1 (100%)
+2020-05-18 16:52:49 INFO  IntrinsticInference:42 - Inferring test data...
+2020-05-18 16:53:17 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 16:53:17 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 16:53:17 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2020-05-18 16:53:17 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 16:53:17 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 16:53:17 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2020-05-18 16:53:17 INFO  ParseUtil:106 - Collecting GitHub Subject Systems/Projects
+2020-05-18 16:53:17 INFO  ParseUtil:117 - Total Number of Subject Systems: 1
+2020-05-18 16:53:17 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2020-05-18 16:53:18 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2020-05-18 16:53:18 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:53:18 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 13
+2020-05-18 16:53:18 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:53:18 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:53:19 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 13
+2020-05-18 16:53:19 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:53:26 INFO  CompilableCodeExtraction:55 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2020-05-18 16:53:26 INFO  InferUtil:68 - Subject Systems Parsed: 1/1 (100%)
+2020-05-18 16:53:26 INFO  IntrinsticInference:42 - Inferring test data...
+2020-05-18 16:53:51 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 16:53:51 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 16:53:51 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2020-05-18 16:53:51 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 16:53:51 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 16:53:51 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2020-05-18 16:53:51 INFO  ParseUtil:106 - Collecting GitHub Subject Systems/Projects
+2020-05-18 16:53:51 INFO  ParseUtil:117 - Total Number of Subject Systems: 1
+2020-05-18 16:53:51 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2020-05-18 16:53:51 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2020-05-18 16:53:51 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:53:51 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 13
+2020-05-18 16:53:51 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:53:51 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:53:52 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 13
+2020-05-18 16:53:52 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:54:00 INFO  CompilableCodeExtraction:55 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2020-05-18 16:54:00 INFO  InferUtil:68 - Subject Systems Parsed: 1/1 (100%)
+2020-05-18 16:54:00 INFO  IntrinsticInference:42 - Inferring test data...
+2020-05-18 16:54:14 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 16:54:14 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 16:54:14 INFO  IntrinsticInference:29 - Collecting Jar Files...
+2020-05-18 16:54:14 INFO  ParseUtil:87 - Collecting Jar Files
+2020-05-18 16:54:14 INFO  ParseUtil:100 - Total Number of JAR Files: 48
+2020-05-18 16:54:14 INFO  IntrinsticInference:32 - Collecting Subject Systems from repository for evaluation...
+2020-05-18 16:54:14 INFO  ParseUtil:106 - Collecting GitHub Subject Systems/Projects
+2020-05-18 16:54:14 INFO  ParseUtil:117 - Total Number of Subject Systems: 1
+2020-05-18 16:54:14 INFO  IntrinsticInference:36 - Extracting test data from the Subject Systems...
+2020-05-18 16:54:14 INFO  InferUtil:44 - Working on the project /home/khaledkucse/Project/backup/coster/data/TestDataset/subjectSystem/moffermann-harvest-client.zip
+2020-05-18 16:54:14 INFO  CompilableCodeExtraction:62 - Colelcting Java Files
+2020-05-18 16:54:14 INFO  CompilableCodeExtraction:74 - Total Number of Java Files: 13
+2020-05-18 16:54:14 INFO  CompilableCodeExtraction:80 - Configure Eclipse JDT
+2020-05-18 16:54:14 INFO  CompilableCodeExtraction:99 - Creating Compilation Unit for each java file
+2020-05-18 16:54:15 INFO  CompilableCodeExtraction:110 - Total Number of Compilation Units: 13
+2020-05-18 16:54:15 INFO  CompilableCodeExtraction:42 - Extracting types/methods/fields from each Compilation Unit
+2020-05-18 16:54:23 INFO  CompilableCodeExtraction:55 - 13 compilation units out of 13 are parsed. Percentage of completion: 100%
+2020-05-18 16:54:23 INFO  InferUtil:68 - Subject Systems Parsed: 1/1 (100%)
+2020-05-18 16:54:23 INFO  IntrinsticInference:42 - Inferring test data...
+2020-05-18 16:54:35 INFO  IntrinsticInference:70 - Test Data Inferred: 100/218 (45%)
+2020-05-18 16:57:54 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 16:57:54 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 16:57:54 INFO  ExtrinsicInference:53 - Inferring test data...
+2020-05-18 16:58:07 INFO  ExtrinsicInference:82 - Test Data Inferred: 100/4338 (2%)
+2020-05-18 16:58:17 INFO  ExtrinsicInference:82 - Test Data Inferred: 200/4338 (4%)
+2020-05-18 16:58:29 INFO  ExtrinsicInference:82 - Test Data Inferred: 300/4338 (6%)
+2020-05-18 16:58:40 INFO  ExtrinsicInference:82 - Test Data Inferred: 400/4338 (9%)
+2020-05-18 16:58:50 INFO  ExtrinsicInference:82 - Test Data Inferred: 500/4338 (11%)
+2020-05-18 16:59:00 INFO  ExtrinsicInference:82 - Test Data Inferred: 600/4338 (13%)
+2020-05-18 16:59:12 INFO  ExtrinsicInference:82 - Test Data Inferred: 700/4338 (16%)
+2020-05-18 16:59:26 INFO  ExtrinsicInference:82 - Test Data Inferred: 800/4338 (18%)
+2020-05-18 16:59:41 INFO  ExtrinsicInference:82 - Test Data Inferred: 900/4338 (20%)
+2020-05-18 16:59:50 INFO  ExtrinsicInference:82 - Test Data Inferred: 1000/4338 (23%)
+2020-05-18 17:00:01 INFO  ExtrinsicInference:82 - Test Data Inferred: 1100/4338 (25%)
+2020-05-18 17:00:11 INFO  ExtrinsicInference:82 - Test Data Inferred: 1200/4338 (27%)
+2020-05-18 17:00:21 INFO  ExtrinsicInference:82 - Test Data Inferred: 1300/4338 (29%)
+2020-05-18 17:00:31 INFO  ExtrinsicInference:82 - Test Data Inferred: 1400/4338 (32%)
+2020-05-18 17:00:47 INFO  ExtrinsicInference:82 - Test Data Inferred: 1500/4338 (34%)
+2020-05-18 17:00:58 INFO  ExtrinsicInference:82 - Test Data Inferred: 1600/4338 (36%)
+2020-05-18 17:01:10 INFO  ExtrinsicInference:82 - Test Data Inferred: 1700/4338 (39%)
+2020-05-18 17:01:21 INFO  ExtrinsicInference:82 - Test Data Inferred: 1800/4338 (41%)
+2020-05-18 17:01:30 INFO  ExtrinsicInference:82 - Test Data Inferred: 1900/4338 (43%)
+2020-05-18 17:01:41 INFO  ExtrinsicInference:82 - Test Data Inferred: 2000/4338 (46%)
+2020-05-18 17:01:52 INFO  ExtrinsicInference:82 - Test Data Inferred: 2100/4338 (48%)
+2020-05-18 17:02:02 INFO  ExtrinsicInference:82 - Test Data Inferred: 2200/4338 (50%)
+2020-05-18 17:02:11 INFO  ExtrinsicInference:82 - Test Data Inferred: 2300/4338 (53%)
+2020-05-18 17:02:20 INFO  ExtrinsicInference:82 - Test Data Inferred: 2400/4338 (55%)
+2020-05-18 17:02:30 INFO  ExtrinsicInference:82 - Test Data Inferred: 2500/4338 (57%)
+2020-05-18 17:02:41 INFO  ExtrinsicInference:82 - Test Data Inferred: 2600/4338 (59%)
+2020-05-18 17:02:51 INFO  ExtrinsicInference:82 - Test Data Inferred: 2700/4338 (62%)
+2020-05-18 17:03:02 INFO  ExtrinsicInference:82 - Test Data Inferred: 2800/4338 (64%)
+2020-05-18 17:03:10 INFO  ExtrinsicInference:82 - Test Data Inferred: 2900/4338 (66%)
+2020-05-18 17:03:22 INFO  ExtrinsicInference:82 - Test Data Inferred: 3000/4338 (69%)
+2020-05-18 17:03:33 INFO  ExtrinsicInference:82 - Test Data Inferred: 3100/4338 (71%)
+2020-05-18 17:03:41 INFO  ExtrinsicInference:82 - Test Data Inferred: 3200/4338 (73%)
+2020-05-18 17:03:50 INFO  ExtrinsicInference:82 - Test Data Inferred: 3300/4338 (76%)
+2020-05-18 17:03:58 INFO  ExtrinsicInference:82 - Test Data Inferred: 3400/4338 (78%)
+2020-05-18 17:04:08 INFO  ExtrinsicInference:82 - Test Data Inferred: 3500/4338 (80%)
+2020-05-18 17:04:16 INFO  ExtrinsicInference:82 - Test Data Inferred: 3600/4338 (82%)
+2020-05-18 17:04:25 INFO  ExtrinsicInference:82 - Test Data Inferred: 3700/4338 (85%)
+2020-05-18 17:04:25 INFO  ExtrinsicInference:82 - Test Data Inferred: 3700/4338 (85%)
+2020-05-18 17:04:34 INFO  ExtrinsicInference:87 - Test Data Inferred: 3775/4338 (87%)
+2020-05-18 17:04:34 INFO  ExtrinsicInference:91 - Average time for inference: 91.0milliseconds
+2020-05-18 17:04:34 INFO  ExtrinsicInference:93 - Calculating performance mesures...
+2020-05-18 17:04:34 INFO  ExtrinsicInference:99 - Precision: 0.89
+2020-05-18 17:04:34 INFO  ExtrinsicInference:100 - Recall: 0.89
+2020-05-18 17:04:34 INFO  ExtrinsicInference:101 - FScore: 0.89
+2020-05-18 17:04:34 INFO  ExtrinsicInference:103 - Extrinsic Evaluation is done!!!
+2020-05-18 17:04:58 INFO  COSTER:572 - COSTER: Context Sensitive Type Solver
+2020-05-18 17:04:58 INFO  COSTER:573 - Version: 1.0
+
+2020-05-18 17:04:58 INFO  ExtrinsicInference:53 - Inferring test data...
+2020-05-18 17:05:11 INFO  ExtrinsicInference:80 - Test Data Inferred: 100/4338 (2%)
+2020-05-18 17:05:21 INFO  ExtrinsicInference:80 - Test Data Inferred: 200/4338 (4%)
+2020-05-18 17:05:38 INFO  ExtrinsicInference:80 - Test Data Inferred: 300/4338 (6%)
+2020-05-18 17:05:50 INFO  ExtrinsicInference:80 - Test Data Inferred: 400/4338 (9%)
+2020-05-18 17:06:02 INFO  ExtrinsicInference:80 - Test Data Inferred: 500/4338 (11%)
+2020-05-18 17:06:12 INFO  ExtrinsicInference:80 - Test Data Inferred: 600/4338 (13%)
+2020-05-18 17:06:23 INFO  ExtrinsicInference:80 - Test Data Inferred: 700/4338 (16%)
+2020-05-18 17:06:36 INFO  ExtrinsicInference:80 - Test Data Inferred: 800/4338 (18%)
+2020-05-18 17:06:48 INFO  ExtrinsicInference:80 - Test Data Inferred: 900/4338 (20%)
+2020-05-18 17:06:57 INFO  ExtrinsicInference:80 - Test Data Inferred: 1000/4338 (23%)
+2020-05-18 17:07:07 INFO  ExtrinsicInference:80 - Test Data Inferred: 1100/4338 (25%)
+2020-05-18 17:07:17 INFO  ExtrinsicInference:80 - Test Data Inferred: 1200/4338 (27%)
+2020-05-18 17:07:27 INFO  ExtrinsicInference:80 - Test Data Inferred: 1300/4338 (29%)
+2020-05-18 17:07:36 INFO  ExtrinsicInference:80 - Test Data Inferred: 1400/4338 (32%)
+2020-05-18 17:07:52 INFO  ExtrinsicInference:80 - Test Data Inferred: 1500/4338 (34%)
+2020-05-18 17:08:03 INFO  ExtrinsicInference:80 - Test Data Inferred: 1600/4338 (36%)
+2020-05-18 17:08:15 INFO  ExtrinsicInference:80 - Test Data Inferred: 1700/4338 (39%)
+2020-05-18 17:08:26 INFO  ExtrinsicInference:80 - Test Data Inferred: 1800/4338 (41%)
+2020-05-18 17:08:35 INFO  ExtrinsicInference:80 - Test Data Inferred: 1900/4338 (43%)
+2020-05-18 17:08:45 INFO  ExtrinsicInference:80 - Test Data Inferred: 2000/4338 (46%)
+2020-05-18 17:08:57 INFO  ExtrinsicInference:80 - Test Data Inferred: 2100/4338 (48%)
+2020-05-18 17:09:06 INFO  ExtrinsicInference:80 - Test Data Inferred: 2200/4338 (50%)
+2020-05-18 17:09:15 INFO  ExtrinsicInference:80 - Test Data Inferred: 2300/4338 (53%)
+2020-05-18 17:09:24 INFO  ExtrinsicInference:80 - Test Data Inferred: 2400/4338 (55%)
+2020-05-18 17:09:33 INFO  ExtrinsicInference:80 - Test Data Inferred: 2500/4338 (57%)
+2020-05-18 17:09:45 INFO  ExtrinsicInference:80 - Test Data Inferred: 2600/4338 (59%)
+2020-05-18 17:09:54 INFO  ExtrinsicInference:80 - Test Data Inferred: 2700/4338 (62%)
+2020-05-18 17:10:06 INFO  ExtrinsicInference:80 - Test Data Inferred: 2800/4338 (64%)
+2020-05-18 17:10:13 INFO  ExtrinsicInference:80 - Test Data Inferred: 2900/4338 (66%)
+2020-05-18 17:10:25 INFO  ExtrinsicInference:80 - Test Data Inferred: 3000/4338 (69%)
+2020-05-18 17:10:36 INFO  ExtrinsicInference:80 - Test Data Inferred: 3100/4338 (71%)
+2020-05-18 17:10:44 INFO  ExtrinsicInference:80 - Test Data Inferred: 3200/4338 (73%)
+2020-05-18 17:10:53 INFO  ExtrinsicInference:80 - Test Data Inferred: 3300/4338 (76%)
+2020-05-18 17:11:02 INFO  ExtrinsicInference:80 - Test Data Inferred: 3400/4338 (78%)
+2020-05-18 17:11:11 INFO  ExtrinsicInference:80 - Test Data Inferred: 3500/4338 (80%)
+2020-05-18 17:11:19 INFO  ExtrinsicInference:80 - Test Data Inferred: 3600/4338 (82%)
+2020-05-18 17:11:28 INFO  ExtrinsicInference:80 - Test Data Inferred: 3700/4338 (85%)
+2020-05-18 17:11:28 INFO  ExtrinsicInference:80 - Test Data Inferred: 3700/4338 (85%)
+2020-05-18 17:11:35 INFO  ExtrinsicInference:85 - Test Data Inferred: 3775/4338 (87%)
+2020-05-18 17:11:35 INFO  ExtrinsicInference:89 - Average time for inference: 90.0milliseconds
+2020-05-18 17:11:35 INFO  ExtrinsicInference:91 - Calculating performance mesures...
+2020-05-18 17:11:35 INFO  ExtrinsicInference:97 - Precision: 0.75
+2020-05-18 17:11:35 INFO  ExtrinsicInference:98 - Recall: 0.75
+2020-05-18 17:11:35 INFO  ExtrinsicInference:99 - FScore: 0.75
+2020-05-18 17:11:35 INFO  ExtrinsicInference:101 - Extrinsic Evaluation is done!!!

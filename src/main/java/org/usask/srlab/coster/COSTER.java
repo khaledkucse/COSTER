@@ -95,6 +95,8 @@ public class COSTER {
         COSTER.fqnThreshold = fqnThreshold;
     }
 
+    public static boolean isFqnThreshold(){return fqnThreshold > 0 ?true:false;}
+
     public static int getReccs() {
         return reccs;
     }
@@ -438,7 +440,7 @@ public class COSTER {
 //                            }
                         }catch (Exception ignored){}
                         if(evalType.equals("intrinsic")){
-                            COSTER.setJarRepoPath(Config.GITHUB_JAR_PATH);
+                            COSTER.setJarRepoPath(Config.SO_JAR_PATH);
                             COSTER.setRepositoryPath(Config.TEST_SUBJECT_SYSTEM_PATH);
                             COSTER.setDatasetPath(Config.TEST_DATSET_PATH);
                             if (line.hasOption("r"))

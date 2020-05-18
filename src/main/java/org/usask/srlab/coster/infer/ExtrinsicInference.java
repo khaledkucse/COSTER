@@ -3,9 +3,7 @@ package org.usask.srlab.coster.infer;
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.LogManager;
@@ -14,11 +12,9 @@ import org.apache.log4j.Logger;
 
 import org.usask.srlab.coster.COSTER;
 import org.usask.srlab.coster.model.APIElement;
-import org.usask.srlab.coster.model.ExtrinsicTestResult;
-import org.usask.srlab.coster.model.OLDEntry;
 import org.usask.srlab.coster.model.TestResult;
+import org.usask.srlab.coster.model.OLDEntry;
 import org.usask.srlab.coster.utils.EvaluationUtil;
-import org.usask.srlab.coster.utils.ExtrinsicEvaluationUtil;
 import org.usask.srlab.coster.utils.InferUtil;
 import org.usask.srlab.coster.utils.ParseUtil;
 
@@ -29,8 +25,8 @@ public class ExtrinsicInference {
 
     private static void print(Object s){System.out.println(s.toString());}
 
-//    public static void evaluation(String jarPath, String repositoryPath, String datasetPath, String modelPath, int topk, String contextSim, String nameSim){
-public static void evaluation(){
+
+    public static void evaluation(){
         List<APIElement> testCases = new ArrayList<>();
         if(COSTER.getIsExtraction()) {
             print("Collecting Jar files...");
@@ -47,34 +43,39 @@ public static void evaluation(){
             logger.info("Extracting test data from the StackOverflow code snippets...");
             testCases = InferUtil.collectSODataset(sourcefilePaths,jarPaths,COSTER.getRepositoryPath(),COSTER.getDatasetPath());
         }
-
         else{
             testCases = InferUtil.collectTestAPISFromDATASET(COSTER.getDatasetPath());
         }
-        List<ExtrinsicTestResult> testResults = new ArrayList<>();
+        List<TestResult> testResults = new ArrayList<>();
         int count = 0;
         long totalInferenceTime = 0;
         print("Inferring test data...");
         logger.info("Inferring test data...");
         for(APIElement eachCase:testCases){
             long starttime = System.currentTimeMillis();
-            String queryContext = StringUtils.join(eachCase.getContext()," ").replaceAll(",","");
-            String queryAPIelement = eachCase.getName();
-            List<OLDEntry> candidateList = InferUtil.collectCandidateList(queryContext, COSTER.getModelPath());
-            for(OLDEntry eachCandidate:candidateList){
-                String candidateContext = eachCandidate.getContext();
-                String candidateFQN = eachCandidate.getFqn();
-                double contextSimialrityScore = InferUtil.calculateContextSimilarity(queryContext,candidateContext, COSTER.getContextSimilarity());
-                double nameSimilarityScore = InferUtil.calculateNameSimilarity(queryAPIelement,candidateFQN, COSTER.getNameSimilarity());
-                double recommendationScore = InferUtil.calculateRecommendationScore(eachCandidate.getScore(),contextSimialrityScore,nameSimilarityScore);
-                eachCandidate.setScore(recommendationScore);
+            if(InferUtil.isLibraryExists(eachCase.getActualFQN(),COSTER.getModelPath())) {
+                String queryContext = StringUtils.join(eachCase.getContext()," ").replaceAll(",","");
+                String queryAPIelement = eachCase.getName();
+                List<OLDEntry> candidateList = InferUtil.collectCandidateList(queryContext, COSTER.getModelPath());
+                for(OLDEntry eachCandidate:candidateList){
+                    String candidateContext = eachCandidate.getContext();
+                    String candidateFQN = eachCandidate.getFqn();
+                    double contextSimialrityScore = InferUtil.calculateContextSimilarity(queryContext,candidateContext, COSTER.getContextSimilarity());
+                    double nameSimilarityScore = InferUtil.calculateNameSimilarity(queryAPIelement,candidateFQN, COSTER.getNameSimilarity());
+                    double recommendationScore = InferUtil.calculateRecommendationScore(eachCandidate.getScore(),contextSimialrityScore,nameSimilarityScore);
+                    eachCandidate.setScore(recommendationScore);
+                }
+                if(COSTER.isFqnThreshold()) {
+                    long inferenceTime = System.currentTimeMillis() - starttime;
+                    totalInferenceTime += inferenceTime;
+                    InferUtil.setCandidates(candidateList);
+                    candidateList = InferUtil.generateList();
+                    TestResult eachTestResult = new TestResult(eachCase, candidateList, inferenceTime);
+                    testResults.add(eachTestResult);
+                    count++;
+
+                }
             }
-            long inferenceTime = System.currentTimeMillis()-starttime;
-            totalInferenceTime += inferenceTime;
-            candidateList = InferUtil.generateList(candidateList);
-            ExtrinsicTestResult eachTestResult = new ExtrinsicTestResult(eachCase,candidateList, inferenceTime);
-            testResults.add(eachTestResult);
-            count++;
             if(count%100 == 0){
                 logger.info("Test Data Inferred: "+count+"/"+testCases.size()+" ("+df.format((count*100/testCases.size()))+"%)");
                 print("Test Data Inferred: "+count+"/"+testCases.size()+" ("+df.format((count*100/testCases.size()))+"%)");
@@ -89,7 +90,7 @@ public static void evaluation(){
 
         logger.info("Calculating performance mesures...");
 //        int totalCases = CompilableCodeExtraction.getTotalCase().get();
-        ExtrinsicEvaluationUtil evaluationUtil = new ExtrinsicEvaluationUtil(testResults);
+        EvaluationUtil evaluationUtil = new EvaluationUtil(testResults);
         print("Precision: "+String.format("%.2f",evaluationUtil.getPrecision()));
         print("Recall: "+String.format("%.2f",evaluationUtil.getRecall()));
         print("FScore: "+String.format("%.2f",evaluationUtil.getFscore()));

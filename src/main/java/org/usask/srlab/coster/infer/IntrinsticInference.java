@@ -11,11 +11,9 @@ import org.apache.log4j.Logger;
 
 import org.usask.srlab.coster.COSTER;
 import org.usask.srlab.coster.model.APIElement;
-import org.usask.srlab.coster.model.ExtrinsicTestResult;
-import org.usask.srlab.coster.model.OLDEntry;
 import org.usask.srlab.coster.model.TestResult;
+import org.usask.srlab.coster.model.OLDEntry;
 import org.usask.srlab.coster.utils.EvaluationUtil;
-import org.usask.srlab.coster.utils.ExtrinsicEvaluationUtil;
 import org.usask.srlab.coster.utils.InferUtil;
 import org.usask.srlab.coster.utils.ParseUtil;
 
@@ -37,31 +35,35 @@ public class IntrinsticInference {
         print("Extracting test data from the Subject Systems...");
         logger.info("Extracting test data from the Subject Systems...");
         List<APIElement> testCases = InferUtil.collectDataset(projectPaths,jarPaths,COSTER.getDatasetPath());
-        List<ExtrinsicTestResult> testResults = new ArrayList<>();
+        List<TestResult> testResults = new ArrayList<>();
         int count = 0;
         long totalInferenceTime = 0;
         print("Inferring test data...");
         logger.info("Inferring test data...");
         for(APIElement eachCase:testCases){
             long starttime = System.currentTimeMillis();
-            String queryContext = StringUtils.join(eachCase.getContext()," ").replaceAll(",","");
-            String queryAPIelement = eachCase.getName();
-            List<OLDEntry> candidateList = InferUtil.collectCandidateList(queryContext,COSTER.getModelPath());
-            Map<String, Double> recommendations = new HashMap<>();
-            for(OLDEntry eachCandidate:candidateList){
-                String candidateContext = eachCandidate.getContext();
-                String candidateFQN = eachCandidate.getFqn();
-                double contextSimialrityScore = InferUtil.calculateContextSimilarity(queryContext,candidateContext, COSTER.getContextSimilarity());
-                double nameSimilarityScore = InferUtil.calculateNameSimilarity(queryAPIelement,candidateFQN, COSTER.getNameSimilarity());
-                double recommendationScore = InferUtil.calculateRecommendationScore(eachCandidate.getScore(),contextSimialrityScore,nameSimilarityScore);
-                eachCandidate.setScore(recommendationScore);
+            if(InferUtil.isLibraryExists(eachCase.getActualFQN(),COSTER.getModelPath())) {
+                String queryContext = StringUtils.join(eachCase.getContext(), " ").replaceAll(",", "");
+                String queryAPIelement = eachCase.getName();
+                List<OLDEntry> candidateList = InferUtil.collectCandidateList(queryContext, COSTER.getModelPath());
+                for (OLDEntry eachCandidate : candidateList) {
+                    String candidateContext = eachCandidate.getContext();
+                    String candidateFQN = eachCandidate.getFqn();
+                    double contextSimialrityScore = InferUtil.calculateContextSimilarity(queryContext, candidateContext, COSTER.getContextSimilarity());
+                    double nameSimilarityScore = InferUtil.calculateNameSimilarity(queryAPIelement, candidateFQN, COSTER.getNameSimilarity());
+                    double recommendationScore = InferUtil.calculateRecommendationScore(eachCandidate.getScore(), contextSimialrityScore, nameSimilarityScore);
+                    eachCandidate.setScore(recommendationScore);
+                }
+                if (COSTER.isFqnThreshold()) {
+                    InferUtil.setCandidates(candidateList);
+                    long inferenceTime = System.currentTimeMillis() - starttime;
+                    totalInferenceTime += inferenceTime;
+                    candidateList = InferUtil.generateList();
+                    TestResult eachTestResult = new TestResult(eachCase, candidateList, inferenceTime);
+                    testResults.add(eachTestResult);
+                    count++;
+                }
             }
-            long inferenceTime = System.currentTimeMillis()-starttime;
-            totalInferenceTime += inferenceTime;
-            candidateList = InferUtil.generateList(candidateList);
-            ExtrinsicTestResult eachTestResult = new ExtrinsicTestResult(eachCase,candidateList, inferenceTime);
-            testResults.add(eachTestResult);
-            count++;
             if(count%100 == 0){
                 logger.info("Test Data Inferred: "+count+"/"+testCases.size()+" ("+df.format((count*100/testCases.size()))+"%)");
                 print("Test Data Inferred: "+count+"/"+testCases.size()+" ("+df.format((count*100/testCases.size()))+"%)");
@@ -76,7 +78,7 @@ public class IntrinsticInference {
 
         logger.info("Calculating performance mesures...");
 //        int totalTestCases = CompilableCodeExtraction.getTotalCase().get();
-        ExtrinsicEvaluationUtil evaluationUtil = new ExtrinsicEvaluationUtil(testResults);
+        EvaluationUtil evaluationUtil = new EvaluationUtil(testResults);
         print("Precision: "+String.format("%.2f",evaluationUtil.getPrecision()));
         print("Recall: "+String.format("%.2f",evaluationUtil.getRecall()));
         print("FScore: "+String.format("%.2f",evaluationUtil.getFscore()));

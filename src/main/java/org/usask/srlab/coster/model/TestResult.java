@@ -1,22 +1,20 @@
 package org.usask.srlab.coster.model;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 import java.util.Objects;
 
 public class TestResult {
     APIElement apiElement;
-    Map<String, Double> recommendations;
+    List<OLDEntry> recommendations;
     long InfernceTime;
 
-    public TestResult(APIElement apiElement, Map<String, Double> recommendations, long infernceTime) {
+    public TestResult() {
+    }
+
+    public TestResult(APIElement apiElement, List<OLDEntry> recommendations, long infernceTime) {
         this.apiElement = apiElement;
         this.recommendations = recommendations;
         InfernceTime = infernceTime;
-    }
-
-    public TestResult() {
-        this.recommendations = new HashMap<>();
     }
 
     public APIElement getApiElement() {
@@ -27,11 +25,11 @@ public class TestResult {
         this.apiElement = apiElement;
     }
 
-    public Map<String, Double> getRecommendations() {
+    public List<OLDEntry> getRecommendations() {
         return recommendations;
     }
 
-    public void setRecommendations(Map<String, Double> recommendations) {
+    public void setRecommendations(List<OLDEntry> recommendations) {
         this.recommendations = recommendations;
     }
 
@@ -48,23 +46,14 @@ public class TestResult {
         if (this == o) return true;
         if (!(o instanceof TestResult)) return false;
         TestResult that = (TestResult) o;
-        return Objects.equals(getApiElement(), that.getApiElement()) &&
-                Objects.equals(getRecommendations(), that.getRecommendations()) &&
-                Objects.equals(getInfernceTime(), that.getInfernceTime());
+        return getInfernceTime() == that.getInfernceTime() &&
+                Objects.equals(getApiElement(), that.getApiElement()) &&
+                Objects.equals(getRecommendations(), that.getRecommendations());
     }
 
     @Override
     public int hashCode() {
 
         return Objects.hash(getApiElement(), getRecommendations(), getInfernceTime());
-    }
-
-    @Override
-    public String toString() {
-        return "TestResult{" +
-                "apiElement=" + apiElement +
-                ", recommendations=" + recommendations +
-                ", InfernceTime=" + InfernceTime +
-                '}';
     }
 }

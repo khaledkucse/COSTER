@@ -1,26 +1,25 @@
 package org.usask.srlab.coster.utils;
 
-import org.usask.srlab.coster.model.ExtrinsicTestResult;
-import org.usask.srlab.coster.model.OLDEntry;
-import org.usask.srlab.coster.model.TestResult;
 
 import java.util.List;
 import java.util.Set;
 
-public class ExtrinsicEvaluationUtil {
+import org.usask.srlab.coster.model.FileTestResult;
+
+public class FileEvaluationUtil {
+
     double precision;
     double recall;
     double fscore;
 
-    public ExtrinsicEvaluationUtil(List<ExtrinsicTestResult> results){
+    public FileEvaluationUtil(List<FileTestResult> results){
         long tp = 0;
         long fp = 0;
-        for (ExtrinsicTestResult result : results) {
+        for (FileTestResult result : results) {
             String actualFQN = result.getApiElement().getActualFQN();
 
-//            Set<String> predictedFQNs = result.getRecommendations().keySet();
-
-            if(isHave(result.getRecommendations(),actualFQN))
+            Set<String> predictedFQNs = result.getRecommendations().keySet();
+            if(contains(predictedFQNs,actualFQN))
                 tp++;
             else
                 fp++;
@@ -54,12 +53,6 @@ public class ExtrinsicEvaluationUtil {
     private static boolean contains(Set<String> resutls, String eachCase) {
         for(String eachResult:resutls)
             if (eachResult.contains(eachCase) || eachCase.contains(eachResult))
-                return true;
-        return false;
-    }
-    private static boolean isHave(List<OLDEntry> resutls, String eachCase) {
-        for(OLDEntry eachResult:resutls)
-            if (eachResult.getFqn().contains(eachCase) || eachCase.contains(eachResult.getFqn()))
                 return true;
         return false;
     }

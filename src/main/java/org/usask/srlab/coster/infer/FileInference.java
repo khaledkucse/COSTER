@@ -12,8 +12,8 @@ import org.apache.log4j.Logger;
 import org.usask.srlab.coster.COSTER;
 import org.usask.srlab.coster.extraction.NonCompilableCodeExtraction;
 import org.usask.srlab.coster.model.APIElement;
+import org.usask.srlab.coster.model.FileTestResult;
 import org.usask.srlab.coster.model.OLDEntry;
-import org.usask.srlab.coster.model.TestResult;
 import org.usask.srlab.coster.utils.FileUtil;
 import org.usask.srlab.coster.utils.InferUtil;
 import org.usask.srlab.coster.utils.ParseUtil;
@@ -38,7 +38,7 @@ public class FileInference {
         List<APIElement> testCases = NonCompilableCodeExtraction.extractCode(src,jarPaths,inputFilePath);
 
 
-        List<TestResult> testResults = new ArrayList<>();
+        List<FileTestResult> testResults = new ArrayList<>();
         if (testCases.size() == 0){
             print("No API element has been found to infer!!!!");
             logger.info("No API element has been found to infer!!!!");
@@ -70,7 +70,7 @@ public class FileInference {
     }
 
 
-    private static TestResult inferEachCase(String modelPath, APIElement eachCase, String contextSim, String nameSim, int topk){
+    private static FileTestResult inferEachCase(String modelPath, APIElement eachCase, String contextSim, String nameSim, int topk){
         String queryContext = StringUtils.join(eachCase.getContext(), " ").replaceAll(",", "");
         String queryAPIelement = eachCase.getName();
         List<OLDEntry> candidateList = InferUtil.collectCandidateList(queryContext,modelPath);
@@ -88,13 +88,13 @@ public class FileInference {
                 recommendations.put(candidateFQN, recommendationScore);
         }
         recommendations = sortByComparator(recommendations, false, topk);
-        return new TestResult(eachCase, recommendations, 0);
+        return new FileTestResult(eachCase, recommendations, 0);
     }
 
 
-    private static void writitngOutputFile(String outPutFilePath, List<String> srcList, List<TestResult> testResults){
+    private static void writitngOutputFile(String outPutFilePath, List<String> srcList, List<FileTestResult> testResults){
         Map<String, Map<String,Double>> results = new HashMap<>();
-        for(TestResult eachTesResult: testResults){
+        for(FileTestResult eachTesResult: testResults){
             results.put(eachTesResult.getApiElement().getName(),eachTesResult.getRecommendations());
         }
         List<String> outputStrings = new ArrayList<>();
