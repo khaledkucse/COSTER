@@ -1,0 +1,84 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-COSTER<coster>",
+            "request": "launch",
+            "mainClass": "org.usask.srlab.coster.COSTER",
+            "projectName": "coster"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-DictonaryCreator<coster>",
+            "request": "launch",
+            "mainClass": "org.usask.srlab.coster.dictionary.DictonaryCreator",
+            "projectName": "coster"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-UnionSignatures<coster>",
+            "request": "launch",
+            "mainClass": "org.usask.srlab.coster.dictionary.UnionSignatures",
+            "projectName": "coster"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-RecieverVariableAnalysis<coster>",
+            "request": "launch",
+            "mainClass": "org.usask.srlab.coster.infer.RecieverVariableAnalysis",
+            "projectName": "coster"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SOCodeColelctor<coster>",
+            "request": "launch",
+            "mainClass": "org.usask.srlab.coster.infer.SOCodeColelctor",
+            "projectName": "coster"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GroundTruthCreator<coster>",
+            "request": "launch",
+            "mainClass": "org.usask.srlab.coster.test.GroundTruthCreator",
+            "projectName": "coster"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PrevInferCode<coster>",
+            "request": "launch",
+            "mainClass": "org.usask.srlab.coster.test.PrevInferCode",
+            "projectName": "coster"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-tests<coster>",
+            "request": "launch",
+            "mainClass": "org.usask.srlab.coster.test.tests",
+            "projectName": "coster"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CalculateAPIUsages<coster>",
+            "request": "launch",
+            "mainClass": "org.usask.srlab.coster.train.CalculateAPIUsages",
+            "projectName": "coster"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-DictonaryCreator<coster>(1)",
+            "request": "launch",
+            "mainClass": "org.usask.srlab.coster.train.DictonaryCreator",
+            "projectName": "coster"
+        }
+    ]
+}
