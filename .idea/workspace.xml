@@ -5,23 +5,56 @@
       <artifact name="coster:jar" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="830074f3-d605-41ba-a4e9-a67a9e873454" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/COSTER.jar" beforeDir="false" afterPath="$PROJECT_DIR$/COSTER.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/RetrainOLD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/train/RetrainOLD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/COSTER-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/COSTER-jar-with-dependencies.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/COSTER.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/COSTER.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/train/RetrainOLD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/usask/srlab/coster/train/RetrainOLD.class" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/COSTER.jar" beforeDir="false" afterPath="$PROJECT_DIR$/COSTER.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/coster.logs" beforeDir="false" afterPath="$PROJECT_DIR$/logs/coster.logs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/model/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/SOCodeColelctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/infer/SOCodeColelctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/COSTER-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/COSTER-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/COSTER.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/COSTER.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+>>>>>>> 6856ef66c4f605a32f16f69bd3368cfb7959dc09
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="COSTER.java" pinned="false" current-in-tab="false">
@@ -47,6 +80,8 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> 6856ef66c4f605a32f16f69bd3368cfb7959dc09
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -57,6 +92,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
       <map>
@@ -231,28 +267,32 @@
       <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
+=======
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1i8uyVb9hGSt7VwPWfMsZzOS3EV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+>>>>>>> 6856ef66c4f605a32f16f69bd3368cfb7959dc09
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Application.COSTER">
     <configuration name="COSTER" type="Application" factoryName="Application">
@@ -260,9 +300,11 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="org.usask.srlab.coster.COSTER" />
       <module name="coster" />
-      <option name="PROGRAM_PARAMETERS" value="-f eval -e extrinsic -d $PROJECT_DIR$/../../../backup/coster/data/SODataset/dataset/codeSnippet.csv -t 1 -k 0" />
+      <option name="PROGRAM_PARAMETERS" value="-f eval -e extrinsic -t 1 -k 1" />
       <option name="VM_PARAMETERS" value="-Xmx8g" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="DictonaryCreator" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.usask.srlab.coster.dictionary.DictonaryCreator" />
@@ -274,53 +316,49 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
+    <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
       <item itemvalue="Application.DictonaryCreator" />
       <item itemvalue="Application.COSTER" />
     </list>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -332,6 +370,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589741735423</updated>
       <workItem from="1589741736761" duration="22925000" />
+<<<<<<< HEAD
       <workItem from="1589788992430" duration="36138000" />
       <workItem from="1590503834015" duration="599000" />
       <workItem from="1590550396638" duration="9000" />
@@ -400,16 +439,62 @@
       <window_info id="Learn" order="2" />
     </layout-to-restore>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+=======
+      <workItem from="1589788992430" duration="30730000" />
+      <workItem from="1601301798212" duration="5039000" />
+    </task>
+    <servers />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+>>>>>>> 6856ef66c4f605a32f16f69bd3368cfb7959dc09
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="445" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601310673295">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="445" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/54.27.1866.1053/1920.0.1920.1080@54.27.1866.1053" timestamp="1601310673295" />
+    <state x="770" y="314" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601310295280">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="770" y="314" width="424" height="491" key="FileChooserDialogImpl/54.27.1866.1053/1920.0.1920.1080@54.27.1866.1053" timestamp="1601310295280" />
+    <state width="1820" height="275" key="GridCell.Tab.0.bottom" timestamp="1601312321117">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state width="1820" height="275" key="GridCell.Tab.0.bottom/54.27.1866.1053/1920.0.1920.1080@54.27.1866.1053" timestamp="1601312321117" />
+    <state width="1820" height="275" key="GridCell.Tab.0.center" timestamp="1601312321117">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state width="1820" height="275" key="GridCell.Tab.0.center/54.27.1866.1053/1920.0.1920.1080@54.27.1866.1053" timestamp="1601312321117" />
+    <state width="1820" height="275" key="GridCell.Tab.0.left" timestamp="1601312321117">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state width="1820" height="275" key="GridCell.Tab.0.left/54.27.1866.1053/1920.0.1920.1080@54.27.1866.1053" timestamp="1601312321117" />
+    <state width="1820" height="275" key="GridCell.Tab.0.right" timestamp="1601312321117">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state width="1820" height="275" key="GridCell.Tab.0.right/54.27.1866.1053/1920.0.1920.1080@54.27.1866.1053" timestamp="1601312321117" />
+    <state x="476" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1601310340794">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="476" y="188" width="1022" height="737" key="SettingsEditor/54.27.1866.1053/1920.0.1920.1080@54.27.1866.1053" timestamp="1601310340794" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usask/srlab/coster/utils/InferUtil.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -870,4 +955,6 @@
       </state>
     </states>
   </component>
+=======
+>>>>>>> 6856ef66c4f605a32f16f69bd3368cfb7959dc09
 </project>
