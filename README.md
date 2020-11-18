@@ -20,7 +20,7 @@ Before running the code, you must have following packages installed in your comp
 COSTER  supports following four features:
 
 1. Infer Types: Determine types or FQNs of API elements. We use the term type or FQN interchangeably throughout the discussion.
-2. Complete Import Statements: Add missing import statements
+2. Complete Import Statements: Add missing import statements and library
 3. Training COSTER: This enables the tool to support type inference of new APIs
 4. Evaluation: Researchers and tool developers can also use the tool to evaluate the performance of COSTER. This enables to compare COSTER with other type inference techniques.
 
@@ -31,9 +31,79 @@ The tool consists of five major components (shown as orange colored rectangular 
 
 Query generator collects the API elements and associated contexts from the online forums’ code snippets. The context of each API element is passed into the candidate list processor that takes the trained model as input and generates the candidate list for each test case and refines the candidates based on the likelihood, context similarity, and name similarity scores.  The top-k recommendations returns a ranked list of top-k FQNs(s) for each case that provide three features: inferring types of API element, completing the import statements and evaluating the tool. Infer types feature annotate the API elements within the code snippet and output the code along with the annotation in a file (similar to the right side of the motivating example). Import statement completions is done through an Eclipse plugin that includes the import statements before the code snippet upon pasting it in the Eclipse IDE. Evaluation features enables the user to recreate our evaluation results and uses them for future studies.
 
-###Download
+##Available Tools
 
-The tool is available in two forms: a) Command line tool b) Eclipse plugin
+The tool is available in two forms: a) Eclipse plugin  b) Command line tool
+
+### Eclipse Plugin
+The tool is available as Eclipse Pluging. Following are some details of the plugin:
+
+**Eclipse Versions**: 2019-12 (4.14), 2019-09 (4.13), 2019-06 (4.12), 2019-03 (4.11), 2018-12 (4.10), 2018-09 (4.9), Photon (4.8), Oxygen (4.7), Neon (4.6), Mars (4.5), Luna (4.4), Kepler (4.3), Juno (4.2, 3.8), 2020-03 (4.15), 2020-06 (4.16), 2020-09 (4.17)
+
+**Suported Platforms**: Windows, Mac, Linux/GTK
+
+**Required JDK Version**: Java 8
+
+
+####Installing
+The plugin is available at [Eclipse Marketplace](https://marketplace.eclipse.org/content/coster).
+From any Eclipse IDE, go to Help--> Eclipse Marketplace and type COSTER. Following search result will appear.
+
+![COSTER in Eclipse Marketplace](/images/[plugin]marketplace.png)
+
+
+Besides, You can clone the [Github Plugin Repository](https://github.com/khaledkucse/org.usask.srlab.COSTERPlugin) using follwoing command:
+```
+git clone git@github.com:khaledkucse/org.usask.srlab.COSTERPlugin.git
+```
+
+Then run the Eclipse Plugin Project as Eclipse Application. We will reccommend to run the latest code from the github repository since marketplace takes days to update the plugin after submitting any change.
+After installing and restarting the IDE, COSTER menu will be seen in the menu bar like the following figure.
+
+![COSTER installed inside Eclipse](/images/[plugin]after install.png)
+
+#### Running Eclipse Plugin
+
+Before running any of the feature of the plugin, the user must explore the plugin’s preference page. To do that, select Windows -> Preferences -> COSTER. Following window will appear.
+
+![COSTER plugin's Prefernece Page](/images/[plugin]preference.png)
+
+The most important option is the first one “Directory Path to supporting files for plugin”. The user needs to point where (s)he keeps the supplementary files to run the plugin. 
+
+[Plugin Supplementary File](https://drive.google.com/file/d/1dB0_PkW4Ad72RIBAxuVgWnRPQnFoA_gY/view?usp=sharing)
+
+Download the file and unzip at any location of the computer. Then using the Browse… button select the unziped directory. Other options give the user some flexibility to test the tool in different combination of settings. To get the effect of the options, the user needs to click Apply and Close button.
+
+
+**1. Fix Imports**: Let us consider a developer, Alice, who is looking for a code fragment that converts time zoned date-time into milliseconds along with setting up an HTTP connection and hibernate session. After searching she finds a couple of code snippets in Stack Overflow posts (id: 18274902, 3509824) that look promising. She copies all code fragments and pastes them in the Eclipse IDE. Next, she tries to use the Eclipse suggestions to complete the import statements. The following figure shows the suggestion made by Eclipse IDE when hovers on the API elements.
+
+![Eclipse Suggesting when hover on an API element](/images/[plugin]case2-1.png)
+
+Eclipse cannot infer types other than the JDK and thus fails to complete the import statements of the APIs involved within the pasted code snippets. Next, Alice uses the complete import statements and library feature of COSTER on the code snippets, and the tool returns FQNs from three libraries (joda-time, hibernate, httpclient). The following figure shows the screenshot after the tool completes the import statements.
+
+![COSTER suggestion of library with version after completing import statements](/images/[plugin]case2-2.png)
+
+For example completes $import org.joda.time.format.DateTimeFormatter;$ statement for the $DateTimeFormatter$ API situated at the first line of the $main$ method. In addition to that, the tool lists the versions of each of the libraries and provides choices to Alice. Upon selecting the specific version of each library and clicking the import button, the tool adds the jar files to the build path. Since the libraries are in the build path of the Java Project, Alice can use the Eclipse suggestion to complete the import statements that are missed by COSTER. After completing all the import statements, she manages to make the code that consists of online code snippets compilable. The following figure shows the compilable code after the library being added and completing all required import statements.
+
+![Compilabe online code after COSTER added required library and completed required import statements ](/images/[plugin]case2-3.png)
+ 
+Thus the tool helps the developer not only by completing the import statements of the online code snippets but also enhances the capabilities of IDE to make the code compilable. 
+
+**2. Infer Types**: Similar to command line tool, the user can see the FQNs of the API element of a code snippet with this feature. Click Infer Types command in the COSTER menu and the following window will appear.
+
+![Usages Example of Infer Types Feature of COSTER Eclipse Plugin](/images/[plugin]infer_types.png)
+
+The user has the flexibility to browse the Java file containing the online code snippet or paste the code snippet in the Text Box denoted as 2 in the above figure. Next, the user will click the infer button and the FQNs returned by the tool will appear as the annotation before the API elements in the text box. Thus the user can learn the participating FQNs of the code snippet using our plugin.
+
+
+**3. Training COSTER**: Users can also train the COSTER model using the plugin. To do that click Train Model command and the following window will appear.
+
+![Usages example of Train Model of COSTER Eclipse Plugin](/images/[plugin]train_model.png)
+
+The user needs to input the path of the repository that contains the subject systems though the Browse… button. Additionally, the user can include a new library by giving the path of the Jar repository. Upon clicking the Train button the plugin will train the COSTER model using the subject system and the jar repositories.
+
+
+###Command Line Tool
 
 Command line tool provides three features: Infer types, Training COSTER and Evaluation and Eclipse Plugin provides the three feature: Complete Import Statement, Infer types and Training COSTER.
 
@@ -46,7 +116,9 @@ Data: [COSTER Data](http://bit.ly/costerData)
 Model: [COSTER MODEL](http://bit.ly/costerModel)
 
 
-###Installing
+
+
+####Installing
 To install the tool, following requirements need to be fulfilled.
 
 ```
@@ -59,7 +131,7 @@ For installing the tool from GitHub repository run the following command to clon
 git clone https://github.com/khaledkucse/COSTER.git
 ```
 
-###Running the command line tool:
+####Running the command line tool:
 To run the command line tool from Code, the user needs to import all dependency of the tool using Maven and download the coster_data and coster_model. Next (s)he extracts the files into data and model directories respectively and runs the following class file:
 ```
 src/main/java/org/srlab/coster/COSTER.java
@@ -75,7 +147,7 @@ java -jar COSTER.jar <program arguments>
 
 Let us see some examples of executing all three features of command line tool.
 
-1. Infer Types: A user wants to learn the FQNs of APIs used in a SO code. (s)He can puts the code into a file named input.java, place the file within the tool directory and run the following command:
+**1. Infer Types**: A user wants to learn the FQNs of APIs used in a SO code. (s)He can puts the code into a file named input.java, place the file within the tool directory and run the following command:
 
 ```
 java -jar COSTER.jar -f infer -i input.java -o output.java -j data/jars/so/ -m model/ -t 1 -c cosine -n levenshtein
@@ -88,7 +160,7 @@ Here functionality is chosen as infer, path to input file is input.java and path
 First some info related to the tool are shown. Next, the tool collects jar files, trained model files and input code snippet form input.java. It then extracts the code, collects potential API elements and infers them. Finally the annotated API elements along with the full code snippet is generated in output.java file.
 
 
-2. Train: A user can reproduce our model and add new APIs with our trained model using train feature. To do that user needs to run the following command:
+**2. Train**: A user can reproduce our model and add new APIs with our trained model using train feature. To do that user needs to run the following command:
 
 ```
 java -jar COSTER.java -f train -r data/GitHubDataset/subjectSystem/ -j data/jars/github/ -d data/GitHubDataset/dataset/ -m model/ -q 50 -k 0
@@ -101,7 +173,7 @@ Following execution trace will appear once the command is executed successfully.
 
 Similar to previous feature it will show some information related to the tool at first. Next it extracts new subject systems, create training dataset, retrieve the trained model, and retrain the model.
 
-3. Evaluation: Evaluation of the tool is done so that the user can reproduce the result we reported in our papers.  Two types of evaluation is supported. Intrinsic evaluation where users can evaluate the tool for the subject system and extrinsic evaluation where user can evaluate COSTER for StackOverflow code snippets. Let us consider the intrinsic evaluation and to do that user needs to use the following command:
+**3. Evaluation**: Evaluation of the tool is done so that the user can reproduce the result we reported in our papers.  Two types of evaluation is supported. Intrinsic evaluation where users can evaluate the tool for the subject system and extrinsic evaluation where user can evaluate COSTER for StackOverflow code snippets. Let us consider the intrinsic evaluation and to do that user needs to use the following command:
 
 ```
 java -jar COSTER.jar -f eval -e intrinsic -r data/TestDataset/subjectSystem/ -j data/jars/github/ -d data/TestDataset/dataset/ -t 1 -m model/ -c cosine -n levenshtein
@@ -163,6 +235,7 @@ The command creates a docker container named coster and run the container.  Insi
 ```
 java -jar COSTER.jar <program arguments>
 ```
+
 
 
 ## Publication

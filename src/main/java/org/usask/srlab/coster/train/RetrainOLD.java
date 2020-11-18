@@ -1,11 +1,13 @@
 package org.usask.srlab.coster.train;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.DecimalFormat;
+
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -61,8 +63,13 @@ public class RetrainOLD {
 
         logger.info("Storing the model at "+ COSTER.getModelPath()+"...");
         print("Storing the model at "+COSTER.getModelPath()+"...");
-        try {
-            Files.write(Paths.get(COSTER.getModelPath()+"OLD.json"), jsonObject.toJSONString().getBytes());
+        try{
+            FileOutputStream fos = new FileOutputStream(COSTER.getModelPath()+"OLD.json");
+            if (jsonObject.toJSONString() != null) {
+                fos.write(jsonObject.toJSONString().getBytes());
+            }
+            fos.close();
+//            Files.write(Paths.get(COSTER.getModelPath()+"OLD.json"), jsonObject.toJSONString().getBytes());
         } catch (IOException e) {
             print("Error Occurred while strong the model. See the detail in the log file");
             logger.error(e.getMessage());
